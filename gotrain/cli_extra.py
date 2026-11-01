@@ -61,6 +61,16 @@ def cmd_agent(args) -> int:
     )
     _print({k: state[k] for k in ("session_id", "status", "tool_calls", "experiments_launched", "rounds", "finished_tasks", "errors")})
     print(f"session files: {home.agent / 'sessions' / state['session_id']}", file=sys.stderr)
+    if getattr(args, "complete", False):
+        from gotrain.completion import complete_tasks
+        result = complete_tasks(
+            home, tasks, device=args.device or "cpu",
+            geobench_root=geobench_dir(args.geobench_dir),
+            batch_size=args.completion_batch_size,
+            num_workers=args.completion_num_workers, log=_log,
+        )
+        _print({"completion": result})
+        return 0 if result["status"] == "completed" and state.get("status") == "completed" else 1
     return 0
 
 
@@ -250,6 +260,9 @@ def register_extra(sub: argparse._SubParsersAction) -> None:
     s.add_argument("--resume-session", default=None, help="continue a previous session id")
     s.add_argument("--scripted", action="store_true", help="use the offline scripted fake model instead of Bedrock (tests/demo only)")
     s.add_argument("--scripted-epochs", type=int, default=2)
+    s.add_argument("--complete", action="store_true", help="after agent rounds, verify selected versions, build supported reviewers and refresh dashboard (extra time beyond training budget; no test evaluation)")
+    s.add_argument("--completion-batch-size", type=int, default=8)
+    s.add_argument("--completion-num-workers", type=int, default=0)
     s.add_argument("--device", default=None)
     s.set_defaults(fn=cmd_agent)
 
