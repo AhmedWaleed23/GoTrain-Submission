@@ -330,6 +330,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     register_extra(sub)
     register_check(sub)
+    from gotrain.completion import register_completion
+    register_completion(sub)
     return p
 
 
