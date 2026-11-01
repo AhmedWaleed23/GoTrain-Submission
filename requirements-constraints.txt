@@ -1,0 +1,7 @@
+# Constraints that preserve the organizer SageMaker environment.
+# Use with:  /opt/conda/bin/python -m pip install -c requirements-constraints.txt <package>
+# Do NOT reinstall torch; the preinstalled CUDA build (2.8.0) must stay.
+numpy==1.26.4
+rasterio==1.4.3
+geobench==1.1.0
+huggingface_hub==0.36.0

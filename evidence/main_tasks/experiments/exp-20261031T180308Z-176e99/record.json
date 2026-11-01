@@ -1,0 +1,189 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T180308Z-176e99/checkpoints/best.pt",
+    "best_sha256": "785968a7043fa11a96f3d654566938efbe3b74caef366b2754e0984399a4c870",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T180308Z-176e99/checkpoints/last.pt",
+    "last_sha256": "6d34cf32f26fb4a487ad46ad87de83541b963385b50a4fefcf9725e22ae7f0f9"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 64,
+    "effective_lr": 0.003,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 260.23895778899896
+  },
+  "config_hash": "5dba4a703e85d87b990bc2e45a67407fa2a32f8916929aca740d190fdcbdaec3",
+  "created_at": "2026-10-31T18:03:08+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/classification_v1.0/m-pv4ger",
+    "input_size": 128,
+    "resized": true,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 999,
+      "train": 11814,
+      "valid": 999
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 11814,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 999
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "Loses fine detail from downsampling; larger batch with higher lr may be less stable.",
+  "experiment_id": "exp-20261031T180308Z-176e99",
+  "finished_at": "2026-10-31T18:07:30+00:00",
+  "hypothesis": "Downsizing to 128 cuts epoch time ~6x so 12 epochs fit in 5 min; PV panels are still visible at 128, accuracy >0.93.",
+  "metric": {
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "cnn_small",
+    "parameters": 583394
+  },
+  "normalization": {
+    "n_samples_used": 11814,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger.json",
+    "split": "train",
+    "stats_hash": "048910f08d468f337da0c54b77c61d7580e00716e96ec0d826cc69c13cc13147"
+  },
+  "parent_experiment": null,
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "Native 320 costs ~130s/epoch, 12 epochs would exceed the budget; baseline smoke gave 0.86 (majority-class rate).",
+  "result": {
+    "best_epoch": 12,
+    "best_val_metric": 0.928928928928929,
+    "epochs_completed": 12,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "accuracy": 0.928928928928929,
+      "confusion_matrix": [
+        [
+          843,
+          3
+        ],
+        [
+          68,
+          85
+        ]
+      ],
+      "conventions": {
+        "accuracy": "overall accuracy over the full split (torchmetrics multiclass Accuracy)",
+        "macro_f1": "unweighted mean of per-class F1; absent classes count as 0 (diagnostic only)"
+      },
+      "loss": 0.1953197382390499,
+      "macro_f1": 0.8324922007287978,
+      "n_ignored": 0,
+      "n_samples": 999,
+      "per_class": [
+        {
+          "class": "no solar pv",
+          "f1": 0.9595902105862265,
+          "precision": 0.9253567508232712,
+          "recall": 0.9964539007092199,
+          "support": 846
+        },
+        {
+          "class": "solar pv",
+          "f1": 0.7053941908713692,
+          "precision": 0.9659090909090909,
+          "recall": 0.5555555555555556,
+          "support": 153
+        }
+      ]
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 64,
+    "early_stopping_patience": 5,
+    "epochs": 12,
+    "expected_tradeoff": "Loses fine detail from downsampling; larger batch with higher lr may be less stable.",
+    "hypothesis": "Downsizing to 128 cuts epoch time ~6x so 12 epochs fit in 5 min; PV panels are still visible at 128, accuracy >0.93.",
+    "input_size": 128,
+    "label_smoothing": 0.0,
+    "lr": 0.003,
+    "max_minutes": 5.0,
+    "model": "cnn_small",
+    "num_workers": 2,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "Native 320 costs ~130s/epoch, 12 epochs would exceed the budget; baseline smoke gave 0.86 (majority-class rate).",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-pv4ger",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T18:03:08+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-pv4ger",
+  "task_type": "classification",
+  "updated_at": "2026-10-31T18:07:30+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

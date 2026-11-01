@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gotrain"
+version = "0.1.0"
+description = "GoTrain: an autonomous geospatial model-training agent for GEO-Bench (AUB ACM x RASID hackathon)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+gotrain = "gotrain.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gotrain*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::UserWarning:geobench"]

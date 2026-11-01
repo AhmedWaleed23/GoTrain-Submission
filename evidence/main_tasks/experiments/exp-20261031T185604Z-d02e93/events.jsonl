@@ -1,0 +1,5 @@
+{"at": "2026-10-31T18:56:04+00:00", "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "created", "tag": "agent", "task": "m-chesapeake"}
+{"at": "2026-10-31T18:56:04+00:00", "error": null, "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:59:16+00:00", "error": null, "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:59:16+00:00", "by": "auto", "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-chesapeake"}
+{"at": "2026-10-31T18:59:19+00:00", "by": "agent", "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "selected_best", "rationale": "Best val mIoU 0.6066 (unet_small, 10 epochs) vs 0.5664 (unet_small, 5 epochs) and 0.5554 (unet_medium, 6 epochs).", "task": "m-chesapeake"}

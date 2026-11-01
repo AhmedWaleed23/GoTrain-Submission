@@ -1,0 +1,552 @@
+{
+  "created_at": "2026-10-31T23:15:23+00:00",
+  "manifest_hash": "c5c1b73338b4ac554f4d3c88dba6302e5e055e3f7b7c0ad8ff45bd89e5dc7091",
+  "tasks": {
+    "m-chesapeake": {
+      "checkpoint_sha256": "15b194f71e93c7f96b1e4ced0275669efad8e8d900a870569cc7e614c5e69848",
+      "device": "cuda",
+      "environment": {
+        "cuda_available": true,
+        "cuda_version": "12.9",
+        "executable": "/opt/conda/bin/python",
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "packages": {
+          "geobench": "1.1.0",
+          "h5py": "3.16.0",
+          "huggingface_hub": "0.36.0",
+          "numpy": "1.26.4",
+          "rasterio": "1.4.3",
+          "strands-agents": "1.63.0"
+        },
+        "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "evaluated_at": "2026-10-31T23:15:37+00:00",
+      "experiment_id": "exp-20261031T191244Z-ad67e7",
+      "metric": {
+        "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "miou",
+        "split": "valid"
+      },
+      "model_version": "mv-m-chesapeake-0001-15b194f7",
+      "n_test_samples": 1000,
+      "started_at": "2026-10-31T23:15:23+00:00",
+      "status": "completed",
+      "test_metric": 0.6404638589150371,
+      "test_metrics": {
+        "confusion_matrix": [
+          [
+            419281,
+            0,
+            55555,
+            7949,
+            0,
+            31,
+            0
+          ],
+          [
+            2,
+            8304566,
+            49513,
+            132636,
+            34940,
+            32012,
+            1107
+          ],
+          [
+            542,
+            26960,
+            22135507,
+            1621365,
+            29813,
+            248850,
+            30809
+          ],
+          [
+            13,
+            80652,
+            2379720,
+            20356381,
+            347814,
+            734923,
+            70377
+          ],
+          [
+            0,
+            35324,
+            53619,
+            472730,
+            722031,
+            120503,
+            12381
+          ],
+          [
+            1,
+            55279,
+            213562,
+            616556,
+            334395,
+            3389633,
+            338132
+          ],
+          [
+            0,
+            9896,
+            134501,
+            196439,
+            56351,
+            949043,
+            724306
+          ]
+        ],
+        "loss": null,
+        "miou": 0.6404638589150371,
+        "n_classes_present": 7,
+        "n_ignored": 0,
+        "n_pixels": 65536000,
+        "per_class": [
+          {
+            "class": "0",
+            "iou": 0.8674049493766731,
+            "predicted_pixels": 419839,
+            "present": true,
+            "target_pixels": 482816
+          },
+          {
+            "class": "1",
+            "iou": 0.9476974882821152,
+            "predicted_pixels": 8512677,
+            "present": true,
+            "target_pixels": 8554776
+          },
+          {
+            "class": "2",
+            "iou": 0.8204317177011566,
+            "predicted_pixels": 25021977,
+            "present": true,
+            "target_pixels": 24093846
+          },
+          {
+            "class": "3",
+            "iou": 0.7534501549085401,
+            "predicted_pixels": 23404056,
+            "present": true,
+            "target_pixels": 23969880
+          },
+          {
+            "class": "4",
+            "iou": 0.32525369374580215,
+            "predicted_pixels": 1525344,
+            "present": true,
+            "target_pixels": 1416588
+          },
+          {
+            "class": "5",
+            "iou": 0.48196666533957444,
+            "predicted_pixels": 5474995,
+            "present": true,
+            "target_pixels": 4947558
+          },
+          {
+            "class": "6",
+            "iou": 0.2870423430513977,
+            "predicted_pixels": 1177112,
+            "present": true,
+            "target_pixels": 2070536
+          }
+        ],
+        "pixel_accuracy": 0.8552811431884766
+      },
+      "val_metric_at_selection": 0.668305193102589
+    },
+    "m-eurosat": {
+      "checkpoint_sha256": "1725b67f5908c4c4427a619a9b1507bbecefd38983157cd132d12d17df377285",
+      "device": "cuda",
+      "environment": {
+        "cuda_available": true,
+        "cuda_version": "12.9",
+        "executable": "/opt/conda/bin/python",
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "packages": {
+          "geobench": "1.1.0",
+          "h5py": "3.16.0",
+          "huggingface_hub": "0.36.0",
+          "numpy": "1.26.4",
+          "rasterio": "1.4.3",
+          "strands-agents": "1.63.0"
+        },
+        "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "evaluated_at": "2026-10-31T23:15:41+00:00",
+      "experiment_id": "exp-20261031T175718Z-2acce6",
+      "metric": {
+        "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "accuracy",
+        "split": "valid"
+      },
+      "model_version": "mv-m-eurosat-0001-1725b67f",
+      "n_test_samples": 1000,
+      "started_at": "2026-10-31T23:15:37+00:00",
+      "status": "completed",
+      "test_metric": 0.901,
+      "test_metrics": {
+        "accuracy": 0.901,
+        "confusion_matrix": [
+          [
+            84,
+            1,
+            8,
+            1,
+            0,
+            1,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            99,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            94,
+            1,
+            0,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            3,
+            81,
+            6,
+            2,
+            3,
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            5,
+            91,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            8,
+            1,
+            0,
+            91,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            3,
+            6,
+            0,
+            4,
+            83,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            5,
+            3,
+            0,
+            3,
+            87,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            93,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            98
+          ]
+        ],
+        "loss": null,
+        "macro_f1": 0.9011233565389688,
+        "n_ignored": 0,
+        "n_samples": 1000,
+        "per_class": [
+          {
+            "class": "Industrial Buildings",
+            "f1": 0.888888888888889,
+            "precision": 0.9438202247191011,
+            "recall": 0.84,
+            "support": 100
+          },
+          {
+            "class": "Residential Buildings",
+            "f1": 0.99,
+            "precision": 0.99,
+            "recall": 0.99,
+            "support": 100
+          },
+          {
+            "class": "Annual Crop",
+            "f1": 0.8623853211009174,
+            "precision": 0.7966101694915254,
+            "recall": 0.94,
+            "support": 100
+          },
+          {
+            "class": "Permanent Crop",
+            "f1": 0.81,
+            "precision": 0.81,
+            "recall": 0.81,
+            "support": 100
+          },
+          {
+            "class": "River",
+            "f1": 0.900990099009901,
+            "precision": 0.8921568627450981,
+            "recall": 0.91,
+            "support": 100
+          },
+          {
+            "class": "Sea and Lake",
+            "f1": 0.9054726368159204,
+            "precision": 0.900990099009901,
+            "recall": 0.91,
+            "support": 100
+          },
+          {
+            "class": "Herbaceous Vegetation",
+            "f1": 0.8512820512820513,
+            "precision": 0.8736842105263158,
+            "recall": 0.83,
+            "support": 100
+          },
+          {
+            "class": "Highway",
+            "f1": 0.8877551020408163,
+            "precision": 0.90625,
+            "recall": 0.87,
+            "support": 100
+          },
+          {
+            "class": "Pasture",
+            "f1": 0.9441624365482233,
+            "precision": 0.9587628865979382,
+            "recall": 0.93,
+            "support": 100
+          },
+          {
+            "class": "Forest",
+            "f1": 0.9702970297029702,
+            "precision": 0.9607843137254902,
+            "recall": 0.98,
+            "support": 100
+          }
+        ]
+      },
+      "val_metric_at_selection": 0.902
+    },
+    "m-pv4ger": {
+      "checkpoint_sha256": "1c42a390fdac352344a48615032c70d4a99975820ba8290a62757f7dade517d4",
+      "device": "cuda",
+      "environment": {
+        "cuda_available": true,
+        "cuda_version": "12.9",
+        "executable": "/opt/conda/bin/python",
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "packages": {
+          "geobench": "1.1.0",
+          "h5py": "3.16.0",
+          "huggingface_hub": "0.36.0",
+          "numpy": "1.26.4",
+          "rasterio": "1.4.3",
+          "strands-agents": "1.63.0"
+        },
+        "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "evaluated_at": "2026-10-31T23:15:47+00:00",
+      "experiment_id": "exp-20261031T181019Z-94b654",
+      "metric": {
+        "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "accuracy",
+        "split": "valid"
+      },
+      "model_version": "mv-m-pv4ger-0001-1c42a390",
+      "n_test_samples": 999,
+      "started_at": "2026-10-31T23:15:41+00:00",
+      "status": "completed",
+      "test_metric": 0.955955955955956,
+      "test_metrics": {
+        "accuracy": 0.955955955955956,
+        "confusion_matrix": [
+          [
+            845,
+            1
+          ],
+          [
+            43,
+            110
+          ]
+        ],
+        "loss": null,
+        "macro_f1": 0.9039792387543253,
+        "n_ignored": 0,
+        "n_samples": 999,
+        "per_class": [
+          {
+            "class": "no solar pv",
+            "f1": 0.9746251441753173,
+            "precision": 0.9515765765765766,
+            "recall": 0.9988179669030733,
+            "support": 846
+          },
+          {
+            "class": "solar pv",
+            "f1": 0.8333333333333333,
+            "precision": 0.990990990990991,
+            "recall": 0.7189542483660131,
+            "support": 153
+          }
+        ]
+      },
+      "val_metric_at_selection": 0.9409409409409409
+    },
+    "m-pv4ger-seg": {
+      "checkpoint_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+      "device": "cuda",
+      "environment": {
+        "cuda_available": true,
+        "cuda_version": "12.9",
+        "executable": "/opt/conda/bin/python",
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "packages": {
+          "geobench": "1.1.0",
+          "h5py": "3.16.0",
+          "huggingface_hub": "0.36.0",
+          "numpy": "1.26.4",
+          "rasterio": "1.4.3",
+          "strands-agents": "1.63.0"
+        },
+        "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "evaluated_at": "2026-10-31T23:15:50+00:00",
+      "experiment_id": "exp-20261031T182357Z-34155d",
+      "metric": {
+        "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "miou",
+        "split": "valid"
+      },
+      "model_version": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+      "n_test_samples": 403,
+      "started_at": "2026-10-31T23:15:47+00:00",
+      "status": "completed",
+      "test_metric": 0.914438957622814,
+      "test_metrics": {
+        "confusion_matrix": [
+          [
+            33442023,
+            504128
+          ],
+          [
+            587561,
+            6733488
+          ]
+        ],
+        "foreground_iou": 0.8604901844392785,
+        "loss": null,
+        "miou": 0.914438957622814,
+        "n_classes_present": 2,
+        "n_ignored": 0,
+        "n_pixels": 41267200,
+        "per_class": [
+          {
+            "class": "no solar pv",
+            "iou": 0.9683877308063494,
+            "predicted_pixels": 34029584,
+            "present": true,
+            "target_pixels": 33946151
+          },
+          {
+            "class": "solar pv",
+            "iou": 0.8604901844392785,
+            "predicted_pixels": 7237616,
+            "present": true,
+            "target_pixels": 7321049
+          }
+        ],
+        "pixel_accuracy": 0.9735458427031638
+      },
+      "val_metric_at_selection": 0.9229632830171473
+    }
+  },
+  "updated_at": "2026-10-31T23:15:50+00:00"
+}

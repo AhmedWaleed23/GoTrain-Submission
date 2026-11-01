@@ -1,0 +1,14 @@
+{
+  "name": "m-pv4ger-seg",
+  "task_type": "segmentation",
+  "benchmark": "segmentation_v1.0",
+  "hf_filename": "segmentation_v1.0/m-pv4ger-seg.zip",
+  "selection_metric": "miou",
+  "n_classes": 2,
+  "class_names": ["no solar pv", "solar pv"],
+  "in_channels": 3,
+  "patch_size": [320, 320],
+  "rgb_indices": [0, 1, 2],
+  "band_order_note": "Stored order Red, Green, Blue (uint8 aerial imagery); mask values {0,1}.",
+  "notes": "Aerial RGB 0.1 m, 320x320, 3000/403/403 train/valid/test. Foreground (solar pv) is a small fraction of pixels; mIoU is the frozen metric, foreground IoU is reported as a diagnostic."
+}

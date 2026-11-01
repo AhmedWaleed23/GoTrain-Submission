@@ -1,0 +1,19 @@
+{"at": "2026-10-31T23:23:17+00:00", "experiment_id": "exp-20261031T232317Z-05cee9", "kind": "created", "tag": "agent", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:23:17+00:00", "error": null, "experiment_id": "exp-20261031T232317Z-05cee9", "kind": "status", "status": "running"}
+{"at": "2026-10-31T23:24:23+00:00", "error": null, "experiment_id": "exp-20261031T232317Z-05cee9", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T23:24:23+00:00", "by": "auto", "experiment_id": "exp-20261031T232317Z-05cee9", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:24:27+00:00", "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "created", "tag": "agent", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:24:27+00:00", "error": null, "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "status", "status": "running"}
+{"at": "2026-10-31T23:27:36+00:00", "error": null, "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T23:27:36+00:00", "by": "auto", "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:27:38+00:00", "by": "agent", "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "selected_best", "rationale": "unet_medium 20 epochs val mIoU 0.8333 vs unet_small 12 epochs 0.8231.", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:30:37+00:00", "experiment_id": "exp-20261031T233037Z-dd252d", "kind": "created", "tag": "agent", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:30:37+00:00", "error": null, "experiment_id": "exp-20261031T233037Z-dd252d", "kind": "status", "status": "running"}
+{"at": "2026-10-31T23:34:51+00:00", "error": null, "experiment_id": "exp-20261031T233037Z-dd252d", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T23:34:55+00:00", "by": "agent", "experiment_id": "exp-20261031T233037Z-dd252d", "kind": "selected_best", "rationale": "Highest val mIoU 0.8338 (vs 0.8333 for 20-epoch unet_medium, 0.8231 for unet_small). Gains have plateaued.", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:40:11+00:00", "experiment_id": "exp-20261031T234011Z-fa5d0b", "kind": "created", "tag": "higher_resolution", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:40:11+00:00", "error": null, "experiment_id": "exp-20261031T234011Z-fa5d0b", "kind": "status", "status": "running"}
+{"at": "2026-10-31T23:52:15+00:00", "error": null, "experiment_id": "exp-20261031T234011Z-fa5d0b", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T23:56:26+00:00", "by": "manual", "experiment_id": "exp-20261031T234011Z-fa5d0b", "kind": "selected_best", "rationale": "Selected using validation only: mean IoU improved from 0.8338 to 0.8477 and cattle IoU from 0.6762 to 0.7035. Best checkpoint at epoch 20. Higher-resolution recipe was proposed manually. Test split remains untouched.", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:57:11+00:00", "experiment_id": "exp-20261031T234011Z-fa5d0b", "kind": "model_version_stored", "version_id": "mv-m-nz-cattle-0001-18138fd9"}
+{"at": "2026-11-01T00:02:45+00:00", "experiment_id": "exp-20261031T234011Z-fa5d0b", "kind": "frozen_for_final_eval", "manifest_hash": "695dca472bd2ce5d2f0320fd45745d2c434526bc6840ac1c7cc8449fc9e89ba1", "task": "m-nz-cattle"}

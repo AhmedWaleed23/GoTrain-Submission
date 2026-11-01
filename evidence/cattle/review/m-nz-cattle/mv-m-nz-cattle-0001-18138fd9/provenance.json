@@ -1,0 +1,195 @@
+{
+  "built_at": "2026-11-01T00:28:40+00:00",
+  "data": {
+    "class_names": [
+      "no cattle",
+      "cattle"
+    ],
+    "dataset_source": "geobench",
+    "n_images_in_split": 66,
+    "n_images_reviewed": 66,
+    "native_mask_size": [
+      500,
+      500
+    ],
+    "partial": false,
+    "rgb_indices": [
+      0,
+      1,
+      2
+    ],
+    "split": "valid"
+  },
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "format": "gotrain-review-v1",
+  "identity": {
+    "architecture": "unet_medium",
+    "checkpoint_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+    "dataset_source": "geobench",
+    "experiment_id": "exp-20261031T234011Z-fa5d0b",
+    "input_size": 512,
+    "model_version": "mv-m-nz-cattle-0001-18138fd9",
+    "n_images": 66,
+    "n_images_in_split": 66,
+    "normalization_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba",
+    "partial": false,
+    "split": "valid",
+    "task": "m-nz-cattle"
+  },
+  "identity_hash": "8ec56bcfa079a09d5014850929dae6b9a4500d49cec11487449e02c5fa742a76",
+  "inference": {
+    "augmentation": false,
+    "batch_size": 4,
+    "device": "cuda",
+    "logits_upsampled_to_native": true,
+    "precision": "fp32",
+    "seconds": 6.56,
+    "seconds_per_image": 0.0994
+  },
+  "metric_comparison": {
+    "abs_diff": 9.397789016207803e-06,
+    "note": "recorded value came from training-time validation (possibly AMP on CUDA); the review recomputes in fp32",
+    "recorded_val_miou": 0.847690075670909,
+    "review_val_miou": 0.8476994734599252,
+    "tolerance": 0.005,
+    "within_tolerance": true
+  },
+  "model": {
+    "architecture": {
+      "class_names": [
+        "no cattle",
+        "cattle"
+      ],
+      "ignore_index": null,
+      "in_channels": 3,
+      "n_classes": 2,
+      "name": "unet_medium",
+      "parameters": 7763074
+    },
+    "checkpoint_path": "/home/sagemaker-user/gotrain_cattle_runs/experiments/exp-20261031T234011Z-fa5d0b/checkpoints/best.pt",
+    "checkpoint_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+    "experiment_id": "exp-20261031T234011Z-fa5d0b",
+    "extra": {
+      "home": "/home/sagemaker-user/gotrain_cattle_runs"
+    },
+    "input_size": 512,
+    "mode": "home",
+    "model_version": "mv-m-nz-cattle-0001-18138fd9",
+    "normalization_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba",
+    "normalization_path": "/home/sagemaker-user/gotrain_cattle_runs/normalization/m-nz-cattle.json",
+    "reference_check": {
+      "argmax_agreement": 1.0,
+      "device": "cuda",
+      "file": "/home/sagemaker-user/gotrain_cattle_runs/registry/models/mv-m-nz-cattle-0001-18138fd9/reference.npz",
+      "max_abs_diff": 5.245208740234375e-06,
+      "n": 4,
+      "scope": "stored reference batch only (4 validation inputs), not full-split accuracy",
+      "tolerance": {
+        "atol": 0.001,
+        "note": "fp32 eval on either device; AMP is not used for verification",
+        "rtol": 0.001
+      },
+      "within_tolerance": true
+    },
+    "run_config": {
+      "augment": true,
+      "batch_size": 4,
+      "early_stopping_patience": 10,
+      "epochs": 30,
+      "expected_tradeoff": "",
+      "hypothesis": "Test whether higher-resolution inputs and a lower learning rate improve segmentation of small cattle.",
+      "input_size": 512,
+      "label_smoothing": 0.0,
+      "lr": 0.001,
+      "max_minutes": 12.0,
+      "model": "unet_medium",
+      "num_workers": 0,
+      "parent_experiment": null,
+      "precision": "auto",
+      "rationale": "",
+      "scheduler": "cosine",
+      "screening": false,
+      "seed": 0,
+      "subset_fraction": 1.0,
+      "tag": "higher_resolution",
+      "task": "m-nz-cattle",
+      "val_limit": null,
+      "weight_decay": 0.0001
+    },
+    "selected_by": "manual",
+    "task": "m-nz-cattle",
+    "validation_metric": {
+      "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+      "diagnostics": {
+        "foreground_iou": 0.7035231827403632,
+        "miou": 0.847690075670909,
+        "n_classes_present": 2,
+        "pixel_accuracy": 0.9920113333333334
+      },
+      "direction": "max",
+      "name": "miou",
+      "split": "valid",
+      "value": 0.847690075670909
+    }
+  },
+  "split_metrics_fp32": {
+    "confusion_matrix": [
+      [
+        16055405,
+        71790
+      ],
+      [
+        60014,
+        312791
+      ]
+    ],
+    "foreground_iou": 0.7035414253421653,
+    "miou": 0.8476994734599252,
+    "n_classes_present": 2,
+    "n_pixels": 16500000,
+    "per_class": [
+      {
+        "class": "no cattle",
+        "iou": 0.9918575215776851,
+        "predicted_pixels": 16115419,
+        "present": true,
+        "target_pixels": 16127195
+      },
+      {
+        "class": "cattle",
+        "iou": 0.7035414253421653,
+        "predicted_pixels": 384581,
+        "present": true,
+        "target_pixels": 372805
+      }
+    ],
+    "pixel_accuracy": 0.9920118787878788
+  },
+  "synthetic": false,
+  "thumbnails": {
+    "entropy_levels": 32,
+    "entropy_size": 160,
+    "masks_native": true,
+    "rgb_format": "jpeg",
+    "rgb_size": 256
+  }
+}

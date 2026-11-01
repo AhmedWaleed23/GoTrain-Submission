@@ -1,0 +1,378 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T175718Z-2acce6/checkpoints/best.pt",
+    "best_sha256": "1725b67f5908c4c4427a619a9b1507bbecefd38983157cd132d12d17df377285",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T175718Z-2acce6/checkpoints/last.pt",
+    "last_sha256": "2c34f4eaa241e22eb78c440f8c7484d8b3dce7600b3403475a2fabc5897fb6b3"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 64,
+    "effective_lr": 0.003,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 74.52778122300151
+  },
+  "config_hash": "37875448f4da33ac1889d16e4be3f2bd40905b92916a6ebc70a004a4e079325e",
+  "created_at": "2026-10-31T17:57:18+00:00",
+  "dataset": {
+    "band_names": [
+      "01 - Coastal aerosol",
+      "02 - Blue",
+      "03 - Green",
+      "04 - Red",
+      "05 - Vegetation Red Edge",
+      "06 - Vegetation Red Edge",
+      "07 - Vegetation Red Edge",
+      "08 - NIR",
+      "08A - Vegetation Red Edge",
+      "09 - Water vapour",
+      "10 - SWIR - Cirrus",
+      "11 - SWIR",
+      "12 - SWIR"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/classification_v1.0/m-eurosat",
+    "input_size": [
+      64,
+      64
+    ],
+    "resized": false,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 1000,
+      "train": 2000,
+      "valid": 1000
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 2000,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 1000
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "May be cut by time cap; higher lr risks instability.",
+  "experiment_id": "exp-20261031T175718Z-2acce6",
+  "finished_at": "2026-10-31T17:58:34+00:00",
+  "hypothesis": "Larger batch cuts per-epoch time; cnn_small with lr 3e-3 should reach ~80%+ in 10 epochs.",
+  "metric": {
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "Industrial Buildings",
+      "Residential Buildings",
+      "Annual Crop",
+      "Permanent Crop",
+      "River",
+      "Sea and Lake",
+      "Herbaceous Vegetation",
+      "Highway",
+      "Pasture",
+      "Forest"
+    ],
+    "ignore_index": null,
+    "in_channels": 13,
+    "n_classes": 10,
+    "name": "cnn_small",
+    "parameters": 588330
+  },
+  "normalization": {
+    "n_samples_used": 2000,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-eurosat.json",
+    "split": "train",
+    "stats_hash": "5fb7bcce78b3e419e2996331f04618ad513fb7d497c5b2ff709fd78f6dca83d9"
+  },
+  "parent_experiment": null,
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "Only 3 min/run and 2 runs left; smoke test gave 37s/epoch estimate at bs16, bigger batch should be faster.",
+  "result": {
+    "best_epoch": 10,
+    "best_val_metric": 0.902,
+    "epochs_completed": 10,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "accuracy": 0.902,
+      "confusion_matrix": [
+        [
+          80,
+          1,
+          4,
+          3,
+          0,
+          6,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          96,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          90,
+          2,
+          0,
+          3,
+          1,
+          2,
+          2,
+          0
+        ],
+        [
+          4,
+          0,
+          7,
+          70,
+          6,
+          0,
+          3,
+          4,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          97,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          3,
+          0,
+          0,
+          93,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          7,
+          2,
+          0,
+          2,
+          87,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          3,
+          0,
+          2,
+          92,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          98,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          99
+        ]
+      ],
+      "conventions": {
+        "accuracy": "overall accuracy over the full split (torchmetrics multiclass Accuracy)",
+        "macro_f1": "unweighted mean of per-class F1; absent classes count as 0 (diagnostic only)"
+      },
+      "loss": 0.3093827599659562,
+      "macro_f1": 0.9007406098535439,
+      "n_ignored": 0,
+      "n_samples": 1000,
+      "per_class": [
+        {
+          "class": "Industrial Buildings",
+          "f1": 0.8510638297872342,
+          "precision": 0.9090909090909091,
+          "recall": 0.8,
+          "support": 100
+        },
+        {
+          "class": "Residential Buildings",
+          "f1": 0.9746192893401014,
+          "precision": 0.9896907216494846,
+          "recall": 0.96,
+          "support": 100
+        },
+        {
+          "class": "Annual Crop",
+          "f1": 0.8372093023255814,
+          "precision": 0.782608695652174,
+          "recall": 0.9,
+          "support": 100
+        },
+        {
+          "class": "Permanent Crop",
+          "f1": 0.7821229050279329,
+          "precision": 0.8860759493670886,
+          "recall": 0.7,
+          "support": 100
+        },
+        {
+          "class": "River",
+          "f1": 0.9417475728155339,
+          "precision": 0.9150943396226415,
+          "recall": 0.97,
+          "support": 100
+        },
+        {
+          "class": "Sea and Lake",
+          "f1": 0.9029126213592233,
+          "precision": 0.8773584905660378,
+          "recall": 0.93,
+          "support": 100
+        },
+        {
+          "class": "Herbaceous Vegetation",
+          "f1": 0.87,
+          "precision": 0.87,
+          "recall": 0.87,
+          "support": 100
+        },
+        {
+          "class": "Highway",
+          "f1": 0.9154228855721394,
+          "precision": 0.9108910891089109,
+          "recall": 0.92,
+          "support": 100
+        },
+        {
+          "class": "Pasture",
+          "f1": 0.9423076923076924,
+          "precision": 0.9074074074074074,
+          "recall": 0.98,
+          "support": 100
+        },
+        {
+          "class": "Forest",
+          "f1": 0.99,
+          "precision": 0.99,
+          "recall": 0.99,
+          "support": 100
+        }
+      ]
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 64,
+    "early_stopping_patience": 5,
+    "epochs": 10,
+    "expected_tradeoff": "May be cut by time cap; higher lr risks instability.",
+    "hypothesis": "Larger batch cuts per-epoch time; cnn_small with lr 3e-3 should reach ~80%+ in 10 epochs.",
+    "input_size": null,
+    "label_smoothing": 0.0,
+    "lr": 0.003,
+    "max_minutes": 3.0,
+    "model": "cnn_small",
+    "num_workers": 2,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "Only 3 min/run and 2 runs left; smoke test gave 37s/epoch estimate at bs16, bigger batch should be faster.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-eurosat",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T17:57:18+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-eurosat",
+  "task_type": "classification",
+  "updated_at": "2026-10-31T17:58:34+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

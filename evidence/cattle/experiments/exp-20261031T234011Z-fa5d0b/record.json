@@ -1,0 +1,191 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T234011Z-fa5d0b/checkpoints/best.pt",
+    "best_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T234011Z-fa5d0b/checkpoints/last.pt",
+    "last_sha256": "4f30df555325f64bc33945e6226ae64adfe96b92bc0aa03161f54d9377e126d4"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 4,
+    "effective_lr": 0.001,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 721.9030208059994
+  },
+  "config_hash": "af34914148000b0545ae85fd3bc8acadd58874b7fffd641695858b643780f389",
+  "created_at": "2026-10-31T23:40:11+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-nz-cattle",
+    "input_size": 512,
+    "resized": true,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 65,
+      "train": 524,
+      "valid": 66
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 524,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 66
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "",
+  "experiment_id": "exp-20261031T234011Z-fa5d0b",
+  "finished_at": "2026-10-31T23:52:15+00:00",
+  "hypothesis": "Test whether higher-resolution inputs and a lower learning rate improve segmentation of small cattle.",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "no cattle",
+      "cattle"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "unet_medium",
+    "parameters": 7763074
+  },
+  "normalization": {
+    "n_samples_used": 524,
+    "path": "/home/sagemaker-user/gotrain_cattle_runs/normalization/m-nz-cattle.json",
+    "split": "train",
+    "stats_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba"
+  },
+  "parent_experiment": null,
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "",
+  "result": {
+    "best_epoch": 20,
+    "best_val_metric": 0.847690075670909,
+    "epochs_completed": 28,
+    "stop_reason": "time_budget",
+    "val_metrics_at_best": {
+      "confusion_matrix": [
+        [
+          16055402,
+          71793
+        ],
+        [
+          60020,
+          312785
+        ]
+      ],
+      "conventions": {
+        "miou": "macro mean of per-class IoU from the split-level confusion matrix; classes absent from both target and prediction are excluded (torchmetrics multiclass JaccardIndex, average=macro)",
+        "pixel_accuracy": "diagnostic only; misleading on imbalanced masks"
+      },
+      "foreground_iou": 0.7035231827403632,
+      "loss": 0.01848515457309344,
+      "miou": 0.847690075670909,
+      "n_classes_present": 2,
+      "n_ignored": 0,
+      "n_pixels": 16500000,
+      "per_class": [
+        {
+          "class": "no cattle",
+          "iou": 0.9918569686014549,
+          "predicted_pixels": 16115422,
+          "present": true,
+          "target_pixels": 16127195
+        },
+        {
+          "class": "cattle",
+          "iou": 0.7035231827403632,
+          "predicted_pixels": 384578,
+          "present": true,
+          "target_pixels": 372805
+        }
+      ],
+      "pixel_accuracy": 0.9920113333333334
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 4,
+    "early_stopping_patience": 10,
+    "epochs": 30,
+    "expected_tradeoff": "",
+    "hypothesis": "Test whether higher-resolution inputs and a lower learning rate improve segmentation of small cattle.",
+    "input_size": 512,
+    "label_smoothing": 0.0,
+    "lr": 0.001,
+    "max_minutes": 12.0,
+    "model": "unet_medium",
+    "num_workers": 0,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "higher_resolution",
+    "task": "m-nz-cattle",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T23:40:11+00:00",
+  "status": "completed",
+  "tag": "higher_resolution",
+  "task": "m-nz-cattle",
+  "task_type": "segmentation",
+  "updated_at": "2026-10-31T23:52:15+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

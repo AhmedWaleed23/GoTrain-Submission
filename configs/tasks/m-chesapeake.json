@@ -1,0 +1,31 @@
+{
+  "name": "m-chesapeake",
+  "task_type": "segmentation",
+  "benchmark": "segmentation_v1.0",
+  "hf_filename": "segmentation_v1.0/m-chesapeake.zip",
+  "selection_metric": "miou",
+  "n_classes": 7,
+  "class_names": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "in_channels": 4,
+  "patch_size": [
+    256,
+    256
+  ],
+  "rgb_indices": [
+    0,
+    1,
+    2
+  ],
+  "ignore_index": null,
+  "diagnostic_exclude_classes": [],
+  "band_order_note": "Stored order Red, Green, Blue, NearInfrared (1 m aerial). Verified by `inspect` before training.",
+  "notes": "Report macro IoU over all seven stored numeric label IDs, with no ignored pixels. Semantic label mapping in the converted release is not verified; use numeric names. Do not describe class 6 as no-data. The separate validation diagnostic ignoring true label 0 is not the seven-class selection metric."
+}

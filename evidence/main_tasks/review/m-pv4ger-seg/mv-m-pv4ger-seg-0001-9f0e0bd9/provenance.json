@@ -1,0 +1,195 @@
+{
+  "built_at": "2026-10-31T22:50:25+00:00",
+  "data": {
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "dataset_source": "geobench",
+    "n_images_in_split": 403,
+    "n_images_reviewed": 403,
+    "native_mask_size": [
+      320,
+      320
+    ],
+    "partial": false,
+    "rgb_indices": [
+      0,
+      1,
+      2
+    ],
+    "split": "valid"
+  },
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "format": "gotrain-review-v1",
+  "identity": {
+    "architecture": "unet_small",
+    "checkpoint_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+    "dataset_source": "geobench",
+    "experiment_id": "exp-20261031T182357Z-34155d",
+    "input_size": 160,
+    "model_version": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+    "n_images": 403,
+    "n_images_in_split": 403,
+    "normalization_hash": "9dbf09291ec520b9b99ea66416defa9393d6f7f6a00c16cc4f556d43f6e55ef8",
+    "partial": false,
+    "split": "valid",
+    "task": "m-pv4ger-seg"
+  },
+  "identity_hash": "be51a73069bad587b037620f834e42b9fedcebe1ac9651ace9b2e77c5857cac0",
+  "inference": {
+    "augmentation": false,
+    "batch_size": 8,
+    "device": "cuda",
+    "logits_upsampled_to_native": true,
+    "precision": "fp32",
+    "seconds": 19.23,
+    "seconds_per_image": 0.0477
+  },
+  "metric_comparison": {
+    "abs_diff": 7.526257668311054e-06,
+    "note": "recorded value came from training-time validation (possibly AMP on CUDA); the review recomputes in fp32",
+    "recorded_val_miou": 0.9229632830171473,
+    "review_val_miou": 0.9229557567594789,
+    "tolerance": 0.005,
+    "within_tolerance": true
+  },
+  "model": {
+    "architecture": {
+      "class_names": [
+        "no solar pv",
+        "solar pv"
+      ],
+      "ignore_index": null,
+      "in_channels": 3,
+      "n_classes": 2,
+      "name": "unet_small",
+      "parameters": 1942594
+    },
+    "checkpoint_path": "/home/sagemaker-user/GoTrain/gotrain_runs/experiments/exp-20261031T182357Z-34155d/checkpoints/best.pt",
+    "checkpoint_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+    "experiment_id": "exp-20261031T182357Z-34155d",
+    "extra": {
+      "home": "/home/sagemaker-user/GoTrain/gotrain_runs"
+    },
+    "input_size": 160,
+    "mode": "home",
+    "model_version": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+    "normalization_hash": "9dbf09291ec520b9b99ea66416defa9393d6f7f6a00c16cc4f556d43f6e55ef8",
+    "normalization_path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger-seg.json",
+    "reference_check": {
+      "argmax_agreement": 1.0,
+      "device": "cuda",
+      "file": "/home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-pv4ger-seg-0001-9f0e0bd9/reference.npz",
+      "max_abs_diff": 3.993511199951172e-06,
+      "n": 4,
+      "scope": "stored reference batch only (4 validation inputs), not full-split accuracy",
+      "tolerance": {
+        "atol": 0.001,
+        "note": "fp32 eval on either device; AMP is not used for verification",
+        "rtol": 0.001
+      },
+      "within_tolerance": true
+    },
+    "run_config": {
+      "augment": true,
+      "batch_size": 16,
+      "early_stopping_patience": 5,
+      "epochs": 14,
+      "expected_tradeoff": "Lose fine detail from downscaling; higher lr may be slightly unstable but cosine schedule helps.",
+      "hypothesis": "Downscaling to 160 cuts compute ~4x, enabling ~14 epochs in the 5 min cap; should well exceed the 1-epoch smoke mIoU of 0.41.",
+      "input_size": 160,
+      "label_smoothing": 0.0,
+      "lr": 0.003,
+      "max_minutes": 5.0,
+      "model": "unet_small",
+      "num_workers": 2,
+      "parent_experiment": null,
+      "precision": "auto",
+      "rationale": "Only one experiment and ~14 min left; native speed is 64s/epoch, so only ~4 epochs would fit natively.",
+      "scheduler": "cosine",
+      "screening": false,
+      "seed": 0,
+      "subset_fraction": 1.0,
+      "tag": "agent",
+      "task": "m-pv4ger-seg",
+      "val_limit": null,
+      "weight_decay": 0.0001
+    },
+    "selected_by": "agent",
+    "task": "m-pv4ger-seg",
+    "validation_metric": {
+      "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+      "diagnostics": {
+        "foreground_iou": 0.8776153245467778,
+        "miou": 0.9229632830171473,
+        "n_classes_present": 2,
+        "pixel_accuracy": 0.9741788151364764
+      },
+      "direction": "max",
+      "name": "miou",
+      "split": "valid",
+      "value": 0.9229632830171473
+    }
+  },
+  "split_metrics_fp32": {
+    "confusion_matrix": [
+      [
+        32560870,
+        473383
+      ],
+      [
+        592255,
+        7640692
+      ]
+    ],
+    "foreground_iou": 0.8776019287116386,
+    "miou": 0.9229557567594789,
+    "n_classes_present": 2,
+    "n_pixels": 41267200,
+    "per_class": [
+      {
+        "class": "no solar pv",
+        "iou": 0.9683095848073193,
+        "predicted_pixels": 33153125,
+        "present": true,
+        "target_pixels": 33034253
+      },
+      {
+        "class": "solar pv",
+        "iou": 0.8776019287116386,
+        "predicted_pixels": 8114075,
+        "present": true,
+        "target_pixels": 8232947
+      }
+    ],
+    "pixel_accuracy": 0.9741771188740694
+  },
+  "synthetic": false,
+  "thumbnails": {
+    "entropy_levels": 32,
+    "entropy_size": 160,
+    "masks_native": true,
+    "rgb_format": "jpeg",
+    "rgb_size": 256
+  }
+}

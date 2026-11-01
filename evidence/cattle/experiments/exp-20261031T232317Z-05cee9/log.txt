@@ -1,0 +1,14 @@
+[2026-10-31T23:23:17+00:00] exp-20261031T232317Z-05cee9: unet_small on m-nz-cattle (geobench), 524 train / 66 valid samples, device cuda
+[2026-10-31T23:23:26+00:00] epoch 1/12 train_loss=0.1752 val_miou=0.7183 best=0.7183@1 (6s+1s)
+[2026-10-31T23:23:31+00:00] epoch 2/12 train_loss=0.0494 val_miou=0.7600 best=0.7600@2 (4s+1s)
+[2026-10-31T23:23:36+00:00] epoch 3/12 train_loss=0.0411 val_miou=0.7382 best=0.7600@2 (4s+1s)
+[2026-10-31T23:23:41+00:00] epoch 4/12 train_loss=0.0373 val_miou=0.6989 best=0.7600@2 (4s+1s)
+[2026-10-31T23:23:47+00:00] epoch 5/12 train_loss=0.0328 val_miou=0.7607 best=0.7607@5 (4s+1s)
+[2026-10-31T23:23:52+00:00] epoch 6/12 train_loss=0.0307 val_miou=0.7748 best=0.7748@6 (4s+1s)
+[2026-10-31T23:23:57+00:00] epoch 7/12 train_loss=0.0290 val_miou=0.8001 best=0.8001@7 (4s+1s)
+[2026-10-31T23:24:02+00:00] epoch 8/12 train_loss=0.0282 val_miou=0.8137 best=0.8137@8 (4s+1s)
+[2026-10-31T23:24:07+00:00] epoch 9/12 train_loss=0.0277 val_miou=0.8030 best=0.8137@8 (4s+1s)
+[2026-10-31T23:24:13+00:00] epoch 10/12 train_loss=0.0265 val_miou=0.8158 best=0.8158@10 (4s+1s)
+[2026-10-31T23:24:18+00:00] epoch 11/12 train_loss=0.0262 val_miou=0.8176 best=0.8176@11 (4s+1s)
+[2026-10-31T23:24:23+00:00] epoch 12/12 train_loss=0.0255 val_miou=0.8231 best=0.8231@12 (4s+1s)
+[2026-10-31T23:24:23+00:00] exp-20261031T232317Z-05cee9: completed (max_epochs), best miou=0.8230807196994356 at epoch 12

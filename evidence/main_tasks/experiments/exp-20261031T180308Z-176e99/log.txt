@@ -1,0 +1,14 @@
+[2026-10-31T18:03:08+00:00] exp-20261031T180308Z-176e99: cnn_small on m-pv4ger (geobench), 11814 train / 999 valid samples, device cuda
+[2026-10-31T18:03:44+00:00] epoch 1/12 train_loss=0.2686 val_accuracy=0.8869 best=0.8869@1 (32s+3s)
+[2026-10-31T18:04:10+00:00] epoch 2/12 train_loss=0.2485 val_accuracy=0.9029 best=0.9029@2 (24s+1s)
+[2026-10-31T18:04:29+00:00] epoch 3/12 train_loss=0.2391 val_accuracy=0.9079 best=0.9079@3 (18s+2s)
+[2026-10-31T18:04:50+00:00] epoch 4/12 train_loss=0.2326 val_accuracy=0.8999 best=0.9079@3 (19s+2s)
+[2026-10-31T18:05:10+00:00] epoch 5/12 train_loss=0.2045 val_accuracy=0.9099 best=0.9099@5 (18s+2s)
+[2026-10-31T18:05:30+00:00] epoch 6/12 train_loss=0.1802 val_accuracy=0.9119 best=0.9119@6 (18s+1s)
+[2026-10-31T18:05:50+00:00] epoch 7/12 train_loss=0.1638 val_accuracy=0.9219 best=0.9219@7 (18s+2s)
+[2026-10-31T18:06:10+00:00] epoch 8/12 train_loss=0.1520 val_accuracy=0.9189 best=0.9219@7 (18s+2s)
+[2026-10-31T18:06:29+00:00] epoch 9/12 train_loss=0.1422 val_accuracy=0.9209 best=0.9219@7 (18s+2s)
+[2026-10-31T18:06:49+00:00] epoch 10/12 train_loss=0.1318 val_accuracy=0.9189 best=0.9219@7 (18s+1s)
+[2026-10-31T18:07:09+00:00] epoch 11/12 train_loss=0.1235 val_accuracy=0.9269 best=0.9269@11 (18s+2s)
+[2026-10-31T18:07:29+00:00] epoch 12/12 train_loss=0.1245 val_accuracy=0.9289 best=0.9289@12 (19s+2s)
+[2026-10-31T18:07:30+00:00] exp-20261031T180308Z-176e99: completed (max_epochs), best accuracy=0.928928928928929 at epoch 12

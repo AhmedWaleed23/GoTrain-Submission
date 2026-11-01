@@ -1,0 +1,12 @@
+[2026-10-31T18:56:04+00:00] exp-20261031T185604Z-d02e93: unet_small on m-chesapeake (geobench), 3000 train / 1000 valid samples, device cuda
+[2026-10-31T18:56:23+00:00] epoch 1/10 train_loss=1.0429 val_miou=0.5059 best=0.5059@1 (15s+3s)
+[2026-10-31T18:56:42+00:00] epoch 2/10 train_loss=0.6762 val_miou=0.5160 best=0.5160@2 (16s+3s)
+[2026-10-31T18:57:02+00:00] epoch 3/10 train_loss=0.6317 val_miou=0.5264 best=0.5264@3 (16s+4s)
+[2026-10-31T18:57:22+00:00] epoch 4/10 train_loss=0.6079 val_miou=0.5350 best=0.5350@4 (16s+4s)
+[2026-10-31T18:57:41+00:00] epoch 5/10 train_loss=0.5793 val_miou=0.5542 best=0.5542@5 (16s+3s)
+[2026-10-31T18:58:00+00:00] epoch 6/10 train_loss=0.5415 val_miou=0.5803 best=0.5803@6 (16s+3s)
+[2026-10-31T18:58:19+00:00] epoch 7/10 train_loss=0.5249 val_miou=0.5777 best=0.5803@6 (16s+3s)
+[2026-10-31T18:58:38+00:00] epoch 8/10 train_loss=0.5156 val_miou=0.5885 best=0.5885@8 (16s+3s)
+[2026-10-31T18:58:57+00:00] epoch 9/10 train_loss=0.5028 val_miou=0.6066 best=0.6066@9 (16s+3s)
+[2026-10-31T18:59:16+00:00] epoch 10/10 train_loss=0.4962 val_miou=0.6031 best=0.6066@9 (16s+3s)
+[2026-10-31T18:59:16+00:00] exp-20261031T185604Z-d02e93: completed (max_epochs), best miou=0.6066257637873264 at epoch 9

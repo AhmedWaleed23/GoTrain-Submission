@@ -1,0 +1,12 @@
+[2026-10-31T17:57:18+00:00] exp-20261031T175718Z-2acce6: cnn_small on m-eurosat (geobench), 2000 train / 1000 valid samples, device cuda
+[2026-10-31T17:57:29+00:00] epoch 1/10 train_loss=1.3052 val_accuracy=0.5270 best=0.5270@1 (6s+3s)
+[2026-10-31T17:57:37+00:00] epoch 2/10 train_loss=0.9551 val_accuracy=0.7140 best=0.7140@2 (5s+3s)
+[2026-10-31T17:57:43+00:00] epoch 3/10 train_loss=0.7683 val_accuracy=0.7210 best=0.7210@3 (5s+2s)
+[2026-10-31T17:57:51+00:00] epoch 4/10 train_loss=0.6727 val_accuracy=0.7900 best=0.7900@4 (5s+2s)
+[2026-10-31T17:57:58+00:00] epoch 5/10 train_loss=0.5804 val_accuracy=0.8220 best=0.8220@5 (5s+2s)
+[2026-10-31T17:58:05+00:00] epoch 6/10 train_loss=0.5293 val_accuracy=0.8720 best=0.8720@6 (5s+2s)
+[2026-10-31T17:58:12+00:00] epoch 7/10 train_loss=0.4797 val_accuracy=0.8750 best=0.8750@7 (5s+2s)
+[2026-10-31T17:58:19+00:00] epoch 8/10 train_loss=0.3843 val_accuracy=0.8950 best=0.8950@8 (5s+2s)
+[2026-10-31T17:58:27+00:00] epoch 9/10 train_loss=0.3557 val_accuracy=0.9010 best=0.9010@9 (5s+2s)
+[2026-10-31T17:58:34+00:00] epoch 10/10 train_loss=0.3465 val_accuracy=0.9020 best=0.9020@10 (5s+2s)
+[2026-10-31T17:58:34+00:00] exp-20261031T175718Z-2acce6: completed (max_epochs), best accuracy=0.902 at epoch 10

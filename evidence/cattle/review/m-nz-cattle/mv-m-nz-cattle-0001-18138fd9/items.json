@@ -1,0 +1,1260 @@
+{
+  "format": "gotrain-review-v1",
+  "identity_hash": "8ec56bcfa079a09d5014850929dae6b9a4500d49cec11487449e02c5fa742a76",
+  "items": [
+    {
+      "both_empty": false,
+      "foreground_iou": 0.756876,
+      "index": 0,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.021277,
+      "misclassified_pixels": 1105,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.015504,
+      "priority": 0.189447,
+      "rank": 39,
+      "sample_id": "594_Hamilton_(2019)_175.1976,-37.8026_shifted",
+      "stem": "0000",
+      "true_foreground_fraction": 0.016436,
+      "uncertain_pixel_fraction": 0.017124
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.75352,
+      "index": 1,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.027583,
+      "misclassified_pixels": 1593,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.023228,
+      "priority": 0.249631,
+      "rank": 32,
+      "sample_id": "434_Hamilton_(2016-2017)_175.2041380277435,-37.73226681919144_shifted",
+      "stem": "0001",
+      "true_foreground_fraction": 0.022104,
+      "uncertain_pixel_fraction": 0.022236
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.717708,
+      "index": 2,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.029525,
+      "misclassified_pixels": 1685,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.021792,
+      "priority": 0.265183,
+      "rank": 28,
+      "sample_id": "474_Hamilton_(2016-2017)_175.28726538859775,-37.84733942287437_shifted",
+      "stem": "0002",
+      "true_foreground_fraction": 0.01922,
+      "uncertain_pixel_fraction": 0.024028
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.78028,
+      "index": 3,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.057405,
+      "misclassified_pixels": 3015,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.048836,
+      "priority": 0.529112,
+      "rank": 9,
+      "sample_id": "559_Hamilton_(2016-2017)_175.28753068969436,-37.71235897479299_shifted",
+      "stem": "0003",
+      "true_foreground_fraction": 0.04888,
+      "uncertain_pixel_fraction": 0.050592
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.72865,
+      "index": 4,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.04661,
+      "misclassified_pixels": 3187,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.040656,
+      "priority": 0.428743,
+      "rank": 18,
+      "sample_id": "030_Hamilton_(2016-2017)_175.23297174092585,-37.8215885715657",
+      "stem": "0004",
+      "true_foreground_fraction": 0.040556,
+      "uncertain_pixel_fraction": 0.039392
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.705397,
+      "index": 5,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.033557,
+      "misclassified_pixels": 2069,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.022728,
+      "priority": 0.304942,
+      "rank": 24,
+      "sample_id": "629_Tauranga_(2017)_176.1845,-37.7619_shifted",
+      "stem": "0005",
+      "true_foreground_fraction": 0.02518,
+      "uncertain_pixel_fraction": 0.028552
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.58961,
+      "index": 6,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.051822,
+      "misclassified_pixels": 3002,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.024368,
+      "priority": 0.469007,
+      "rank": 14,
+      "sample_id": "614_Hamilton_(2019)_175.2457,-37.8253_shifted",
+      "stem": "0006",
+      "true_foreground_fraction": 0.022144,
+      "uncertain_pixel_fraction": 0.042012
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.760474,
+      "index": 7,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.030462,
+      "misclassified_pixels": 1355,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.019892,
+      "priority": 0.27961,
+      "rank": 27,
+      "sample_id": "567_Hamilton_(2019)_175.1373,-37.7303_shifted",
+      "stem": "0007",
+      "true_foreground_fraction": 0.019944,
+      "uncertain_pixel_fraction": 0.025696
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.626907,
+      "index": 8,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.009341,
+      "misclassified_pixels": 269,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.002628,
+      "priority": 0.058265,
+      "rank": 64,
+      "sample_id": "504_Hamilton_(2016-2017)_175.34690425810624,-37.763950232554414_shifted",
+      "stem": "0008",
+      "true_foreground_fraction": 0.002064,
+      "uncertain_pixel_fraction": 0.004024
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.827234,
+      "index": 9,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.013106,
+      "misclassified_pixels": 406,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.00892,
+      "priority": 0.099902,
+      "rank": 52,
+      "sample_id": "570_Hamilton_(2019)_175.3511,-37.7521_shifted",
+      "stem": "0009",
+      "true_foreground_fraction": 0.008256,
+      "uncertain_pixel_fraction": 0.008612
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.607895,
+      "index": 10,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.004895,
+      "misclassified_pixels": 149,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.001412,
+      "priority": 0.024676,
+      "rank": 66,
+      "sample_id": "411_Hamilton_(2016-2017)_175.2056508533894,-37.79909938342127_shifted",
+      "stem": "0010",
+      "true_foreground_fraction": 0.001032,
+      "uncertain_pixel_fraction": 0.0018
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.717062,
+      "index": 11,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.019922,
+      "misclassified_pixels": 1194,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.0151,
+      "priority": 0.16799,
+      "rank": 40,
+      "sample_id": "173_Hamilton_(2016-2017)_175.3345033693917,-37.76181328738234",
+      "stem": "0011",
+      "true_foreground_fraction": 0.013884,
+      "uncertain_pixel_fraction": 0.014484
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.784697,
+      "index": 12,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.019051,
+      "misclassified_pixels": 816,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.013188,
+      "priority": 0.161644,
+      "rank": 42,
+      "sample_id": "425_Hamilton_(2016-2017)_175.17824266290742,-37.78489313766686_shifted",
+      "stem": "0012",
+      "true_foreground_fraction": 0.013868,
+      "uncertain_pixel_fraction": 0.014088
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.718268,
+      "index": 13,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.121308,
+      "misclassified_pixels": 8317,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.103112,
+      "priority": 0.83011,
+      "rank": 1,
+      "sample_id": "146_Hamilton_(2016-2017)_175.3186187001094,-37.82366394324298",
+      "stem": "0013",
+      "true_foreground_fraction": 0.099788,
+      "uncertain_pixel_fraction": 0.11028
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.718068,
+      "index": 14,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.026273,
+      "misclassified_pixels": 1704,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.021036,
+      "priority": 0.2378,
+      "rank": 34,
+      "sample_id": "553_Hamilton_(2016-2017)_175.23066480204253,-37.69688028333274_shifted",
+      "stem": "0014",
+      "true_foreground_fraction": 0.0205,
+      "uncertain_pixel_fraction": 0.021912
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.621327,
+      "index": 15,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.033565,
+      "misclassified_pixels": 2642,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.021372,
+      "priority": 0.311393,
+      "rank": 23,
+      "sample_id": "113_Hamilton_(2016-2017)_175.18707485301076,-37.67562655988491",
+      "stem": "0015",
+      "true_foreground_fraction": 0.023876,
+      "uncertain_pixel_fraction": 0.0324
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.652113,
+      "index": 16,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.009558,
+      "misclassified_pixels": 247,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.002628,
+      "priority": 0.059878,
+      "rank": 63,
+      "sample_id": "169_Hamilton_(2016-2017)_175.34690425810624,-37.763950232554414",
+      "stem": "0016",
+      "true_foreground_fraction": 0.002064,
+      "uncertain_pixel_fraction": 0.004012
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.776082,
+      "index": 17,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.057475,
+      "misclassified_pixels": 3140,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.051776,
+      "priority": 0.529643,
+      "rank": 7,
+      "sample_id": "557_Hamilton_(2016-2017)_175.31394274740137,-37.74847804874825_shifted",
+      "stem": "0017",
+      "true_foreground_fraction": 0.047848,
+      "uncertain_pixel_fraction": 0.050308
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.808413,
+      "index": 18,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.014141,
+      "misclassified_pixels": 583,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.011176,
+      "priority": 0.116682,
+      "rank": 50,
+      "sample_id": "440_Hamilton_(2016-2017)_175.1915423270471,-37.726101961118346_shifted",
+      "stem": "0018",
+      "true_foreground_fraction": 0.010836,
+      "uncertain_pixel_fraction": 0.01042
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.696533,
+      "index": 19,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.032429,
+      "misclassified_pixels": 2293,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.025916,
+      "priority": 0.299651,
+      "rank": 26,
+      "sample_id": "218_Hamilton_(2016-2017)_175.23066480204253,-37.69688028333274",
+      "stem": "0019",
+      "true_foreground_fraction": 0.02536,
+      "uncertain_pixel_fraction": 0.028432
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.743604,
+      "index": 20,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.064558,
+      "misclassified_pixels": 4129,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.055616,
+      "priority": 0.597141,
+      "rank": 5,
+      "sample_id": "385_Hamilton_(2016-2017)_175.18486689468466,-37.82314772397572_shifted",
+      "stem": "0020",
+      "true_foreground_fraction": 0.0567,
+      "uncertain_pixel_fraction": 0.058812
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.567244,
+      "index": 21,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.033065,
+      "misclassified_pixels": 2275,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.018096,
+      "priority": 0.300454,
+      "rank": 25,
+      "sample_id": "335_Kapiti_Coast_(2017)_175.17496800261915,-40.79715733103505",
+      "stem": "0021",
+      "true_foreground_fraction": 0.01486,
+      "uncertain_pixel_fraction": 0.027976
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.450614,
+      "index": 22,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.028653,
+      "misclassified_pixels": 2325,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.008916,
+      "priority": 0.254727,
+      "rank": 31,
+      "sample_id": "636_Tauranga_(2017)_176.18999891850538,-37.754407684466756_shifted",
+      "stem": "0022",
+      "true_foreground_fraction": 0.01564,
+      "uncertain_pixel_fraction": 0.023112
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.623177,
+      "index": 23,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.057065,
+      "misclassified_pixels": 4884,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.048136,
+      "priority": 0.529164,
+      "rank": 8,
+      "sample_id": "542_Hamilton_(2016-2017)_175.19837318796934,-37.74361340556498_shifted",
+      "stem": "0023",
+      "true_foreground_fraction": 0.036016,
+      "uncertain_pixel_fraction": 0.0497
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.61916,
+      "index": 24,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.015274,
+      "misclassified_pixels": 970,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.007512,
+      "priority": 0.121021,
+      "rank": 49,
+      "sample_id": "453_Hamilton_(2016-2017)_175.2467672422952,-37.6862872472548_shifted",
+      "stem": "0024",
+      "true_foreground_fraction": 0.008984,
+      "uncertain_pixel_fraction": 0.011088
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.70657,
+      "index": 25,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.053009,
+      "misclassified_pixels": 3993,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.048624,
+      "priority": 0.499657,
+      "rank": 11,
+      "sample_id": "252_Hamilton_(2019)_175.3881,-37.7914",
+      "stem": "0025",
+      "true_foreground_fraction": 0.044268,
+      "uncertain_pixel_fraction": 0.047636
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.618022,
+      "index": 26,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.015979,
+      "misclassified_pixels": 958,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.00748,
+      "priority": 0.123739,
+      "rank": 48,
+      "sample_id": "490_Hamilton_(2016-2017)_175.37209423230487,-37.85991870195834_shifted",
+      "stem": "0026",
+      "true_foreground_fraction": 0.008752,
+      "uncertain_pixel_fraction": 0.010544
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.794393,
+      "index": 27,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.009554,
+      "misclassified_pixels": 88,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.001524,
+      "priority": 0.0683,
+      "rank": 61,
+      "sample_id": "648_Kapiti_Coast_(2017)_175.12039759390936,-40.77885045246229_shifted",
+      "stem": "0027",
+      "true_foreground_fraction": 0.001548,
+      "uncertain_pixel_fraction": 0.003556
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.793512,
+      "index": 28,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.012802,
+      "misclassified_pixels": 401,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.006728,
+      "priority": 0.096547,
+      "rank": 53,
+      "sample_id": "565_Hamilton_(2016-2017)_175.20874082182544,-37.81252390734526_shifted",
+      "stem": "0028",
+      "true_foreground_fraction": 0.007204,
+      "uncertain_pixel_fraction": 0.008244
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.661308,
+      "index": 29,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.029195,
+      "misclassified_pixels": 2170,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.02144,
+      "priority": 0.258914,
+      "rank": 29,
+      "sample_id": "465_Hamilton_(2016-2017)_175.30791465586802,-37.72074743631328_shifted",
+      "stem": "0029",
+      "true_foreground_fraction": 0.021136,
+      "uncertain_pixel_fraction": 0.023008
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.619927,
+      "index": 30,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.019257,
+      "misclassified_pixels": 1358,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.011096,
+      "priority": 0.164897,
+      "rank": 41,
+      "sample_id": "292_Tauranga_(2017)_176.1972,-37.7496",
+      "stem": "0030",
+      "true_foreground_fraction": 0.012056,
+      "uncertain_pixel_fraction": 0.015896
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.702169,
+      "index": 31,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.076873,
+      "misclassified_pixels": 4860,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.054636,
+      "priority": 0.677188,
+      "rank": 2,
+      "sample_id": "642_Tauranga_(2017)_176.08487182719514,-37.74656735759675_shifted",
+      "stem": "0031",
+      "true_foreground_fraction": 0.056468,
+      "uncertain_pixel_fraction": 0.070628
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.713377,
+      "index": 32,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.024513,
+      "misclassified_pixels": 1577,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.018748,
+      "priority": 0.213134,
+      "rank": 36,
+      "sample_id": "186_Hamilton_(2016-2017)_175.30814523689946,-37.726141223287755",
+      "stem": "0032",
+      "true_foreground_fraction": 0.01896,
+      "uncertain_pixel_fraction": 0.019252
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.662116,
+      "index": 33,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.009121,
+      "misclassified_pixels": 495,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.005096,
+      "priority": 0.06874,
+      "rank": 60,
+      "sample_id": "268_Hamilton_(2019)_175.1703,-37.8175",
+      "stem": "0033",
+      "true_foreground_fraction": 0.004644,
+      "uncertain_pixel_fraction": 0.005888
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.757441,
+      "index": 34,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.009684,
+      "misclassified_pixels": 383,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.005424,
+      "priority": 0.064922,
+      "rank": 62,
+      "sample_id": "190_Hamilton_(2016-2017)_175.2899449453432,-37.71188327798987",
+      "stem": "0034",
+      "true_foreground_fraction": 0.005676,
+      "uncertain_pixel_fraction": 0.005628
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.6423,
+      "index": 35,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.010501,
+      "misclassified_pixels": 367,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.003644,
+      "priority": 0.073073,
+      "rank": 58,
+      "sample_id": "656_Kapiti_Coast_(2017)_175.09708716120022,-40.81036379311512_shifted",
+      "stem": "0035",
+      "true_foreground_fraction": 0.003096,
+      "uncertain_pixel_fraction": 0.006164
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.633677,
+      "index": 36,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.018378,
+      "misclassified_pixels": 781,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.007264,
+      "priority": 0.150993,
+      "rank": 43,
+      "sample_id": "584_Hamilton_(2019)_175.3849,-37.7771_shifted",
+      "stem": "0036",
+      "true_foreground_fraction": 0.006668,
+      "uncertain_pixel_fraction": 0.012548
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.714733,
+      "index": 37,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.035733,
+      "misclassified_pixels": 1822,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.022052,
+      "priority": 0.320569,
+      "rank": 22,
+      "sample_id": "649_Kapiti_Coast_(2017)_175.12722962284542,-40.791645361455245_shifted",
+      "stem": "0037",
+      "true_foreground_fraction": 0.021756,
+      "uncertain_pixel_fraction": 0.028812
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.73329,
+      "index": 38,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.026556,
+      "misclassified_pixels": 1628,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.021164,
+      "priority": 0.238394,
+      "rank": 33,
+      "sample_id": "463_Hamilton_(2016-2017)_175.25596408046744,-37.69484055520548_shifted",
+      "stem": "0038",
+      "true_foreground_fraction": 0.021156,
+      "uncertain_pixel_fraction": 0.021408
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.671364,
+      "index": 39,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.050228,
+      "misclassified_pixels": 3941,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.042072,
+      "priority": 0.460683,
+      "rank": 15,
+      "sample_id": "354_Hamilton_(2016-2017)_175.28762299520753,-37.84816803955771_shifted",
+      "stem": "0039",
+      "true_foreground_fraction": 0.0381,
+      "uncertain_pixel_fraction": 0.042184
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.67409,
+      "index": 40,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.051722,
+      "misclassified_pixels": 4434,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.047016,
+      "priority": 0.48544,
+      "rank": 12,
+      "sample_id": "024_Hamilton_(2016-2017)_175.2556408749914,-37.82723339134472",
+      "stem": "0040",
+      "true_foreground_fraction": 0.044088,
+      "uncertain_pixel_fraction": 0.045472
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.712515,
+      "index": 41,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.054449,
+      "misclassified_pixels": 3827,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.047412,
+      "priority": 0.506356,
+      "rank": 10,
+      "sample_id": "100_Hamilton_(2016-2017)_175.20490871250652,-37.731156132871696",
+      "stem": "0041",
+      "true_foreground_fraction": 0.043776,
+      "uncertain_pixel_fraction": 0.047256
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.725579,
+      "index": 42,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.012154,
+      "misclassified_pixels": 486,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.006548,
+      "priority": 0.091431,
+      "rank": 54,
+      "sample_id": "171_Hamilton_(2016-2017)_175.33664416040008,-37.76659594237979",
+      "stem": "0042",
+      "true_foreground_fraction": 0.005676,
+      "uncertain_pixel_fraction": 0.00794
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.700965,
+      "index": 43,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.035533,
+      "misclassified_pixels": 2200,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.02518,
+      "priority": 0.327507,
+      "rank": 21,
+      "sample_id": "250_Hamilton_(2019)_175.3776,-37.7902",
+      "stem": "0043",
+      "true_foreground_fraction": 0.024876,
+      "uncertain_pixel_fraction": 0.03006
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.78405,
+      "index": 44,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.043135,
+      "misclassified_pixels": 2429,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.041088,
+      "priority": 0.406563,
+      "rank": 19,
+      "sample_id": "394_Hamilton_(2016-2017)_175.18422813616738,-37.807983295395516_shifted",
+      "stem": "0044",
+      "true_foreground_fraction": 0.03918,
+      "uncertain_pixel_fraction": 0.037412
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.829408,
+      "index": 45,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.009344,
+      "misclassified_pixels": 268,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.00582,
+      "priority": 0.072728,
+      "rank": 59,
+      "sample_id": "247_Hamilton_(2019)_175.3773,-37.7718",
+      "stem": "0045",
+      "true_foreground_fraction": 0.005676,
+      "uncertain_pixel_fraction": 0.006208
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.666387,
+      "index": 46,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.024219,
+      "misclassified_pixels": 1591,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.016392,
+      "priority": 0.207433,
+      "rank": 37,
+      "sample_id": "344_Hamilton_(2016-2017)_175.28943743862095,-37.84178135670501_shifted",
+      "stem": "0046",
+      "true_foreground_fraction": 0.015396,
+      "uncertain_pixel_fraction": 0.01796
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.754124,
+      "index": 47,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.015835,
+      "misclassified_pixels": 641,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.009052,
+      "priority": 0.12907,
+      "rank": 45,
+      "sample_id": "388_Hamilton_(2016-2017)_175.2074710609442,-37.8217807982206_shifted",
+      "stem": "0047",
+      "true_foreground_fraction": 0.00924,
+      "uncertain_pixel_fraction": 0.00974
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.730728,
+      "index": 48,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.01661,
+      "misclassified_pixels": 1006,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.012984,
+      "priority": 0.139875,
+      "rank": 44,
+      "sample_id": "098_Hamilton_(2016-2017)_175.19448841227324,-37.820205420117446",
+      "stem": "0048",
+      "true_foreground_fraction": 0.01288,
+      "uncertain_pixel_fraction": 0.012376
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.642384,
+      "index": 49,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.010546,
+      "misclassified_pixels": 378,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.003644,
+      "priority": 0.073559,
+      "rank": 57,
+      "sample_id": "321_Kapiti_Coast_(2017)_175.09708716120022,-40.81036379311512",
+      "stem": "0049",
+      "true_foreground_fraction": 0.0033,
+      "uncertain_pixel_fraction": 0.006164
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.712995,
+      "index": 50,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.048478,
+      "misclassified_pixels": 3335,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.041472,
+      "priority": 0.449594,
+      "rank": 16,
+      "sample_id": "435_Hamilton_(2016-2017)_175.20490871250652,-37.731156132871696_shifted",
+      "stem": "0050",
+      "true_foreground_fraction": 0.038148,
+      "uncertain_pixel_fraction": 0.04112
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.739081,
+      "index": 51,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.04157,
+      "misclassified_pixels": 2521,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.033372,
+      "priority": 0.387519,
+      "rank": 20,
+      "sample_id": "241_Hamilton_(2019)_175.1631,-37.7613",
+      "stem": "0051",
+      "true_foreground_fraction": 0.03384,
+      "uncertain_pixel_fraction": 0.035424
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.722714,
+      "index": 52,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.068988,
+      "misclassified_pixels": 4921,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.062304,
+      "priority": 0.618755,
+      "rank": 3,
+      "sample_id": "222_Hamilton_(2016-2017)_175.31394274740137,-37.74847804874825",
+      "stem": "0052",
+      "true_foreground_fraction": 0.059988,
+      "uncertain_pixel_fraction": 0.061316
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.704523,
+      "index": 53,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.013707,
+      "misclassified_pixels": 882,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.010032,
+      "priority": 0.116113,
+      "rank": 51,
+      "sample_id": "258_Hamilton_(2019)_175.1952,-37.8012",
+      "stem": "0053",
+      "true_foreground_fraction": 0.01032,
+      "uncertain_pixel_fraction": 0.010368
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.739527,
+      "index": 54,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.06775,
+      "misclassified_pixels": 4402,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.060716,
+      "priority": 0.60883,
+      "rank": 4,
+      "sample_id": "457_Hamilton_(2016-2017)_175.2708368691996,-37.690865848921824_shifted",
+      "stem": "0054",
+      "true_foreground_fraction": 0.056876,
+      "uncertain_pixel_fraction": 0.06036
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.781267,
+      "index": 55,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.028528,
+      "misclassified_pixels": 1191,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.019704,
+      "priority": 0.257056,
+      "rank": 30,
+      "sample_id": "332_Kapiti_Coast_(2017)_175.14300021585225,-40.72972508892117",
+      "stem": "0055",
+      "true_foreground_fraction": 0.019092,
+      "uncertain_pixel_fraction": 0.02194
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.623261,
+      "index": 56,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.051939,
+      "misclassified_pixels": 4360,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.03776,
+      "priority": 0.484787,
+      "rank": 13,
+      "sample_id": "005_Hamilton_(2016-2017)_175.2805097305384,-37.8324271565262",
+      "stem": "0056",
+      "true_foreground_fraction": 0.037384,
+      "uncertain_pixel_fraction": 0.050868
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.601212,
+      "index": 57,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.016288,
+      "misclassified_pixels": 1119,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.0087,
+      "priority": 0.128565,
+      "rank": 46,
+      "sample_id": "167_Hamilton_(2016-2017)_175.35042657291203,-37.76449179280241",
+      "stem": "0057",
+      "true_foreground_fraction": 0.009272,
+      "uncertain_pixel_fraction": 0.010644
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.780224,
+      "index": 58,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.047091,
+      "misclassified_pixels": 2516,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.040316,
+      "priority": 0.435914,
+      "rank": 17,
+      "sample_id": "374_Hamilton_(2016-2017)_175.27683634680048,-37.85464735885744_shifted",
+      "stem": "0058",
+      "true_foreground_fraction": 0.041204,
+      "uncertain_pixel_fraction": 0.040332
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.672229,
+      "index": 59,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.026036,
+      "misclassified_pixels": 1925,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.019756,
+      "priority": 0.228112,
+      "rank": 35,
+      "sample_id": "327_Kapiti_Coast_(2017)_175.06411580923123,-40.82501945150894",
+      "stem": "0059",
+      "true_foreground_fraction": 0.019528,
+      "uncertain_pixel_fraction": 0.020792
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.665813,
+      "index": 60,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.023238,
+      "misclassified_pixels": 1435,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.015196,
+      "priority": 0.207246,
+      "rank": 38,
+      "sample_id": "612_Hamilton_(2019)_175.2471,-37.8237_shifted",
+      "stem": "0060",
+      "true_foreground_fraction": 0.013416,
+      "uncertain_pixel_fraction": 0.01812
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.718023,
+      "index": 61,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.010867,
+      "misclassified_pixels": 291,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.003568,
+      "priority": 0.079508,
+      "rank": 56,
+      "sample_id": "633_Tauranga_(2017)_176.033,-37.8123_shifted",
+      "stem": "0061",
+      "true_foreground_fraction": 0.003524,
+      "uncertain_pixel_fraction": 0.006504
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.588038,
+      "index": 62,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.059698,
+      "misclassified_pixels": 5414,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.043088,
+      "priority": 0.568343,
+      "rank": 6,
+      "sample_id": "069_Hamilton_(2016-2017)_175.21144989943252,-37.8118321983045",
+      "stem": "0062",
+      "true_foreground_fraction": 0.040392,
+      "uncertain_pixel_fraction": 0.057984
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.583276,
+      "index": 63,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.016143,
+      "misclassified_pixels": 1216,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.008708,
+      "priority": 0.127524,
+      "rank": 47,
+      "sample_id": "502_Hamilton_(2016-2017)_175.35042657291203,-37.76449179280241_shifted",
+      "stem": "0063",
+      "true_foreground_fraction": 0.009772,
+      "uncertain_pixel_fraction": 0.010636
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.60077,
+      "index": 64,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.008325,
+      "misclassified_pixels": 311,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.002492,
+      "priority": 0.048997,
+      "rank": 65,
+      "sample_id": "330_Kapiti_Coast_(2017)_175.14920041793175,-40.70638545522352",
+      "stem": "0064",
+      "true_foreground_fraction": 0.002496,
+      "uncertain_pixel_fraction": 0.003876
+    },
+    {
+      "both_empty": false,
+      "foreground_iou": 0.645442,
+      "index": 65,
+      "mask_shape": [
+        500,
+        500
+      ],
+      "mean_entropy": 0.010076,
+      "misclassified_pixels": 529,
+      "pixels": 250000,
+      "predicted_foreground_fraction": 0.005468,
+      "priority": 0.079539,
+      "rank": 55,
+      "sample_id": "621_Hamilton_(2019)_175.3747,-37.7696_shifted",
+      "stem": "0065",
+      "true_foreground_fraction": 0.004352,
+      "uncertain_pixel_fraction": 0.006688
+    }
+  ]
+}

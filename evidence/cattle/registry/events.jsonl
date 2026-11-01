@@ -1,0 +1,6 @@
+{"at": "2026-10-31T23:57:11+00:00", "experiment_id": "exp-20261031T234011Z-fa5d0b", "kind": "store_model", "sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194", "task": "m-nz-cattle", "version_id": "mv-m-nz-cattle-0001-18138fd9"}
+{"at": "2026-10-31T23:57:21+00:00", "dest": null, "kind": "retrieve_model", "verified_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194", "version_id": "mv-m-nz-cattle-0001-18138fd9"}
+{"at": "2026-10-31T23:57:22+00:00", "kind": "verify_model", "max_abs_diff": 5.245208740234375e-06, "verified": true, "version_id": "mv-m-nz-cattle-0001-18138fd9"}
+{"at": "2026-10-31T23:59:35+00:00", "dest": null, "kind": "retrieve_model", "verified_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194", "version_id": "mv-m-nz-cattle-0001-18138fd9"}
+{"at": "2026-10-31T23:59:37+00:00", "kind": "verify_model", "max_abs_diff": 5.245208740234375e-06, "verified": true, "version_id": "mv-m-nz-cattle-0001-18138fd9"}
+{"at": "2026-11-01T00:02:45+00:00", "by": "freeze", "kind": "promote_model", "previous": null, "rationale": "frozen selection for final evaluation (manual)", "task": "m-nz-cattle", "version_id": "mv-m-nz-cattle-0001-18138fd9"}

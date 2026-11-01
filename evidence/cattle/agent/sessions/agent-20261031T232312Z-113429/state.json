@@ -1,0 +1,53 @@
+{
+  "allowances": {
+    "m-nz-cattle": 2
+  },
+  "budget": {
+    "max_experiments": 2,
+    "max_tool_calls": 60,
+    "run_max_minutes": 7.0,
+    "session_minutes": 20.0
+  },
+  "coverage": {
+    "allowances": {
+      "m-nz-cattle": 2
+    },
+    "finished": [
+      "m-nz-cattle"
+    ],
+    "launched_by_task": {
+      "m-nz-cattle": 2
+    },
+    "requested": [
+      "m-nz-cattle"
+    ],
+    "unfinished": []
+  },
+  "elapsed_before_seconds": 0.0,
+  "elapsed_seconds": 268.80992007255554,
+  "errors": [],
+  "experiments_launched": 2,
+  "finished_tasks": {
+    "m-nz-cattle": {
+      "best_val_metric": 0.8332663441187129,
+      "selected": "exp-20261031T232427Z-2342ff",
+      "summary": "Ran two experiments, the full allowance for this task. unet_small at 320px for 12 epochs gave val mIoU 0.823. unet_medium at 320px for 20 epochs gave 0.833 (foreground IoU 0.675). I changed both model size and epoch count, so I can't say how much each contributed. Both runs were still improving slightly at the end. I selected unet_medium; the gain is small and comes from a single seed."
+    }
+  },
+  "launched_by_task": {
+    "m-nz-cattle": 2
+  },
+  "model_id": "eu.anthropic.claude-sonnet-5-5",
+  "resume_count": 0,
+  "rounds": 1,
+  "session_id": "agent-20261031T232312Z-113429",
+  "source": "geobench",
+  "started_at": "2026-10-31T23:23:12+00:00",
+  "status": "completed",
+  "tasks": [
+    "m-nz-cattle"
+  ],
+  "tool_calls": 7,
+  "unfinished_tasks": [],
+  "updated_at": "2026-10-31T23:27:41+00:00"
+}

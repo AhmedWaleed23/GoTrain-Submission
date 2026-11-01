@@ -1,0 +1,194 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T175442Z-e18cd2/checkpoints/best.pt",
+    "best_sha256": "93442d79e18530656b961f4b919ac35db2d6302e47b1678a4aa42ae597e16680",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T175442Z-e18cd2/checkpoints/last.pt",
+    "last_sha256": "4a4298fb826139d981430323694898ece64e54aa5d07ace01035fadc0923988c"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 16,
+    "effective_lr": 0.001,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 6.654507256000215
+  },
+  "config_hash": "d4f1634961afdfdfd1725a897ddbd8fd340974c9fb870c435b09f49cefa0fd96",
+  "created_at": "2026-10-31T17:54:42+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-pv4ger-seg",
+    "input_size": [
+      320,
+      320
+    ],
+    "resized": false,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 403,
+      "train": 3000,
+      "valid": 403
+    },
+    "subset_fraction": 0.1,
+    "train_samples_used": 300,
+    "train_subset_indices_hash": "fbe93a75f2cbcfc0c4c808cc300c197edfe5a2d0dad0a006a9d7227e247b0d2f",
+    "valid_samples_used": 100
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "",
+  "experiment_id": "exp-20261031T175442Z-e18cd2",
+  "finished_at": "2026-10-31T17:54:49+00:00",
+  "hypothesis": "pipeline smoke test; timing measurement only",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "unet_small",
+    "parameters": 1942594
+  },
+  "normalization": {
+    "n_samples_used": 3000,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger-seg.json",
+    "split": "train",
+    "stats_hash": "9dbf09291ec520b9b99ea66416defa9393d6f7f6a00c16cc4f556d43f6e55ef8"
+  },
+  "parent_experiment": null,
+  "partial_validation": true,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "",
+  "result": {
+    "best_epoch": 1,
+    "best_val_metric": 0.40761689113527977,
+    "epochs_completed": 1,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "confusion_matrix": [
+        [
+          8347166,
+          753
+        ],
+        [
+          1891948,
+          133
+        ]
+      ],
+      "conventions": {
+        "miou": "macro mean of per-class IoU from the split-level confusion matrix; classes absent from both target and prediction are excluded (torchmetrics multiclass JaccardIndex, average=macro)",
+        "pixel_accuracy": "diagnostic only; misleading on imbalanced masks"
+      },
+      "foreground_iou": 7.02650100325755e-05,
+      "loss": 0.5838787981442043,
+      "miou": 0.40761689113527977,
+      "n_classes_present": 2,
+      "n_ignored": 0,
+      "n_pixels": 10240000,
+      "per_class": [
+        {
+          "class": "no solar pv",
+          "iou": 0.8151635172605269,
+          "predicted_pixels": 10239114,
+          "present": true,
+          "target_pixels": 8347919
+        },
+        {
+          "class": "solar pv",
+          "iou": 7.02650100325755e-05,
+          "predicted_pixels": 886,
+          "present": true,
+          "target_pixels": 1892081
+        }
+      ],
+      "pixel_accuracy": 0.81516591796875
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 16,
+    "early_stopping_patience": 5,
+    "epochs": 1,
+    "expected_tradeoff": "",
+    "hypothesis": "pipeline smoke test; timing measurement only",
+    "input_size": null,
+    "label_smoothing": 0.0,
+    "lr": 0.001,
+    "max_minutes": 5.0,
+    "model": "unet_small",
+    "num_workers": 0,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "",
+    "scheduler": "cosine",
+    "screening": true,
+    "seed": 0,
+    "subset_fraction": 0.1,
+    "tag": "smoke",
+    "task": "m-pv4ger-seg",
+    "val_limit": 100,
+    "weight_decay": 0.0001
+  },
+  "screening": true,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T17:54:42+00:00",
+  "status": "completed",
+  "tag": "smoke",
+  "task": "m-pv4ger-seg",
+  "task_type": "segmentation",
+  "updated_at": "2026-10-31T17:54:49+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

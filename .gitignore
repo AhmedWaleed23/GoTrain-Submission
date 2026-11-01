@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+gotrain_runs/
+*.pt
+*.hdf5
+*.zip
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.gotrain_preflight_patch_v1
+preflight_backups/
+dashboard_backups/
+.env
+.env.*
+.aws/
+.local-review-assets/
+review_outputs/
+*.review.html
+
+# Submission assets are attached to a release, not source control.
+*.zip
+*.pt
+*.pth
+*.npz

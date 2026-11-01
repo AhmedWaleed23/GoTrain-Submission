@@ -1,0 +1,14 @@
+{
+  "name": "m-pv4ger",
+  "task_type": "classification",
+  "benchmark": "classification_v1.0",
+  "hf_filename": "classification_v1.0/m-pv4ger.zip",
+  "selection_metric": "accuracy",
+  "n_classes": 2,
+  "class_names": ["no solar pv", "solar pv"],
+  "in_channels": 3,
+  "patch_size": [320, 320],
+  "rgb_indices": [0, 1, 2],
+  "band_order_note": "Stored order Red, Green, Blue (uint8 aerial imagery).",
+  "notes": "Aerial RGB 0.1 m, 320x320, 11814/999/999 train/valid/test. Sizes are verified by `inspect` on the real data before training."
+}

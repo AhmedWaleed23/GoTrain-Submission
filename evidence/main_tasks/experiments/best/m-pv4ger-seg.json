@@ -1,0 +1,21 @@
+{
+  "best_val_metric": 0.9229632830171473,
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T182357Z-34155d/checkpoints/best.pt",
+    "best_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T182357Z-34155d/checkpoints/last.pt",
+    "last_sha256": "4b90bd5d173521a5c7dca4a31b50d0e9e142c611dfc7765673635bed8e6cc0ad"
+  },
+  "experiment_id": "exp-20261031T182357Z-34155d",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "rationale": "Only full-data run; val mIoU 0.923 (foreground IoU 0.878), still improving at the final epoch.",
+  "selected_at": "2026-10-31T18:26:12+00:00",
+  "selected_by": "agent",
+  "task": "m-pv4ger-seg"
+}

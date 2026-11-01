@@ -1,0 +1,191 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T232427Z-2342ff/checkpoints/best.pt",
+    "best_sha256": "3d6b2cafd542abbc563c3156ee1dfcf11853fce349fcab2712bec8863c377ee5",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T232427Z-2342ff/checkpoints/last.pt",
+    "last_sha256": "b6ef706102b2a003e60846089f4bc1059cee457211a4af5ff057eef4870ea6ff"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 8,
+    "effective_lr": 0.003,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 188.22989440600213
+  },
+  "config_hash": "52fd3d9f71919e7f60517e9409636335c285bf380f7ab3e19b2a08ed2ef9b7a5",
+  "created_at": "2026-10-31T23:24:27+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-nz-cattle",
+    "input_size": 320,
+    "resized": true,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 65,
+      "train": 524,
+      "valid": 66
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 524,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 66
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "~3x compute per epoch; ~5-6 min.",
+  "experiment_id": "exp-20261031T232427Z-2342ff",
+  "finished_at": "2026-10-31T23:27:36+00:00",
+  "hypothesis": "unet_medium with more epochs improves mIoU beyond 0.823 since curve was still rising.",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "no cattle",
+      "cattle"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "unet_medium",
+    "parameters": 7763074
+  },
+  "normalization": {
+    "n_samples_used": 524,
+    "path": "/home/sagemaker-user/gotrain_cattle_runs/normalization/m-nz-cattle.json",
+    "split": "train",
+    "stats_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba"
+  },
+  "parent_experiment": "exp-20261031T232317Z-05cee9",
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "unet_small ran 5s/epoch and was still improving at epoch 12; budget allows a bigger model and longer schedule.",
+  "result": {
+    "best_epoch": 20,
+    "best_val_metric": 0.8332663441187129,
+    "epochs_completed": 20,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "confusion_matrix": [
+        [
+          16066814,
+          60381
+        ],
+        [
+          80312,
+          292493
+        ]
+      ],
+      "conventions": {
+        "miou": "macro mean of per-class IoU from the split-level confusion matrix; classes absent from both target and prediction are excluded (torchmetrics multiclass JaccardIndex, average=macro)",
+        "pixel_accuracy": "diagnostic only; misleading on imbalanced masks"
+      },
+      "foreground_iou": 0.6752134187162097,
+      "loss": 0.018961411900818348,
+      "miou": 0.8332663441187129,
+      "n_classes_present": 2,
+      "n_ignored": 0,
+      "n_pixels": 16500000,
+      "per_class": [
+        {
+          "class": "no cattle",
+          "iou": 0.9913192695212163,
+          "predicted_pixels": 16147126,
+          "present": true,
+          "target_pixels": 16127195
+        },
+        {
+          "class": "cattle",
+          "iou": 0.6752134187162097,
+          "predicted_pixels": 352874,
+          "present": true,
+          "target_pixels": 372805
+        }
+      ],
+      "pixel_accuracy": 0.9914731515151515
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 8,
+    "early_stopping_patience": 5,
+    "epochs": 20,
+    "expected_tradeoff": "~3x compute per epoch; ~5-6 min.",
+    "hypothesis": "unet_medium with more epochs improves mIoU beyond 0.823 since curve was still rising.",
+    "input_size": 320,
+    "label_smoothing": 0.0,
+    "lr": 0.003,
+    "max_minutes": 7.0,
+    "model": "unet_medium",
+    "num_workers": 2,
+    "parent_experiment": "exp-20261031T232317Z-05cee9",
+    "precision": "auto",
+    "rationale": "unet_small ran 5s/epoch and was still improving at epoch 12; budget allows a bigger model and longer schedule.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-nz-cattle",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T23:24:27+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-nz-cattle",
+  "task_type": "segmentation",
+  "updated_at": "2026-10-31T23:27:36+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

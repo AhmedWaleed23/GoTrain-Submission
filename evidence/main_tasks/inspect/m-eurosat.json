@@ -1,0 +1,205 @@
+{
+  "dataset_dir": "/home/sagemaker-user/dataset/geobench/classification_v1.0/m-eurosat",
+  "first_sample": {
+    "image_dtype_stored": "int16",
+    "image_shape": [
+      13,
+      64,
+      64
+    ],
+    "label_shape": [],
+    "load_seconds": 0.0603
+  },
+  "meta": {
+    "band_names": [
+      "01 - Coastal aerosol",
+      "02 - Blue",
+      "03 - Green",
+      "04 - Red",
+      "05 - Vegetation Red Edge",
+      "06 - Vegetation Red Edge",
+      "07 - Vegetation Red Edge",
+      "08 - NIR",
+      "08A - Vegetation Red Edge",
+      "09 - Water vapour",
+      "10 - SWIR - Cirrus",
+      "11 - SWIR",
+      "12 - SWIR"
+    ],
+    "class_names": [
+      "Industrial Buildings",
+      "Residential Buildings",
+      "Annual Crop",
+      "Permanent Crop",
+      "River",
+      "Sea and Lake",
+      "Herbaceous Vegetation",
+      "Highway",
+      "Pasture",
+      "Forest"
+    ],
+    "dtype": "float32",
+    "extra": {
+      "band_order_note": "Stored band names are wrong (geo-bench issue #28). Actual channel order: B01,B02,B03,B04,B05,B06,B07,B08,B09,B10,B11,B12,B8A. Channels are used positionally; RGB = positions 3,2,1.",
+      "benchmark": "classification_v1.0",
+      "dataset_dir": "/home/sagemaker-user/dataset/geobench/classification_v1.0/m-eurosat",
+      "partition": "default",
+      "spatial_resolution_m": 10.0
+    },
+    "height": 64,
+    "ignore_index": null,
+    "in_channels": 13,
+    "n_classes": 10,
+    "rgb_indices": [
+      3,
+      2,
+      1
+    ],
+    "source": "geobench",
+    "split_sizes": {
+      "test": 1000,
+      "train": 2000,
+      "valid": 1000
+    },
+    "task": "m-eurosat",
+    "task_type": "classification",
+    "width": 64
+  },
+  "normalization": {
+    "n_samples_used": 2000,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-eurosat.json",
+    "stats_hash": "5fb7bcce78b3e419e2996331f04618ad513fb7d497c5b2ff709fd78f6dca83d9"
+  },
+  "present": true,
+  "split_sizes": {
+    "test": 1000,
+    "train": 2000,
+    "valid": 1000
+  },
+  "splits": {
+    "train": {
+      "image_shapes": [
+        [
+          13,
+          64,
+          64
+        ]
+      ],
+      "invalid_labels": 0,
+      "label_counts": {
+        "Annual Crop": 97,
+        "Forest": 110,
+        "Herbaceous Vegetation": 106,
+        "Highway": 106,
+        "Industrial Buildings": 92,
+        "Pasture": 105,
+        "Permanent Crop": 91,
+        "Residential Buildings": 98,
+        "River": 99,
+        "Sea and Lake": 96
+      },
+      "label_fractions": {
+        "Annual Crop": 0.097,
+        "Forest": 0.11,
+        "Herbaceous Vegetation": 0.106,
+        "Highway": 0.106,
+        "Industrial Buildings": 0.092,
+        "Pasture": 0.105,
+        "Permanent Crop": 0.091,
+        "Residential Buildings": 0.098,
+        "River": 0.099,
+        "Sea and Lake": 0.096
+      },
+      "samples_checked": 1000,
+      "samples_in_split": 2000
+    },
+    "valid": {
+      "image_shapes": [
+        [
+          13,
+          64,
+          64
+        ]
+      ],
+      "invalid_labels": 0,
+      "label_counts": {
+        "Annual Crop": 100,
+        "Forest": 100,
+        "Herbaceous Vegetation": 100,
+        "Highway": 100,
+        "Industrial Buildings": 100,
+        "Pasture": 100,
+        "Permanent Crop": 100,
+        "Residential Buildings": 100,
+        "River": 100,
+        "Sea and Lake": 100
+      },
+      "label_fractions": {
+        "Annual Crop": 0.1,
+        "Forest": 0.1,
+        "Herbaceous Vegetation": 0.1,
+        "Highway": 0.1,
+        "Industrial Buildings": 0.1,
+        "Pasture": 0.1,
+        "Permanent Crop": 0.1,
+        "Residential Buildings": 0.1,
+        "River": 0.1,
+        "Sea and Lake": 0.1
+      },
+      "samples_checked": 1000,
+      "samples_in_split": 1000
+    }
+  },
+  "task": "m-eurosat",
+  "train_valid_overlap": 0,
+  "train_value_ranges": {
+    "all_finite": true,
+    "max_per_band": [
+      2367.0,
+      4528.0,
+      4651.0,
+      5001.0,
+      4188.0,
+      4969.0,
+      6167.0,
+      6221.0,
+      2362.0,
+      24.0,
+      4609.0,
+      4391.0,
+      6535.0
+    ],
+    "mean_per_band": [
+      1307.0921630859375,
+      1068.7291259765625,
+      1010.7054443359375,
+      894.2908325195312,
+      1203.3646240234375,
+      2068.72216796875,
+      2445.74169921875,
+      2403.475830078125,
+      877.0372314453125,
+      12.493858337402344,
+      1906.00537109375,
+      1158.2239990234375,
+      2700.788330078125
+    ],
+    "min_per_band": [
+      983.0,
+      661.0,
+      451.0,
+      238.0,
+      210.0,
+      205.0,
+      191.0,
+      146.0,
+      66.0,
+      4.0,
+      25.0,
+      5.0,
+      143.0
+    ],
+    "samples": 32
+  },
+  "warnings": []
+}

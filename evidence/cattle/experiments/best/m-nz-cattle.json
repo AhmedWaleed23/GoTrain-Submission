@@ -1,0 +1,21 @@
+{
+  "best_val_metric": 0.847690075670909,
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T234011Z-fa5d0b/checkpoints/best.pt",
+    "best_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T234011Z-fa5d0b/checkpoints/last.pt",
+    "last_sha256": "4f30df555325f64bc33945e6226ae64adfe96b92bc0aa03161f54d9377e126d4"
+  },
+  "experiment_id": "exp-20261031T234011Z-fa5d0b",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "rationale": "Selected using validation only: mean IoU improved from 0.8338 to 0.8477 and cattle IoU from 0.6762 to 0.7035. Best checkpoint at epoch 20. Higher-resolution recipe was proposed manually. Test split remains untouched.",
+  "selected_at": "2026-10-31T23:56:26+00:00",
+  "selected_by": "manual",
+  "task": "m-nz-cattle"
+}

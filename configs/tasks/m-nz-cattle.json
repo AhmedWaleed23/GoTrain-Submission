@@ -1,0 +1,15 @@
+{
+  "name": "m-nz-cattle",
+  "task_type": "segmentation",
+  "benchmark": "segmentation_v1.0",
+  "hf_filename": "segmentation_v1.0/m-nz-cattle.zip",
+  "selection_metric": "miou",
+  "n_classes": 2,
+  "class_names": ["no cattle", "cattle"],
+  "in_channels": 3,
+  "patch_size": [500, 500],
+  "rgb_indices": [0, 1, 2],
+  "band_order_note": "Stored order Red, Green, Blue. Masks were rasterized from point annotations as small squares (converter radius 6 px).",
+  "notes": "STRETCH TASK, not required. 524/66/65 train/valid/test. Foreground is tiny; verify label handling with `inspect` before any training. U-Net pads 500 to 512 internally and crops the logits back.",
+  "required": false
+}

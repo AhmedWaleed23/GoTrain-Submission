@@ -1,0 +1,132 @@
+{
+  "architecture": {
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "resnet_small",
+    "parameters": 2795554
+  },
+  "backend": "filesystem",
+  "checkpoint_bytes": 33666133,
+  "checkpoint_sha256": "1c42a390fdac352344a48615032c70d4a99975820ba8290a62757f7dade517d4",
+  "created_at": "2026-10-31T19:44:05+00:00",
+  "environment": {
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "experiment_id": "exp-20261031T181019Z-94b654",
+  "metric": {
+    "best_epoch": 10,
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid",
+    "value": 0.9409409409409409
+  },
+  "note": "",
+  "parent_version": null,
+  "preprocessing": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "channels_stacked_in_stored_order": true,
+    "input_size": 128,
+    "normalization_file": "normalization.json",
+    "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger.json",
+    "normalization_stats_hash": "048910f08d468f337da0c54b77c61d7580e00716e96ec0d826cc69c13cc13147"
+  },
+  "pretrained": null,
+  "reference": {
+    "file": "reference.npz",
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "input_sha256": "d37ffec8d8bab637875ba3d8eafb6013ab1cd7d95f2d96e4dcdb7c9c829c39c8",
+    "logits_argmax": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n": 4,
+    "split": "valid",
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 64,
+    "early_stopping_patience": 5,
+    "epochs": 10,
+    "expected_tradeoff": "Still might underperform cnn_small; ~4.5 min.",
+    "hypothesis": "Lower lr stabilizes resnet_small; val should exceed 0.93.",
+    "input_size": 128,
+    "label_smoothing": 0.0,
+    "lr": 0.001,
+    "max_minutes": 5.0,
+    "model": "resnet_small",
+    "num_workers": 2,
+    "parent_experiment": "exp-20261031T180733Z-22b10f",
+    "precision": "auto",
+    "rationale": "ResNet at lr 0.003 was noisy (val dropped to 0.868, early stopped at epoch 6) with slow train loss decrease.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-pv4ger",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "seed": 0,
+  "source": "geobench",
+  "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-pv4ger-0001-1c42a390/checkpoint.pt",
+  "task": "m-pv4ger",
+  "task_type": "classification",
+  "training_wall_time_seconds": 271.7881741000019,
+  "validation_diagnostics": {
+    "accuracy": 0.9409409409409409,
+    "macro_f1": 0.8646593233999462
+  },
+  "verification": {
+    "argmax_agreement": 1.0,
+    "at": "2026-10-31T19:44:35+00:00",
+    "device": "cuda",
+    "max_abs_diff": 7.152557373046875e-07,
+    "mean_abs_diff": 2.682209014892578e-07,
+    "model_reproduced": true,
+    "n_reference": 4,
+    "preprocessing_identity": {
+      "checked": true,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    "preprocessing_verified": true,
+    "sha256_ok": true,
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    },
+    "verified": true,
+    "version_id": "mv-m-pv4ger-0001-1c42a390",
+    "within_tolerance": true
+  },
+  "version_id": "mv-m-pv4ger-0001-1c42a390"
+}

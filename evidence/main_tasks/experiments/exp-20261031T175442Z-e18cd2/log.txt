@@ -1,0 +1,3 @@
+[2026-10-31T17:54:42+00:00] exp-20261031T175442Z-e18cd2: unet_small on m-pv4ger-seg (geobench), 300 train / 100 valid samples, device cuda
+[2026-10-31T17:54:49+00:00] epoch 1/1 train_loss=0.6148 val_miou=0.4076 best=0.4076@1 (5s+1s)
+[2026-10-31T17:54:49+00:00] exp-20261031T175442Z-e18cd2: completed (max_epochs), best miou=0.40761689113527977 at epoch 1

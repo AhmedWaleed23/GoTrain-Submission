@@ -1,0 +1,21 @@
+{
+  "best_val_metric": 0.902,
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T175718Z-2acce6/checkpoints/best.pt",
+    "best_sha256": "1725b67f5908c4c4427a619a9b1507bbecefd38983157cd132d12d17df377285",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T175718Z-2acce6/checkpoints/last.pt",
+    "last_sha256": "2c34f4eaa241e22eb78c440f8c7484d8b3dce7600b3403475a2fabc5897fb6b3"
+  },
+  "experiment_id": "exp-20261031T175718Z-2acce6",
+  "metric": {
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid"
+  },
+  "rationale": "cnn_small val acc 0.902 (macro-F1 0.901) vs resnet_small 0.878 under the same 10-epoch recipe.",
+  "selected_at": "2026-10-31T17:59:58+00:00",
+  "selected_by": "agent",
+  "task": "m-eurosat"
+}

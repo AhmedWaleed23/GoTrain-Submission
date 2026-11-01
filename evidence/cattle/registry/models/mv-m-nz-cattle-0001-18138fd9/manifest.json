@@ -1,0 +1,134 @@
+{
+  "architecture": {
+    "class_names": [
+      "no cattle",
+      "cattle"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "unet_medium",
+    "parameters": 7763074
+  },
+  "backend": "filesystem",
+  "checkpoint_bytes": 93281425,
+  "checkpoint_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+  "created_at": "2026-10-31T23:57:11+00:00",
+  "environment": {
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "experiment_id": "exp-20261031T234011Z-fa5d0b",
+  "metric": {
+    "best_epoch": 20,
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid",
+    "value": 0.847690075670909
+  },
+  "note": "",
+  "parent_version": null,
+  "preprocessing": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "channels_stacked_in_stored_order": true,
+    "input_size": 512,
+    "normalization_file": "normalization.json",
+    "normalization_source": "/home/sagemaker-user/gotrain_cattle_runs/normalization/m-nz-cattle.json",
+    "normalization_stats_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba"
+  },
+  "pretrained": null,
+  "reference": {
+    "file": "reference.npz",
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "input_sha256": "6115e0725f9e50cad553355ae76623486baebf5a9b9b5f37036f707c0dc9c979",
+    "logits_argmax": [
+      0.016,
+      0.023,
+      0.022,
+      0.049
+    ],
+    "n": 4,
+    "split": "valid",
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 4,
+    "early_stopping_patience": 10,
+    "epochs": 30,
+    "expected_tradeoff": "",
+    "hypothesis": "Test whether higher-resolution inputs and a lower learning rate improve segmentation of small cattle.",
+    "input_size": 512,
+    "label_smoothing": 0.0,
+    "lr": 0.001,
+    "max_minutes": 12.0,
+    "model": "unet_medium",
+    "num_workers": 0,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "higher_resolution",
+    "task": "m-nz-cattle",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "seed": 0,
+  "source": "geobench",
+  "storage_uri": "file:///home/sagemaker-user/gotrain_cattle_runs/registry/models/mv-m-nz-cattle-0001-18138fd9/checkpoint.pt",
+  "task": "m-nz-cattle",
+  "task_type": "segmentation",
+  "training_wall_time_seconds": 721.9030208059994,
+  "validation_diagnostics": {
+    "foreground_iou": 0.7035231827403632,
+    "miou": 0.847690075670909,
+    "n_classes_present": 2,
+    "pixel_accuracy": 0.9920113333333334
+  },
+  "verification": {
+    "argmax_agreement": 1.0,
+    "at": "2026-10-31T23:59:35+00:00",
+    "device": "cuda",
+    "max_abs_diff": 5.245208740234375e-06,
+    "mean_abs_diff": 3.7410410413940554e-07,
+    "model_reproduced": true,
+    "n_reference": 4,
+    "preprocessing_identity": {
+      "checked": true,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    "preprocessing_verified": true,
+    "sha256_ok": true,
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    },
+    "verified": true,
+    "version_id": "mv-m-nz-cattle-0001-18138fd9",
+    "within_tolerance": true
+  },
+  "version_id": "mv-m-nz-cattle-0001-18138fd9"
+}

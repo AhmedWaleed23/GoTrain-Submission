@@ -1,0 +1,8 @@
+[2026-10-31T18:07:33+00:00] exp-20261031T180733Z-22b10f: resnet_small on m-pv4ger (geobench), 11814 train / 999 valid samples, device cuda
+[2026-10-31T18:08:00+00:00] epoch 1/10 train_loss=0.2928 val_accuracy=0.9039 best=0.9039@1 (25s+2s)
+[2026-10-31T18:08:27+00:00] epoch 2/10 train_loss=0.2660 val_accuracy=0.8949 best=0.9039@1 (25s+2s)
+[2026-10-31T18:08:54+00:00] epoch 3/10 train_loss=0.2482 val_accuracy=0.8969 best=0.9039@1 (25s+2s)
+[2026-10-31T18:09:21+00:00] epoch 4/10 train_loss=0.2458 val_accuracy=0.8929 best=0.9039@1 (25s+2s)
+[2026-10-31T18:09:48+00:00] epoch 5/10 train_loss=0.2365 val_accuracy=0.9009 best=0.9039@1 (25s+2s)
+[2026-10-31T18:10:15+00:00] epoch 6/10 train_loss=0.2235 val_accuracy=0.8679 best=0.9039@1 (25s+2s)
+[2026-10-31T18:10:16+00:00] exp-20261031T180733Z-22b10f: completed (early_stopping), best accuracy=0.9039039039039038 at epoch 1

@@ -1,0 +1,38 @@
+{
+  "budget": {
+    "max_experiments": 6,
+    "max_tool_calls": 60,
+    "run_max_minutes": 5.0,
+    "session_minutes": 35.0
+  },
+  "elapsed_before_seconds": 0.0,
+  "elapsed_seconds": 1426.20756316185,
+  "errors": [],
+  "experiments_launched": 6,
+  "finished_tasks": {
+    "m-pv4ger": {
+      "best_val_metric": 0.9409409409409409,
+      "selected": "exp-20261031T181019Z-94b654",
+      "summary": "Native 320px was too slow (~130 s/epoch), so I downsized to 128px. cnn_small reached 0.929. resnet_small at lr 3e-3 was unstable (0.904, early stopped), but at lr 1e-3 it reached 0.941, the best run. Resolution 160 (0.915, fewer epochs, early stopped) and higher weight decay with a new seed (0.936) did not beat it. I selected exp-20261031T181019Z-94b654. Differences of about 0.5 points are near seed noise."
+    },
+    "m-pv4ger-seg": {
+      "best_val_metric": 0.9229632830171473,
+      "selected": "exp-20261031T182357Z-34155d",
+      "summary": "The only prior run was a one-epoch smoke test (mIoU 0.41). With one experiment left, I trained unet_small at input size 160, lr 0.003, batch size 16 for 14 epochs. Downscaling made epochs about 9 s instead of about 64 s at native size. It reached val mIoU 0.923 (foreground IoU 0.878, pixel accuracy 0.974), and the curve was still rising at the last epoch. I selected it. The experiment budget is now exhausted, so I tried no unet_medium run, no higher resolution and no longer schedule."
+    }
+  },
+  "model_id": "eu.anthropic.claude-sonnet-5-5",
+  "resume_count": 0,
+  "rounds": 6,
+  "session_id": "agent-20261031T180302Z-e3190f",
+  "source": "geobench",
+  "started_at": "2026-10-31T18:03:02+00:00",
+  "status": "completed",
+  "tasks": [
+    "m-pv4ger",
+    "m-pv4ger-seg",
+    "m-chesapeake"
+  ],
+  "tool_calls": 31,
+  "updated_at": "2026-10-31T18:26:49+00:00"
+}

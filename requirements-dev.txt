@@ -1,0 +1,4 @@
+# Developer-only additions. Nothing here is needed to train or run the agent.
+pytest>=7
+# Optional: used only as a reference oracle in tests/test_metrics.py (tests skip without it).
+torchmetrics

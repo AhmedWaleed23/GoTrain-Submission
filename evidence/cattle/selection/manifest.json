@@ -1,0 +1,91 @@
+{
+  "frozen_at": "2026-11-01T00:02:45+00:00",
+  "frozen_by": "manual",
+  "manifest_hash": "695dca472bd2ce5d2f0320fd45745d2c434526bc6840ac1c7cc8449fc9e89ba1",
+  "tasks": {
+    "m-nz-cattle": {
+      "best_val_metric": 0.847690075670909,
+      "checkpoint_path": "experiments/exp-20261031T234011Z-fa5d0b/checkpoints/best.pt",
+      "checkpoint_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+      "experiment_id": "exp-20261031T234011Z-fa5d0b",
+      "metric": {
+        "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "miou",
+        "split": "valid"
+      },
+      "model": {
+        "class_names": [
+          "no cattle",
+          "cattle"
+        ],
+        "ignore_index": null,
+        "in_channels": 3,
+        "n_classes": 2,
+        "name": "unet_medium",
+        "parameters": 7763074
+      },
+      "model_version": "mv-m-nz-cattle-0001-18138fd9",
+      "normalization_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba",
+      "normalization_path": "/home/sagemaker-user/gotrain_cattle_runs/normalization/m-nz-cattle.json",
+      "run_config": {
+        "augment": true,
+        "batch_size": 4,
+        "early_stopping_patience": 10,
+        "epochs": 30,
+        "expected_tradeoff": "",
+        "hypothesis": "Test whether higher-resolution inputs and a lower learning rate improve segmentation of small cattle.",
+        "input_size": 512,
+        "label_smoothing": 0.0,
+        "lr": 0.001,
+        "max_minutes": 12.0,
+        "model": "unet_medium",
+        "num_workers": 0,
+        "parent_experiment": null,
+        "precision": "auto",
+        "rationale": "",
+        "scheduler": "cosine",
+        "screening": false,
+        "seed": 0,
+        "subset_fraction": 1.0,
+        "tag": "higher_resolution",
+        "task": "m-nz-cattle",
+        "val_limit": null,
+        "weight_decay": 0.0001
+      },
+      "seed": 0,
+      "selected_by": "manual",
+      "selection_rationale": "Selected using validation only: mean IoU improved from 0.8338 to 0.8477 and cattle IoU from 0.6762 to 0.7035. Best checkpoint at epoch 20. Higher-resolution recipe was proposed manually. Test split remains untouched.",
+      "source": "geobench",
+      "task_config": {
+        "band_order_note": "Stored order Red, Green, Blue. Masks were rasterized from point annotations as small squares (converter radius 6 px).",
+        "benchmark": "segmentation_v1.0",
+        "class_names": [
+          "no cattle",
+          "cattle"
+        ],
+        "diagnostic_exclude_classes": [],
+        "hf_filename": "segmentation_v1.0/m-nz-cattle.zip",
+        "ignore_index": null,
+        "in_channels": 3,
+        "input_size": null,
+        "n_classes": 2,
+        "name": "m-nz-cattle",
+        "notes": "STRETCH TASK, not required. 524/66/65 train/valid/test. Foreground is tiny; verify label handling with `inspect` before any training. U-Net pads 500 to 512 internally and crops the logits back.",
+        "patch_size": [
+          500,
+          500
+        ],
+        "required": false,
+        "rgb_indices": [
+          0,
+          1,
+          2
+        ],
+        "selection_metric": "miou",
+        "task_type": "segmentation"
+      },
+      "task_type": "segmentation"
+    }
+  }
+}

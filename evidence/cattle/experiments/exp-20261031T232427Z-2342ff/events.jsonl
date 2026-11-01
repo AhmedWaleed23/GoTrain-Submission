@@ -1,0 +1,5 @@
+{"at": "2026-10-31T23:24:27+00:00", "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "created", "tag": "agent", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:24:27+00:00", "error": null, "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "status", "status": "running"}
+{"at": "2026-10-31T23:27:36+00:00", "error": null, "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T23:27:36+00:00", "by": "auto", "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-nz-cattle"}
+{"at": "2026-10-31T23:27:38+00:00", "by": "agent", "experiment_id": "exp-20261031T232427Z-2342ff", "kind": "selected_best", "rationale": "unet_medium 20 epochs val mIoU 0.8333 vs unet_small 12 epochs 0.8231.", "task": "m-nz-cattle"}

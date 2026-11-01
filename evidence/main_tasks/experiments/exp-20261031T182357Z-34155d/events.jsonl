@@ -1,0 +1,7 @@
+{"at": "2026-10-31T18:23:57+00:00", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "created", "tag": "agent", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T18:23:57+00:00", "error": null, "experiment_id": "exp-20261031T182357Z-34155d", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:26:09+00:00", "error": null, "experiment_id": "exp-20261031T182357Z-34155d", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:26:09+00:00", "by": "auto", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T18:26:12+00:00", "by": "agent", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "selected_best", "rationale": "Only full-data run; val mIoU 0.923 (foreground IoU 0.878), still improving at the final epoch.", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T19:44:13+00:00", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "model_version_stored", "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9"}
+{"at": "2026-10-31T23:12:44+00:00", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "frozen_for_final_eval", "manifest_hash": "c5c1b73338b4ac554f4d3c88dba6302e5e055e3f7b7c0ad8ff45bd89e5dc7091", "task": "m-pv4ger-seg"}

@@ -1,0 +1,295 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T185604Z-d02e93/checkpoints/best.pt",
+    "best_sha256": "680a980ca1f376f88baa4f8672b7f7a62945b71294fab08923c8496a51b357c2",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T185604Z-d02e93/checkpoints/last.pt",
+    "last_sha256": "5cc9a1e9af2cc49fa11cce67c1d68b223b19e717695282179de321c619ac78ce"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 16,
+    "effective_lr": 0.002,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 191.61056875299982
+  },
+  "config_hash": "8c029fcd51e891872807300d2c1e043b6c2a3d8a5da12047ac70547a30faa037",
+  "created_at": "2026-10-31T18:56:04+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue",
+      "NearInfrared"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-chesapeake",
+    "input_size": [
+      256,
+      256
+    ],
+    "resized": false,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 1000,
+      "train": 3000,
+      "valid": 1000
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 3000,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 1000
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "Longer run may hit time cap before finishing the schedule.",
+  "experiment_id": "exp-20261031T185604Z-d02e93",
+  "finished_at": "2026-10-31T18:59:16+00:00",
+  "hypothesis": "Longer schedule for unet_small (10 epochs) improves mIoU beyond 0.566; the medium model gave no gain, so training length is the bottleneck.",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "ignore_index": null,
+    "in_channels": 4,
+    "n_classes": 7,
+    "name": "unet_small",
+    "parameters": 1942823
+  },
+  "normalization": {
+    "n_samples_used": 3000,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-chesapeake.json",
+    "split": "train",
+    "stats_hash": "c8af9b0eb3848cc8eb3a3f7d57e8e3ee2f251fea414c95726f94993c77c3bec9"
+  },
+  "parent_experiment": "exp-20261031T184955Z-0fcafd",
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "Small 0.566 vs medium 0.555; both still improving at the end; small epochs take 18-30s so 10 epochs fits in cap.",
+  "result": {
+    "best_epoch": 9,
+    "best_val_metric": 0.6066257637873264,
+    "epochs_completed": 10,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "confusion_matrix": [
+        [
+          1310680,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6351086,
+          165749,
+          256344,
+          47464,
+          56377,
+          401
+        ],
+        [
+          747,
+          20421,
+          21671776,
+          2363749,
+          10878,
+          119480,
+          7232
+        ],
+        [
+          0,
+          76364,
+          1968626,
+          22530188,
+          141355,
+          722544,
+          14032
+        ],
+        [
+          0,
+          21260,
+          14980,
+          385008,
+          344497,
+          268059,
+          31260
+        ],
+        [
+          0,
+          45675,
+          169722,
+          777824,
+          155353,
+          3525282,
+          62066
+        ],
+        [
+          0,
+          8674,
+          127701,
+          358989,
+          83605,
+          1224614,
+          95898
+        ]
+      ],
+      "conventions": {
+        "miou": "macro mean of per-class IoU from the split-level confusion matrix; classes absent from both target and prediction are excluded (torchmetrics multiclass JaccardIndex, average=macro)",
+        "pixel_accuracy": "diagnostic only; misleading on imbalanced masks"
+      },
+      "loss": 0.4219824288572584,
+      "miou": 0.6066257637873264,
+      "miou_excluding": {
+        "classes": [
+          "6"
+        ],
+        "value": 0.6997959688193962
+      },
+      "n_classes_present": 7,
+      "n_ignored": 0,
+      "n_pixels": 65536000,
+      "per_class": [
+        {
+          "class": "0",
+          "iou": 0.9993999086519142,
+          "predicted_pixels": 1311427,
+          "present": true,
+          "target_pixels": 1310720
+        },
+        {
+          "class": "1",
+          "iou": 0.9008869027059575,
+          "predicted_pixels": 6523480,
+          "present": true,
+          "target_pixels": 6877421
+        },
+        {
+          "class": "2",
+          "iou": 0.8134714852813327,
+          "predicted_pixels": 24118594,
+          "present": true,
+          "target_pixels": 24194283
+        },
+        {
+          "class": "3",
+          "iou": 0.7612830035644845,
+          "predicted_pixels": 26672102,
+          "present": true,
+          "target_pixels": 25453109
+        },
+        {
+          "class": "4",
+          "iou": 0.22909665968176235,
+          "predicted_pixels": 783152,
+          "present": true,
+          "target_pixels": 1065064
+        },
+        {
+          "class": "5",
+          "iou": 0.49463785303092633,
+          "predicted_pixels": 5916356,
+          "present": true,
+          "target_pixels": 4735922
+        },
+        {
+          "class": "6",
+          "iou": 0.04760453359490725,
+          "predicted_pixels": 210889,
+          "present": true,
+          "target_pixels": 1899481
+        }
+      ],
+      "pixel_accuracy": 0.8518891448974609
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 16,
+    "early_stopping_patience": 5,
+    "epochs": 10,
+    "expected_tradeoff": "Longer run may hit time cap before finishing the schedule.",
+    "hypothesis": "Longer schedule for unet_small (10 epochs) improves mIoU beyond 0.566; the medium model gave no gain, so training length is the bottleneck.",
+    "input_size": null,
+    "label_smoothing": 0.0,
+    "lr": 0.002,
+    "max_minutes": 4.8,
+    "model": "unet_small",
+    "num_workers": 2,
+    "parent_experiment": "exp-20261031T184955Z-0fcafd",
+    "precision": "auto",
+    "rationale": "Small 0.566 vs medium 0.555; both still improving at the end; small epochs take 18-30s so 10 epochs fits in cap.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-chesapeake",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T18:56:04+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-chesapeake",
+  "task_type": "segmentation",
+  "updated_at": "2026-10-31T18:59:16+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

@@ -1,0 +1,600 @@
+{
+  "promoted": {
+    "m-chesapeake": {
+      "at": "2026-10-31T23:12:44+00:00",
+      "by": "freeze",
+      "previous": null,
+      "rationale": "frozen selection for final evaluation (manual)",
+      "task": "m-chesapeake",
+      "version_id": "mv-m-chesapeake-0001-15b194f7"
+    },
+    "m-eurosat": {
+      "at": "2026-10-31T23:12:44+00:00",
+      "by": "freeze",
+      "previous": null,
+      "rationale": "frozen selection for final evaluation (agent)",
+      "task": "m-eurosat",
+      "version_id": "mv-m-eurosat-0001-1725b67f"
+    },
+    "m-pv4ger": {
+      "at": "2026-10-31T23:12:44+00:00",
+      "by": "freeze",
+      "previous": null,
+      "rationale": "frozen selection for final evaluation (agent)",
+      "task": "m-pv4ger",
+      "version_id": "mv-m-pv4ger-0001-1c42a390"
+    },
+    "m-pv4ger-seg": {
+      "at": "2026-10-31T23:12:44+00:00",
+      "by": "freeze",
+      "previous": null,
+      "rationale": "frozen selection for final evaluation (agent)",
+      "task": "m-pv4ger-seg",
+      "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9"
+    }
+  },
+  "updated_at": "2026-10-31T23:12:44+00:00",
+  "versions": {
+    "mv-m-chesapeake-0001-15b194f7": {
+      "architecture": {
+        "class_names": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "ignore_index": null,
+        "in_channels": 4,
+        "n_classes": 7,
+        "name": "unet_small",
+        "parameters": 1942823
+      },
+      "backend": "filesystem",
+      "checkpoint_bytes": 23426961,
+      "checkpoint_sha256": "15b194f71e93c7f96b1e4ced0275669efad8e8d900a870569cc7e614c5e69848",
+      "created_at": "2026-10-31T19:44:24+00:00",
+      "environment": {
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "experiment_id": "exp-20261031T191244Z-ad67e7",
+      "metric": {
+        "best_epoch": 28,
+        "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "miou",
+        "split": "valid",
+        "value": 0.668305193102589
+      },
+      "note": "",
+      "parent_version": null,
+      "preprocessing": {
+        "band_names": [
+          "Red",
+          "Green",
+          "Blue",
+          "NearInfrared"
+        ],
+        "channels_stacked_in_stored_order": true,
+        "input_size": [
+          256,
+          256
+        ],
+        "normalization_file": "normalization.json",
+        "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-chesapeake.json",
+        "normalization_stats_hash": "c8af9b0eb3848cc8eb3a3f7d57e8e3ee2f251fea414c95726f94993c77c3bec9"
+      },
+      "pretrained": null,
+      "reference": {
+        "file": "reference.npz",
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "input_sha256": "674e74c9dc5d634d61f40a351b700207be2c3d6c06e52cf275ea7cb8456a40f7",
+        "logits_argmax": [
+          0.0,
+          2.842,
+          3.986,
+          3.682
+        ],
+        "n": 4,
+        "split": "valid",
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        }
+      },
+      "run_config": {
+        "augment": true,
+        "batch_size": 16,
+        "early_stopping_patience": 10,
+        "epochs": 30,
+        "expected_tradeoff": "",
+        "hypothesis": "Test whether extending the small U-Net schedule improves full-validation mIoU and weak classes 4 and 6.",
+        "input_size": null,
+        "label_smoothing": 0.0,
+        "lr": 0.002,
+        "max_minutes": 12.0,
+        "model": "unet_small",
+        "num_workers": 2,
+        "parent_experiment": null,
+        "precision": "auto",
+        "rationale": "",
+        "scheduler": "cosine",
+        "screening": false,
+        "seed": 0,
+        "subset_fraction": 1.0,
+        "tag": "longer_schedule",
+        "task": "m-chesapeake",
+        "val_limit": null,
+        "weight_decay": 0.0001
+      },
+      "seed": 0,
+      "source": "geobench",
+      "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-chesapeake-0001-15b194f7/checkpoint.pt",
+      "task": "m-chesapeake",
+      "task_type": "segmentation",
+      "training_wall_time_seconds": 567.220152818998,
+      "validation_diagnostics": {
+        "miou": 0.668305193102589,
+        "n_classes_present": 7,
+        "pixel_accuracy": 0.8636047668457031
+      },
+      "verification": {
+        "argmax_agreement": 1.0,
+        "at": "2026-10-31T19:44:34+00:00",
+        "device": "cuda",
+        "max_abs_diff": 8.58306884765625e-06,
+        "mean_abs_diff": 6.232577334230882e-07,
+        "model_reproduced": true,
+        "n_reference": 4,
+        "preprocessing_identity": {
+          "checked": true,
+          "max_abs_diff": 0.0,
+          "ok": true
+        },
+        "preprocessing_verified": true,
+        "sha256_ok": true,
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        },
+        "verified": true,
+        "version_id": "mv-m-chesapeake-0001-15b194f7",
+        "within_tolerance": true
+      },
+      "version_id": "mv-m-chesapeake-0001-15b194f7"
+    },
+    "mv-m-eurosat-0001-1725b67f": {
+      "architecture": {
+        "class_names": [
+          "Industrial Buildings",
+          "Residential Buildings",
+          "Annual Crop",
+          "Permanent Crop",
+          "River",
+          "Sea and Lake",
+          "Herbaceous Vegetation",
+          "Highway",
+          "Pasture",
+          "Forest"
+        ],
+        "ignore_index": null,
+        "in_channels": 13,
+        "n_classes": 10,
+        "name": "cnn_small",
+        "parameters": 588330
+      },
+      "backend": "filesystem",
+      "checkpoint_bytes": 7108571,
+      "checkpoint_sha256": "1725b67f5908c4c4427a619a9b1507bbecefd38983157cd132d12d17df377285",
+      "created_at": "2026-10-31T19:43:49+00:00",
+      "environment": {
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "experiment_id": "exp-20261031T175718Z-2acce6",
+      "metric": {
+        "best_epoch": 10,
+        "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "accuracy",
+        "split": "valid",
+        "value": 0.902
+      },
+      "note": "",
+      "parent_version": null,
+      "preprocessing": {
+        "band_names": [
+          "01 - Coastal aerosol",
+          "02 - Blue",
+          "03 - Green",
+          "04 - Red",
+          "05 - Vegetation Red Edge",
+          "06 - Vegetation Red Edge",
+          "07 - Vegetation Red Edge",
+          "08 - NIR",
+          "08A - Vegetation Red Edge",
+          "09 - Water vapour",
+          "10 - SWIR - Cirrus",
+          "11 - SWIR",
+          "12 - SWIR"
+        ],
+        "channels_stacked_in_stored_order": true,
+        "input_size": [
+          64,
+          64
+        ],
+        "normalization_file": "normalization.json",
+        "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-eurosat.json",
+        "normalization_stats_hash": "5fb7bcce78b3e419e2996331f04618ad513fb7d497c5b2ff709fd78f6dca83d9"
+      },
+      "pretrained": null,
+      "reference": {
+        "file": "reference.npz",
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "input_sha256": "02a26ee3f1b21a8a0d1bf6d1532616cc3ac47c50f0a44c4aa20594816949a723",
+        "logits_argmax": [
+          4.0,
+          0.0,
+          4.0,
+          2.0
+        ],
+        "n": 4,
+        "split": "valid",
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        }
+      },
+      "run_config": {
+        "augment": true,
+        "batch_size": 64,
+        "early_stopping_patience": 5,
+        "epochs": 10,
+        "expected_tradeoff": "May be cut by time cap; higher lr risks instability.",
+        "hypothesis": "Larger batch cuts per-epoch time; cnn_small with lr 3e-3 should reach ~80%+ in 10 epochs.",
+        "input_size": null,
+        "label_smoothing": 0.0,
+        "lr": 0.003,
+        "max_minutes": 3.0,
+        "model": "cnn_small",
+        "num_workers": 2,
+        "parent_experiment": null,
+        "precision": "auto",
+        "rationale": "Only 3 min/run and 2 runs left; smoke test gave 37s/epoch estimate at bs16, bigger batch should be faster.",
+        "scheduler": "cosine",
+        "screening": false,
+        "seed": 0,
+        "subset_fraction": 1.0,
+        "tag": "agent",
+        "task": "m-eurosat",
+        "val_limit": null,
+        "weight_decay": 0.0001
+      },
+      "seed": 0,
+      "source": "geobench",
+      "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-eurosat-0001-1725b67f/checkpoint.pt",
+      "task": "m-eurosat",
+      "task_type": "classification",
+      "training_wall_time_seconds": 74.52778122300151,
+      "validation_diagnostics": {
+        "accuracy": 0.902,
+        "macro_f1": 0.9007406098535439
+      },
+      "verification": {
+        "argmax_agreement": 1.0,
+        "at": "2026-10-31T19:44:35+00:00",
+        "device": "cuda",
+        "max_abs_diff": 9.5367431640625e-07,
+        "mean_abs_diff": 2.95601779498611e-07,
+        "model_reproduced": true,
+        "n_reference": 4,
+        "preprocessing_identity": {
+          "checked": true,
+          "max_abs_diff": 0.0,
+          "ok": true
+        },
+        "preprocessing_verified": true,
+        "sha256_ok": true,
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        },
+        "verified": true,
+        "version_id": "mv-m-eurosat-0001-1725b67f",
+        "within_tolerance": true
+      },
+      "version_id": "mv-m-eurosat-0001-1725b67f"
+    },
+    "mv-m-pv4ger-0001-1c42a390": {
+      "architecture": {
+        "class_names": [
+          "no solar pv",
+          "solar pv"
+        ],
+        "ignore_index": null,
+        "in_channels": 3,
+        "n_classes": 2,
+        "name": "resnet_small",
+        "parameters": 2795554
+      },
+      "backend": "filesystem",
+      "checkpoint_bytes": 33666133,
+      "checkpoint_sha256": "1c42a390fdac352344a48615032c70d4a99975820ba8290a62757f7dade517d4",
+      "created_at": "2026-10-31T19:44:05+00:00",
+      "environment": {
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "experiment_id": "exp-20261031T181019Z-94b654",
+      "metric": {
+        "best_epoch": 10,
+        "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "accuracy",
+        "split": "valid",
+        "value": 0.9409409409409409
+      },
+      "note": "",
+      "parent_version": null,
+      "preprocessing": {
+        "band_names": [
+          "Red",
+          "Green",
+          "Blue"
+        ],
+        "channels_stacked_in_stored_order": true,
+        "input_size": 128,
+        "normalization_file": "normalization.json",
+        "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger.json",
+        "normalization_stats_hash": "048910f08d468f337da0c54b77c61d7580e00716e96ec0d826cc69c13cc13147"
+      },
+      "pretrained": null,
+      "reference": {
+        "file": "reference.npz",
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "input_sha256": "d37ffec8d8bab637875ba3d8eafb6013ab1cd7d95f2d96e4dcdb7c9c829c39c8",
+        "logits_argmax": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "n": 4,
+        "split": "valid",
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        }
+      },
+      "run_config": {
+        "augment": true,
+        "batch_size": 64,
+        "early_stopping_patience": 5,
+        "epochs": 10,
+        "expected_tradeoff": "Still might underperform cnn_small; ~4.5 min.",
+        "hypothesis": "Lower lr stabilizes resnet_small; val should exceed 0.93.",
+        "input_size": 128,
+        "label_smoothing": 0.0,
+        "lr": 0.001,
+        "max_minutes": 5.0,
+        "model": "resnet_small",
+        "num_workers": 2,
+        "parent_experiment": "exp-20261031T180733Z-22b10f",
+        "precision": "auto",
+        "rationale": "ResNet at lr 0.003 was noisy (val dropped to 0.868, early stopped at epoch 6) with slow train loss decrease.",
+        "scheduler": "cosine",
+        "screening": false,
+        "seed": 0,
+        "subset_fraction": 1.0,
+        "tag": "agent",
+        "task": "m-pv4ger",
+        "val_limit": null,
+        "weight_decay": 0.0001
+      },
+      "seed": 0,
+      "source": "geobench",
+      "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-pv4ger-0001-1c42a390/checkpoint.pt",
+      "task": "m-pv4ger",
+      "task_type": "classification",
+      "training_wall_time_seconds": 271.7881741000019,
+      "validation_diagnostics": {
+        "accuracy": 0.9409409409409409,
+        "macro_f1": 0.8646593233999462
+      },
+      "verification": {
+        "argmax_agreement": 1.0,
+        "at": "2026-10-31T19:44:35+00:00",
+        "device": "cuda",
+        "max_abs_diff": 7.152557373046875e-07,
+        "mean_abs_diff": 2.682209014892578e-07,
+        "model_reproduced": true,
+        "n_reference": 4,
+        "preprocessing_identity": {
+          "checked": true,
+          "max_abs_diff": 0.0,
+          "ok": true
+        },
+        "preprocessing_verified": true,
+        "sha256_ok": true,
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        },
+        "verified": true,
+        "version_id": "mv-m-pv4ger-0001-1c42a390",
+        "within_tolerance": true
+      },
+      "version_id": "mv-m-pv4ger-0001-1c42a390"
+    },
+    "mv-m-pv4ger-seg-0001-9f0e0bd9": {
+      "architecture": {
+        "class_names": [
+          "no solar pv",
+          "solar pv"
+        ],
+        "ignore_index": null,
+        "in_channels": 3,
+        "n_classes": 2,
+        "name": "unet_small",
+        "parameters": 1942594
+      },
+      "backend": "filesystem",
+      "checkpoint_bytes": 23423953,
+      "checkpoint_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+      "created_at": "2026-10-31T19:44:13+00:00",
+      "environment": {
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "experiment_id": "exp-20261031T182357Z-34155d",
+      "metric": {
+        "best_epoch": 14,
+        "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "miou",
+        "split": "valid",
+        "value": 0.9229632830171473
+      },
+      "note": "",
+      "parent_version": null,
+      "preprocessing": {
+        "band_names": [
+          "Red",
+          "Green",
+          "Blue"
+        ],
+        "channels_stacked_in_stored_order": true,
+        "input_size": 160,
+        "normalization_file": "normalization.json",
+        "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger-seg.json",
+        "normalization_stats_hash": "9dbf09291ec520b9b99ea66416defa9393d6f7f6a00c16cc4f556d43f6e55ef8"
+      },
+      "pretrained": null,
+      "reference": {
+        "file": "reference.npz",
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "input_sha256": "00bda380d95e3134ce0e406eab98146a5a711afd38a9a92d98c3d9a60b1ff7bc",
+        "logits_argmax": [
+          0.563,
+          0.043,
+          0.213,
+          0.081
+        ],
+        "n": 4,
+        "split": "valid",
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        }
+      },
+      "run_config": {
+        "augment": true,
+        "batch_size": 16,
+        "early_stopping_patience": 5,
+        "epochs": 14,
+        "expected_tradeoff": "Lose fine detail from downscaling; higher lr may be slightly unstable but cosine schedule helps.",
+        "hypothesis": "Downscaling to 160 cuts compute ~4x, enabling ~14 epochs in the 5 min cap; should well exceed the 1-epoch smoke mIoU of 0.41.",
+        "input_size": 160,
+        "label_smoothing": 0.0,
+        "lr": 0.003,
+        "max_minutes": 5.0,
+        "model": "unet_small",
+        "num_workers": 2,
+        "parent_experiment": null,
+        "precision": "auto",
+        "rationale": "Only one experiment and ~14 min left; native speed is 64s/epoch, so only ~4 epochs would fit natively.",
+        "scheduler": "cosine",
+        "screening": false,
+        "seed": 0,
+        "subset_fraction": 1.0,
+        "tag": "agent",
+        "task": "m-pv4ger-seg",
+        "val_limit": null,
+        "weight_decay": 0.0001
+      },
+      "seed": 0,
+      "source": "geobench",
+      "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-pv4ger-seg-0001-9f0e0bd9/checkpoint.pt",
+      "task": "m-pv4ger-seg",
+      "task_type": "segmentation",
+      "training_wall_time_seconds": 131.83306585500395,
+      "validation_diagnostics": {
+        "foreground_iou": 0.8776153245467778,
+        "miou": 0.9229632830171473,
+        "n_classes_present": 2,
+        "pixel_accuracy": 0.9741788151364764
+      },
+      "verification": {
+        "argmax_agreement": 1.0,
+        "at": "2026-10-31T19:44:36+00:00",
+        "device": "cuda",
+        "max_abs_diff": 3.993511199951172e-06,
+        "mean_abs_diff": 4.767041446029907e-07,
+        "model_reproduced": true,
+        "n_reference": 4,
+        "preprocessing_identity": {
+          "checked": true,
+          "max_abs_diff": 0.0,
+          "ok": true
+        },
+        "preprocessing_verified": true,
+        "sha256_ok": true,
+        "tolerance": {
+          "atol": 0.001,
+          "note": "fp32 eval on either device; AMP is not used for verification",
+          "rtol": 0.001
+        },
+        "verified": true,
+        "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+        "within_tolerance": true
+      },
+      "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9"
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T181019Z-94b654/checkpoints/best.pt",
+    "best_sha256": "1c42a390fdac352344a48615032c70d4a99975820ba8290a62757f7dade517d4",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T181019Z-94b654/checkpoints/last.pt",
+    "last_sha256": "b81796032ca0a537253b75739e399563eaba28534ee89d223140063260f298c2"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 64,
+    "effective_lr": 0.001,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 271.7881741000019
+  },
+  "config_hash": "a19eb1b2fd3524027941dafac442f7ddb00e27205b64de9c1095840f7ff14ff8",
+  "created_at": "2026-10-31T18:10:19+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/classification_v1.0/m-pv4ger",
+    "input_size": 128,
+    "resized": true,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 999,
+      "train": 11814,
+      "valid": 999
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 11814,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 999
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "Still might underperform cnn_small; ~4.5 min.",
+  "experiment_id": "exp-20261031T181019Z-94b654",
+  "finished_at": "2026-10-31T18:14:51+00:00",
+  "hypothesis": "Lower lr stabilizes resnet_small; val should exceed 0.93.",
+  "metric": {
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "resnet_small",
+    "parameters": 2795554
+  },
+  "normalization": {
+    "n_samples_used": 11814,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger.json",
+    "split": "train",
+    "stats_hash": "048910f08d468f337da0c54b77c61d7580e00716e96ec0d826cc69c13cc13147"
+  },
+  "parent_experiment": "exp-20261031T180733Z-22b10f",
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "ResNet at lr 0.003 was noisy (val dropped to 0.868, early stopped at epoch 6) with slow train loss decrease.",
+  "result": {
+    "best_epoch": 10,
+    "best_val_metric": 0.9409409409409409,
+    "epochs_completed": 10,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "accuracy": 0.9409409409409409,
+      "confusion_matrix": [
+        [
+          845,
+          1
+        ],
+        [
+          58,
+          95
+        ]
+      ],
+      "conventions": {
+        "accuracy": "overall accuracy over the full split (torchmetrics multiclass Accuracy)",
+        "macro_f1": "unweighted mean of per-class F1; absent classes count as 0 (diagnostic only)"
+      },
+      "loss": 0.18319931160658598,
+      "macro_f1": 0.8646593233999462,
+      "n_ignored": 0,
+      "n_samples": 999,
+      "per_class": [
+        {
+          "class": "no solar pv",
+          "f1": 0.9662664379645511,
+          "precision": 0.9357696566998892,
+          "recall": 0.9988179669030733,
+          "support": 846
+        },
+        {
+          "class": "solar pv",
+          "f1": 0.7630522088353413,
+          "precision": 0.9895833333333334,
+          "recall": 0.6209150326797386,
+          "support": 153
+        }
+      ]
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 64,
+    "early_stopping_patience": 5,
+    "epochs": 10,
+    "expected_tradeoff": "Still might underperform cnn_small; ~4.5 min.",
+    "hypothesis": "Lower lr stabilizes resnet_small; val should exceed 0.93.",
+    "input_size": 128,
+    "label_smoothing": 0.0,
+    "lr": 0.001,
+    "max_minutes": 5.0,
+    "model": "resnet_small",
+    "num_workers": 2,
+    "parent_experiment": "exp-20261031T180733Z-22b10f",
+    "precision": "auto",
+    "rationale": "ResNet at lr 0.003 was noisy (val dropped to 0.868, early stopped at epoch 6) with slow train loss decrease.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-pv4ger",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T18:10:19+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-pv4ger",
+  "task_type": "classification",
+  "updated_at": "2026-10-31T18:14:51+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

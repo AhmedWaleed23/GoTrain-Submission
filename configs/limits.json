@@ -1,0 +1,18 @@
+{
+  "allowed_tasks": ["m-eurosat", "m-pv4ger", "m-pv4ger-seg", "m-chesapeake", "m-nz-cattle"],
+  "allowed_models": ["cnn_small", "resnet_small", "unet_small", "unet_medium"],
+  "lr_min": 1e-05,
+  "lr_max": 0.05,
+  "batch_size_min": 2,
+  "batch_size_max": 128,
+  "epochs_min": 1,
+  "epochs_max": 60,
+  "max_minutes_per_run": 90.0,
+  "weight_decay_max": 0.1,
+  "subset_fraction_min": 0.05,
+  "max_tool_calls_per_session": 60,
+  "max_experiments_per_session": 10,
+  "max_session_minutes": 180.0,
+  "max_retries_per_run": 2,
+  "allowed_input_sizes": [32, 64, 96, 128, 160, 192, 224, 256, 320, 384, 512]
+}

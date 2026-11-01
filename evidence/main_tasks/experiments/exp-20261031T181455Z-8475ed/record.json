@@ -1,0 +1,189 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T181455Z-8475ed/checkpoints/best.pt",
+    "best_sha256": "77fca4e307a84d99e0d451e2bd4e8278bfd5092a78cb951af74664e3563c747f",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T181455Z-8475ed/checkpoints/last.pt",
+    "last_sha256": "685c142997b12aa90b8d3aa9a67bd543ef5350242400d6db6bff6d0edd5081d3"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 64,
+    "effective_lr": 0.001,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 250.62923670599412
+  },
+  "config_hash": "6900ab64eb1227881f902ce6d484481da13a5aad8f267954c40db1a4a2f78f55",
+  "created_at": "2026-10-31T18:14:55+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/classification_v1.0/m-pv4ger",
+    "input_size": 160,
+    "resized": true,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 999,
+      "train": 11814,
+      "valid": 999
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 11814,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 999
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "Fewer epochs fit in the cap; may be undertrained.",
+  "experiment_id": "exp-20261031T181455Z-8475ed",
+  "finished_at": "2026-10-31T18:19:06+00:00",
+  "hypothesis": "Higher resolution (160) helps small PV panel detection, offsetting fewer epochs.",
+  "metric": {
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "resnet_small",
+    "parameters": 2795554
+  },
+  "normalization": {
+    "n_samples_used": 11814,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger.json",
+    "split": "train",
+    "stats_hash": "048910f08d468f337da0c54b77c61d7580e00716e96ec0d826cc69c13cc13147"
+  },
+  "parent_experiment": "exp-20261031T181019Z-94b654",
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "Resnet at 128 still improving at epoch 10 (0.941); resolution is the other lever within the per-run time cap.",
+  "result": {
+    "best_epoch": 3,
+    "best_val_metric": 0.914914914914915,
+    "epochs_completed": 6,
+    "stop_reason": "early_stopping",
+    "val_metrics_at_best": {
+      "accuracy": 0.914914914914915,
+      "confusion_matrix": [
+        [
+          824,
+          22
+        ],
+        [
+          63,
+          90
+        ]
+      ],
+      "conventions": {
+        "accuracy": "overall accuracy over the full split (torchmetrics multiclass Accuracy)",
+        "macro_f1": "unweighted mean of per-class F1; absent classes count as 0 (diagnostic only)"
+      },
+      "loss": 0.22077174298465252,
+      "macro_f1": 0.8150986945965661,
+      "n_ignored": 0,
+      "n_samples": 999,
+      "per_class": [
+        {
+          "class": "no solar pv",
+          "f1": 0.9509521061742642,
+          "precision": 0.9289740698985344,
+          "recall": 0.9739952718676123,
+          "support": 846
+        },
+        {
+          "class": "solar pv",
+          "f1": 0.679245283018868,
+          "precision": 0.8035714285714286,
+          "recall": 0.5882352941176471,
+          "support": 153
+        }
+      ]
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 64,
+    "early_stopping_patience": 3,
+    "epochs": 7,
+    "expected_tradeoff": "Fewer epochs fit in the cap; may be undertrained.",
+    "hypothesis": "Higher resolution (160) helps small PV panel detection, offsetting fewer epochs.",
+    "input_size": 160,
+    "label_smoothing": 0.0,
+    "lr": 0.001,
+    "max_minutes": 5.0,
+    "model": "resnet_small",
+    "num_workers": 2,
+    "parent_experiment": "exp-20261031T181019Z-94b654",
+    "precision": "auto",
+    "rationale": "Resnet at 128 still improving at epoch 10 (0.941); resolution is the other lever within the per-run time cap.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-pv4ger",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T18:14:55+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-pv4ger",
+  "task_type": "classification",
+  "updated_at": "2026-10-31T18:19:06+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

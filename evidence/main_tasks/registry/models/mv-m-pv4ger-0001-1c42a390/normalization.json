@@ -1,0 +1,24 @@
+{
+  "band_names": [
+    "Red",
+    "Green",
+    "Blue"
+  ],
+  "mean": [
+    113.10150824101702,
+    119.3753711111089,
+    116.31626609087999
+  ],
+  "n_samples_in_split": 11814,
+  "n_samples_used": 11814,
+  "sample_order_hash": "cea6aaf025221b6e42bd9c5fcaf5368efe87dd398b621bb3bf4de86ef6150467",
+  "source": "geobench",
+  "split": "train",
+  "stats_hash": "048910f08d468f337da0c54b77c61d7580e00716e96ec0d826cc69c13cc13147",
+  "std": [
+    54.08805996406338,
+    48.118873434128,
+    44.51754981556705
+  ],
+  "task": "m-pv4ger"
+}

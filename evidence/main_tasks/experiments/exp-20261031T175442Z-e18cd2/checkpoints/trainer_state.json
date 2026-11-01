@@ -1,0 +1,21 @@
+{
+  "adjustments": [],
+  "best_epoch": 1,
+  "best_metric": 0.40761689113527977,
+  "best_sha256": "93442d79e18530656b961f4b919ac35db2d6302e47b1678a4aa42ae597e16680",
+  "device": "cuda",
+  "effective_batch_size": 16,
+  "effective_lr": 0.001,
+  "epoch_completed": 1,
+  "epochs_without_improvement": 0,
+  "finished_at": "2026-10-31T17:54:49+00:00",
+  "last_sha256": "4a4298fb826139d981430323694898ece64e54aa5d07ace01035fadc0923988c",
+  "nonfinite_steps": 0,
+  "resume_count": 0,
+  "retries": 0,
+  "started_at": "2026-10-31T17:54:42+00:00",
+  "status": "completed",
+  "stop_reason": "max_epochs",
+  "use_amp": true,
+  "wall_time_seconds": 6.654507256000215
+}

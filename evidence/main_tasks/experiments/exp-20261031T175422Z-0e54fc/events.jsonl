@@ -1,0 +1,3 @@
+{"at": "2026-10-31T17:54:22+00:00", "experiment_id": "exp-20261031T175422Z-0e54fc", "kind": "created", "tag": "smoke", "task": "m-eurosat"}
+{"at": "2026-10-31T17:54:22+00:00", "error": null, "experiment_id": "exp-20261031T175422Z-0e54fc", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:54:29+00:00", "error": null, "experiment_id": "exp-20261031T175422Z-0e54fc", "kind": "status", "status": "completed"}

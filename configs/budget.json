@@ -1,0 +1,11 @@
+{
+  "baseline_epochs": 8,
+  "baseline_max_minutes": 15.0,
+  "agent_session_minutes": 60.0,
+  "agent_max_experiments": 6,
+  "agent_run_max_minutes": 15.0,
+  "screening_subset_fraction": 0.25,
+  "screening_epochs": 3,
+  "finalist_epochs": 12,
+  "finalist_max_minutes": 25.0
+}

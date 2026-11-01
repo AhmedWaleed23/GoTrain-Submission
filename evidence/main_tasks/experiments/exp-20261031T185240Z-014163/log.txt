@@ -1,0 +1,8 @@
+[2026-10-31T18:52:40+00:00] exp-20261031T185240Z-014163: unet_medium on m-chesapeake (geobench), 3000 train / 1000 valid samples, device cuda
+[2026-10-31T18:53:14+00:00] epoch 1/6 train_loss=0.8898 val_miou=0.4966 best=0.4966@1 (29s+3s)
+[2026-10-31T18:53:48+00:00] epoch 2/6 train_loss=0.6667 val_miou=0.5418 best=0.5418@2 (28s+5s)
+[2026-10-31T18:54:20+00:00] epoch 3/6 train_loss=0.6329 val_miou=0.4522 best=0.5418@2 (28s+4s)
+[2026-10-31T18:54:53+00:00] epoch 4/6 train_loss=0.6010 val_miou=0.5521 best=0.5521@4 (28s+3s)
+[2026-10-31T18:55:27+00:00] epoch 5/6 train_loss=0.5758 val_miou=0.5525 best=0.5525@5 (28s+4s)
+[2026-10-31T18:56:00+00:00] epoch 6/6 train_loss=0.5414 val_miou=0.5554 best=0.5554@6 (29s+4s)
+[2026-10-31T18:56:01+00:00] exp-20261031T185240Z-014163: completed (max_epochs), best miou=0.5554421718555803 at epoch 6

@@ -1,0 +1,128 @@
+{
+  "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-nz-cattle",
+  "first_sample": {
+    "image_dtype_stored": "uint8",
+    "image_shape": [
+      3,
+      500,
+      500
+    ],
+    "label_shape": [
+      500,
+      500
+    ],
+    "load_seconds": 0.0179
+  },
+  "meta": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "class_names": [
+      "no cattle",
+      "cattle"
+    ],
+    "dtype": "float32",
+    "extra": {
+      "band_order_note": "Stored order Red, Green, Blue. Masks were rasterized from point annotations as small squares (converter radius 6 px).",
+      "benchmark": "segmentation_v1.0",
+      "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-nz-cattle",
+      "partition": "default",
+      "spatial_resolution_m": 0.1
+    },
+    "height": 500,
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "rgb_indices": [
+      0,
+      1,
+      2
+    ],
+    "source": "geobench",
+    "split_sizes": {
+      "test": 65,
+      "train": 524,
+      "valid": 66
+    },
+    "task": "m-nz-cattle",
+    "task_type": "segmentation",
+    "width": 500
+  },
+  "normalization": {
+    "n_samples_used": 524,
+    "path": "/home/sagemaker-user/gotrain_cattle_runs/normalization/m-nz-cattle.json",
+    "stats_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba"
+  },
+  "present": true,
+  "split_sizes": {
+    "test": 65,
+    "train": 524,
+    "valid": 66
+  },
+  "splits": {
+    "train": {
+      "image_shapes": [
+        [
+          3,
+          500,
+          500
+        ]
+      ],
+      "invalid_labels": 0,
+      "label_counts": {
+        "cattle": 2970609,
+        "no cattle": 128029391
+      },
+      "label_fractions": {
+        "cattle": 0.022676404580152673,
+        "no cattle": 0.9773235954198474
+      },
+      "samples_checked": 524,
+      "samples_in_split": 524
+    },
+    "valid": {
+      "image_shapes": [
+        [
+          3,
+          500,
+          500
+        ]
+      ],
+      "invalid_labels": 0,
+      "label_counts": {
+        "cattle": 372805,
+        "no cattle": 16127195
+      },
+      "label_fractions": {
+        "cattle": 0.022594242424242423,
+        "no cattle": 0.9774057575757575
+      },
+      "samples_checked": 66,
+      "samples_in_split": 66
+    }
+  },
+  "task": "m-nz-cattle",
+  "train_valid_overlap": 0,
+  "train_value_ranges": {
+    "all_finite": true,
+    "max_per_band": [
+      249.0,
+      246.0,
+      240.0
+    ],
+    "mean_per_band": [
+      129.3251495361328,
+      132.38482666015625,
+      109.931396484375
+    ],
+    "min_per_band": [
+      18.0,
+      28.0,
+      12.0
+    ],
+    "samples": 32
+  },
+  "warnings": []
+}

@@ -1,0 +1,128 @@
+{
+  "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-pv4ger-seg",
+  "first_sample": {
+    "image_dtype_stored": "uint8",
+    "image_shape": [
+      3,
+      320,
+      320
+    ],
+    "label_shape": [
+      320,
+      320
+    ],
+    "load_seconds": 0.0068
+  },
+  "meta": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "dtype": "float32",
+    "extra": {
+      "band_order_note": "Stored order Red, Green, Blue (uint8 aerial imagery); mask values {0,1}.",
+      "benchmark": "segmentation_v1.0",
+      "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-pv4ger-seg",
+      "partition": "default",
+      "spatial_resolution_m": 0.1
+    },
+    "height": 320,
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "rgb_indices": [
+      0,
+      1,
+      2
+    ],
+    "source": "geobench",
+    "split_sizes": {
+      "test": 403,
+      "train": 3000,
+      "valid": 403
+    },
+    "task": "m-pv4ger-seg",
+    "task_type": "segmentation",
+    "width": 320
+  },
+  "normalization": {
+    "n_samples_used": 3000,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger-seg.json",
+    "stats_hash": "9dbf09291ec520b9b99ea66416defa9393d6f7f6a00c16cc4f556d43f6e55ef8"
+  },
+  "present": true,
+  "split_sizes": {
+    "test": 403,
+    "train": 3000,
+    "valid": 403
+  },
+  "splits": {
+    "train": {
+      "image_shapes": [
+        [
+          3,
+          320,
+          320
+        ]
+      ],
+      "invalid_labels": 0,
+      "label_counts": {
+        "no solar pv": 77766780,
+        "solar pv": 24633220
+      },
+      "label_fractions": {
+        "no solar pv": 0.7594412109375,
+        "solar pv": 0.2405587890625
+      },
+      "samples_checked": 1000,
+      "samples_in_split": 3000
+    },
+    "valid": {
+      "image_shapes": [
+        [
+          3,
+          320,
+          320
+        ]
+      ],
+      "invalid_labels": 0,
+      "label_counts": {
+        "no solar pv": 33034253,
+        "solar pv": 8232947
+      },
+      "label_fractions": {
+        "no solar pv": 0.800496592935794,
+        "solar pv": 0.19950340706420597
+      },
+      "samples_checked": 403,
+      "samples_in_split": 403
+    }
+  },
+  "task": "m-pv4ger-seg",
+  "train_valid_overlap": 0,
+  "train_value_ranges": {
+    "all_finite": true,
+    "max_per_band": [
+      254.0,
+      254.0,
+      254.0
+    ],
+    "mean_per_band": [
+      140.9531707763672,
+      147.8379364013672,
+      151.2709503173828
+    ],
+    "min_per_band": [
+      31.0,
+      41.0,
+      39.0
+    ],
+    "samples": 32
+  },
+  "warnings": []
+}

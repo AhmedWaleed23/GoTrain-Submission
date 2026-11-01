@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-11-01T00:04:06+00:00",
+  "counts": {
+    "fail": 0,
+    "manual": 1,
+    "ok": 7,
+    "pending": 1,
+    "warn": 1
+  },
+  "exit_code": 0,
+  "final": {
+    "exposure_without_result": [],
+    "final_complete": true,
+    "final_partial": false,
+    "frozen": true
+  },
+  "home": "/home/sagemaker-user/gotrain_cattle_runs",
+  "items": [
+    {
+      "check": "m-nz-cattle: selected checkpoint",
+      "checkpoint_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+      "detail": "exp-20261031T234011Z-fa5d0b selected by manual, validation miou 0.847690075670909 (manual selection; keep this provenance in the write-up)",
+      "experiment_id": "exp-20261031T234011Z-fa5d0b",
+      "selected_by": "manual",
+      "status": "ok"
+    },
+    {
+      "check": "m-nz-cattle: normalization",
+      "detail": "m-nz-cattle.json present, hash matches, fitted on 524 train samples",
+      "status": "ok"
+    },
+    {
+      "check": "m-nz-cattle: model version",
+      "detail": "mv-m-nz-cattle-0001-18138fd9 verified (model and preprocessing: reference-batch reproduction, not full accuracy validation); promoted",
+      "status": "ok",
+      "version_id": "mv-m-nz-cattle-0001-18138fd9"
+    },
+    {
+      "check": "session agent-20261031T232312Z-113429",
+      "detail": "status 'completed', requested ['m-nz-cattle'], finished ['m-nz-cattle'], launched 2 experiments, model eu.anthropic.claude-sonnet-5-5",
+      "session_id": "agent-20261031T232312Z-113429",
+      "status": "ok"
+    },
+    {
+      "check": "session agent-20261031T233033Z-ce2995",
+      "detail": "status 'completed', requested ['m-nz-cattle'], finished ['m-nz-cattle'], launched 1 experiments, model eu.anthropic.claude-sonnet-5-5",
+      "session_id": "agent-20261031T233033Z-ce2995",
+      "status": "ok"
+    },
+    {
+      "check": "m-nz-cattle: selection provenance",
+      "detail": "selected manually, not by an agent session; say so in the presentation",
+      "status": "warn"
+    },
+    {
+      "check": "review page",
+      "detail": "no review output under review/ (python -m gotrain review-build --task m-pv4ger-seg)",
+      "status": "pending"
+    },
+    {
+      "check": "frozen selection",
+      "detail": "manifest frozen at 2026-11-01T00:02:45+00:00 for ['m-nz-cattle']",
+      "status": "ok"
+    },
+    {
+      "check": "m-nz-cattle: final test score",
+      "detail": "miou 0.8432340843280733 on 65 test samples at 2026-11-01T00:03:21+00:00",
+      "status": "ok"
+    },
+    {
+      "check": "presentation/demo deliverables",
+      "detail": "check manually: slides, demo script (DEMO.md, docs/REVIEW_RATIONALE.md), agent logs exported",
+      "status": "manual"
+    }
+  ],
+  "tasks": [
+    "m-nz-cattle"
+  ],
+  "verdict": "final test scores complete for all required tasks; remaining items are manual"
+}

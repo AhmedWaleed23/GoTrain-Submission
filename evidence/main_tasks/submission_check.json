@@ -1,0 +1,168 @@
+{
+  "checked_at": "2026-10-31T23:17:03+00:00",
+  "counts": {
+    "fail": 0,
+    "manual": 1,
+    "ok": 20,
+    "pending": 0,
+    "warn": 3
+  },
+  "exit_code": 0,
+  "final": {
+    "exposure_without_result": [],
+    "final_complete": true,
+    "final_partial": false,
+    "frozen": true
+  },
+  "home": "/home/sagemaker-user/GoTrain/gotrain_runs",
+  "items": [
+    {
+      "check": "m-eurosat: selected checkpoint",
+      "checkpoint_sha256": "1725b67f5908c4c4427a619a9b1507bbecefd38983157cd132d12d17df377285",
+      "detail": "exp-20261031T175718Z-2acce6 selected by agent, validation accuracy 0.902",
+      "experiment_id": "exp-20261031T175718Z-2acce6",
+      "selected_by": "agent",
+      "status": "ok"
+    },
+    {
+      "check": "m-eurosat: normalization",
+      "detail": "m-eurosat.json present, hash matches, fitted on 2000 train samples",
+      "status": "ok"
+    },
+    {
+      "check": "m-eurosat: model version",
+      "detail": "mv-m-eurosat-0001-1725b67f verified (model and preprocessing: reference-batch reproduction, not full accuracy validation); promoted",
+      "status": "ok",
+      "version_id": "mv-m-eurosat-0001-1725b67f"
+    },
+    {
+      "check": "m-pv4ger: selected checkpoint",
+      "checkpoint_sha256": "1c42a390fdac352344a48615032c70d4a99975820ba8290a62757f7dade517d4",
+      "detail": "exp-20261031T181019Z-94b654 selected by agent, validation accuracy 0.9409409409409409",
+      "experiment_id": "exp-20261031T181019Z-94b654",
+      "selected_by": "agent",
+      "status": "ok"
+    },
+    {
+      "check": "m-pv4ger: normalization",
+      "detail": "m-pv4ger.json present, hash matches, fitted on 11814 train samples",
+      "status": "ok"
+    },
+    {
+      "check": "m-pv4ger: model version",
+      "detail": "mv-m-pv4ger-0001-1c42a390 verified (model and preprocessing: reference-batch reproduction, not full accuracy validation); promoted",
+      "status": "ok",
+      "version_id": "mv-m-pv4ger-0001-1c42a390"
+    },
+    {
+      "check": "m-pv4ger-seg: selected checkpoint",
+      "checkpoint_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+      "detail": "exp-20261031T182357Z-34155d selected by agent, validation miou 0.9229632830171473",
+      "experiment_id": "exp-20261031T182357Z-34155d",
+      "selected_by": "agent",
+      "status": "ok"
+    },
+    {
+      "check": "m-pv4ger-seg: normalization",
+      "detail": "m-pv4ger-seg.json present, hash matches, fitted on 3000 train samples",
+      "status": "ok"
+    },
+    {
+      "check": "m-pv4ger-seg: model version",
+      "detail": "mv-m-pv4ger-seg-0001-9f0e0bd9 verified (model and preprocessing: reference-batch reproduction, not full accuracy validation); promoted",
+      "status": "ok",
+      "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9"
+    },
+    {
+      "check": "m-chesapeake: selected checkpoint",
+      "checkpoint_sha256": "15b194f71e93c7f96b1e4ced0275669efad8e8d900a870569cc7e614c5e69848",
+      "detail": "exp-20261031T191244Z-ad67e7 selected by manual, validation miou 0.668305193102589 (manual selection; keep this provenance in the write-up)",
+      "experiment_id": "exp-20261031T191244Z-ad67e7",
+      "selected_by": "manual",
+      "status": "ok"
+    },
+    {
+      "check": "m-chesapeake: normalization",
+      "detail": "m-chesapeake.json present, hash matches, fitted on 3000 train samples",
+      "status": "ok"
+    },
+    {
+      "check": "m-chesapeake: model version",
+      "detail": "mv-m-chesapeake-0001-15b194f7 verified (model and preprocessing: reference-batch reproduction, not full accuracy validation); promoted",
+      "status": "ok",
+      "version_id": "mv-m-chesapeake-0001-15b194f7"
+    },
+    {
+      "check": "session agent-20261031T175713Z-2df925",
+      "detail": "status 'completed', requested ['m-eurosat'], finished ['m-eurosat'], launched 2 experiments, model eu.anthropic.claude-sonnet-5-5",
+      "session_id": "agent-20261031T175713Z-2df925",
+      "status": "ok"
+    },
+    {
+      "check": "session agent-20261031T180302Z-e3190f",
+      "detail": "status 'completed', requested ['m-pv4ger', 'm-pv4ger-seg', 'm-chesapeake'], finished ['m-pv4ger', 'm-pv4ger-seg'], launched 6 experiments, model eu.anthropic.claude-sonnet-5-5; unfinished ['m-chesapeake'] (status text says completed but coverage is incomplete)",
+      "session_id": "agent-20261031T180302Z-e3190f",
+      "status": "warn"
+    },
+    {
+      "check": "session agent-20261031T184951Z-06a810",
+      "detail": "status 'completed', requested ['m-chesapeake'], finished ['m-chesapeake'], launched 3 experiments, model eu.anthropic.claude-sonnet-5-5",
+      "session_id": "agent-20261031T184951Z-06a810",
+      "status": "ok"
+    },
+    {
+      "check": "m-chesapeake: selection provenance",
+      "detail": "selected manually, not by an agent session; say so in the presentation",
+      "status": "warn"
+    },
+    {
+      "check": "review page mv-m-pv4ger-seg-0001-9f0e0bd9",
+      "detail": "m-pv4ger-seg exp-20261031T182357Z-34155d (mv-m-pv4ger-seg-0001-9f0e0bd9), 403 of 403 valid images, page present, benchmark present",
+      "path": "/home/sagemaker-user/GoTrain/gotrain_runs/review/m-pv4ger-seg/mv-m-pv4ger-seg-0001-9f0e0bd9",
+      "status": "ok"
+    },
+    {
+      "check": "review page mv-m-pv4ger-seg-0001-9f0e0bd9_limit16",
+      "detail": "m-pv4ger-seg exp-20261031T182357Z-34155d (mv-m-pv4ger-seg-0001-9f0e0bd9), 16 of 403 valid images PARTIAL, page present, benchmark present",
+      "path": "/home/sagemaker-user/GoTrain/gotrain_runs/review/m-pv4ger-seg/mv-m-pv4ger-seg-0001-9f0e0bd9_limit16",
+      "status": "warn"
+    },
+    {
+      "check": "frozen selection",
+      "detail": "manifest frozen at 2026-10-31T23:12:44+00:00 for ['m-chesapeake', 'm-eurosat', 'm-pv4ger', 'm-pv4ger-seg']",
+      "status": "ok"
+    },
+    {
+      "check": "m-chesapeake: final test score",
+      "detail": "miou 0.6404638589150371 on 1000 test samples at 2026-10-31T23:15:37+00:00",
+      "status": "ok"
+    },
+    {
+      "check": "m-eurosat: final test score",
+      "detail": "accuracy 0.901 on 1000 test samples at 2026-10-31T23:15:41+00:00",
+      "status": "ok"
+    },
+    {
+      "check": "m-pv4ger: final test score",
+      "detail": "accuracy 0.955955955955956 on 999 test samples at 2026-10-31T23:15:47+00:00",
+      "status": "ok"
+    },
+    {
+      "check": "m-pv4ger-seg: final test score",
+      "detail": "miou 0.914438957622814 on 403 test samples at 2026-10-31T23:15:50+00:00",
+      "status": "ok"
+    },
+    {
+      "check": "presentation/demo deliverables",
+      "detail": "check manually: slides, demo script (DEMO.md, docs/REVIEW_RATIONALE.md), agent logs exported",
+      "status": "manual"
+    }
+  ],
+  "tasks": [
+    "m-eurosat",
+    "m-pv4ger",
+    "m-pv4ger-seg",
+    "m-chesapeake"
+  ],
+  "verdict": "final test scores complete for all required tasks; remaining items are manual"
+}

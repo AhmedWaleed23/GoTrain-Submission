@@ -1,0 +1,7 @@
+{"at": "2026-10-31T17:57:18+00:00", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "created", "tag": "agent", "task": "m-eurosat"}
+{"at": "2026-10-31T17:57:18+00:00", "error": null, "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:58:34+00:00", "error": null, "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T17:58:34+00:00", "by": "auto", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-eurosat"}
+{"at": "2026-10-31T17:59:58+00:00", "by": "agent", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "selected_best", "rationale": "cnn_small val acc 0.902 (macro-F1 0.901) vs resnet_small 0.878 under the same 10-epoch recipe.", "task": "m-eurosat"}
+{"at": "2026-10-31T19:43:49+00:00", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "model_version_stored", "version_id": "mv-m-eurosat-0001-1725b67f"}
+{"at": "2026-10-31T23:12:44+00:00", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "frozen_for_final_eval", "manifest_hash": "c5c1b73338b4ac554f4d3c88dba6302e5e055e3f7b7c0ad8ff45bd89e5dc7091", "task": "m-eurosat"}

@@ -1,0 +1,24 @@
+{
+  "band_names": [
+    "Red",
+    "Green",
+    "Blue"
+  ],
+  "mean": [
+    126.27732293893129,
+    130.0801408015267,
+    106.52411915267176
+  ],
+  "n_samples_in_split": 524,
+  "n_samples_used": 524,
+  "sample_order_hash": "e98ccd5647772b80f1e6bf1ca8d041d3ef780598188983b12ca19e274d469721",
+  "source": "geobench",
+  "split": "train",
+  "stats_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba",
+  "std": [
+    23.40181280695295,
+    19.86551857384193,
+    19.01226775606493
+  ],
+  "task": "m-nz-cattle"
+}

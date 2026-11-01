@@ -1,0 +1,3 @@
+[2026-10-31T17:54:50+00:00] exp-20261031T175449Z-c37587: unet_small on m-chesapeake (geobench), 300 train / 100 valid samples, device cuda
+[2026-10-31T17:54:55+00:00] epoch 1/1 train_loss=1.6851 val_miou=0.3055 best=0.3055@1 (4s+1s)
+[2026-10-31T17:54:55+00:00] exp-20261031T175449Z-c37587: completed (max_epochs), best miou=0.3054539625524178 at epoch 1

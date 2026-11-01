@@ -1,0 +1,31 @@
+{
+  "budget": {
+    "max_experiments": 3,
+    "max_tool_calls": 60,
+    "run_max_minutes": 5.0,
+    "session_minutes": 18.0
+  },
+  "elapsed_before_seconds": 0.0,
+  "elapsed_seconds": 571.5748283863068,
+  "errors": [],
+  "experiments_launched": 3,
+  "finished_tasks": {
+    "m-chesapeake": {
+      "best_val_metric": 0.6066257637873264,
+      "selected": "exp-20261031T185604Z-d02e93",
+      "summary": "Ran three full runs under a tight budget. unet_small at 5 epochs reached 0.566 mIoU, and unet_medium at 6 epochs reached 0.555, so the larger model gave no gain at that length. unet_small at 10 epochs, lr 2e-3, reached 0.607 mIoU (pixel accuracy 0.852). I selected it. Validation was still rising near the end of training, so longer schedules would likely help further if budget allowed."
+    }
+  },
+  "model_id": "eu.anthropic.claude-sonnet-5-5",
+  "resume_count": 0,
+  "rounds": 1,
+  "session_id": "agent-20261031T184951Z-06a810",
+  "source": "geobench",
+  "started_at": "2026-10-31T18:49:51+00:00",
+  "status": "completed",
+  "tasks": [
+    "m-chesapeake"
+  ],
+  "tool_calls": 7,
+  "updated_at": "2026-10-31T18:59:22+00:00"
+}

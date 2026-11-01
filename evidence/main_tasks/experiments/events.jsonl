@@ -1,0 +1,67 @@
+{"at": "2026-10-31T17:54:22+00:00", "experiment_id": "exp-20261031T175422Z-0e54fc", "kind": "created", "tag": "smoke", "task": "m-eurosat"}
+{"at": "2026-10-31T17:54:22+00:00", "error": null, "experiment_id": "exp-20261031T175422Z-0e54fc", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:54:29+00:00", "error": null, "experiment_id": "exp-20261031T175422Z-0e54fc", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T17:54:29+00:00", "experiment_id": "exp-20261031T175429Z-6843d2", "kind": "created", "tag": "smoke", "task": "m-pv4ger"}
+{"at": "2026-10-31T17:54:29+00:00", "error": null, "experiment_id": "exp-20261031T175429Z-6843d2", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:54:42+00:00", "error": null, "experiment_id": "exp-20261031T175429Z-6843d2", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T17:54:42+00:00", "experiment_id": "exp-20261031T175442Z-e18cd2", "kind": "created", "tag": "smoke", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T17:54:42+00:00", "error": null, "experiment_id": "exp-20261031T175442Z-e18cd2", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:54:49+00:00", "error": null, "experiment_id": "exp-20261031T175442Z-e18cd2", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T17:54:49+00:00", "experiment_id": "exp-20261031T175449Z-c37587", "kind": "created", "tag": "smoke", "task": "m-chesapeake"}
+{"at": "2026-10-31T17:54:49+00:00", "error": null, "experiment_id": "exp-20261031T175449Z-c37587", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:54:55+00:00", "error": null, "experiment_id": "exp-20261031T175449Z-c37587", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T17:57:18+00:00", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "created", "tag": "agent", "task": "m-eurosat"}
+{"at": "2026-10-31T17:57:18+00:00", "error": null, "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:58:34+00:00", "error": null, "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T17:58:34+00:00", "by": "auto", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-eurosat"}
+{"at": "2026-10-31T17:58:37+00:00", "experiment_id": "exp-20261031T175837Z-612285", "kind": "created", "tag": "agent", "task": "m-eurosat"}
+{"at": "2026-10-31T17:58:37+00:00", "error": null, "experiment_id": "exp-20261031T175837Z-612285", "kind": "status", "status": "running"}
+{"at": "2026-10-31T17:59:55+00:00", "error": null, "experiment_id": "exp-20261031T175837Z-612285", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T17:59:58+00:00", "by": "agent", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "selected_best", "rationale": "cnn_small val acc 0.902 (macro-F1 0.901) vs resnet_small 0.878 under the same 10-epoch recipe.", "task": "m-eurosat"}
+{"at": "2026-10-31T18:03:08+00:00", "experiment_id": "exp-20261031T180308Z-176e99", "kind": "created", "tag": "agent", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:03:08+00:00", "error": null, "experiment_id": "exp-20261031T180308Z-176e99", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:07:30+00:00", "error": null, "experiment_id": "exp-20261031T180308Z-176e99", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:07:30+00:00", "by": "auto", "experiment_id": "exp-20261031T180308Z-176e99", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:07:33+00:00", "experiment_id": "exp-20261031T180733Z-22b10f", "kind": "created", "tag": "agent", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:07:33+00:00", "error": null, "experiment_id": "exp-20261031T180733Z-22b10f", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:10:16+00:00", "error": null, "experiment_id": "exp-20261031T180733Z-22b10f", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:10:19+00:00", "experiment_id": "exp-20261031T181019Z-94b654", "kind": "created", "tag": "agent", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:10:19+00:00", "error": null, "experiment_id": "exp-20261031T181019Z-94b654", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:14:51+00:00", "error": null, "experiment_id": "exp-20261031T181019Z-94b654", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:14:51+00:00", "by": "auto", "experiment_id": "exp-20261031T181019Z-94b654", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:14:55+00:00", "experiment_id": "exp-20261031T181455Z-8475ed", "kind": "created", "tag": "agent", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:14:55+00:00", "error": null, "experiment_id": "exp-20261031T181455Z-8475ed", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:19:06+00:00", "error": null, "experiment_id": "exp-20261031T181455Z-8475ed", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:19:12+00:00", "experiment_id": "exp-20261031T181912Z-540176", "kind": "created", "tag": "agent", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:19:12+00:00", "error": null, "experiment_id": "exp-20261031T181912Z-540176", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:23:44+00:00", "error": null, "experiment_id": "exp-20261031T181912Z-540176", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:23:47+00:00", "by": "agent", "experiment_id": "exp-20261031T181019Z-94b654", "kind": "selected_best", "rationale": "resnet_small @128, lr 1e-3, 10 epochs: val acc 0.941 vs 0.936 (wd 5e-4, seed 1), 0.929 (cnn_small), 0.915 (res 160), 0.904 (lr 3e-3).", "task": "m-pv4ger"}
+{"at": "2026-10-31T18:23:57+00:00", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "created", "tag": "agent", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T18:23:57+00:00", "error": null, "experiment_id": "exp-20261031T182357Z-34155d", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:26:09+00:00", "error": null, "experiment_id": "exp-20261031T182357Z-34155d", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:26:09+00:00", "by": "auto", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T18:26:12+00:00", "by": "agent", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "selected_best", "rationale": "Only full-data run; val mIoU 0.923 (foreground IoU 0.878), still improving at the final epoch.", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T18:49:55+00:00", "experiment_id": "exp-20261031T184955Z-0fcafd", "kind": "created", "tag": "agent", "task": "m-chesapeake"}
+{"at": "2026-10-31T18:49:55+00:00", "error": null, "experiment_id": "exp-20261031T184955Z-0fcafd", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:52:36+00:00", "error": null, "experiment_id": "exp-20261031T184955Z-0fcafd", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:52:36+00:00", "by": "auto", "experiment_id": "exp-20261031T184955Z-0fcafd", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-chesapeake"}
+{"at": "2026-10-31T18:52:40+00:00", "experiment_id": "exp-20261031T185240Z-014163", "kind": "created", "tag": "agent", "task": "m-chesapeake"}
+{"at": "2026-10-31T18:52:40+00:00", "error": null, "experiment_id": "exp-20261031T185240Z-014163", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:56:01+00:00", "error": null, "experiment_id": "exp-20261031T185240Z-014163", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:56:04+00:00", "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "created", "tag": "agent", "task": "m-chesapeake"}
+{"at": "2026-10-31T18:56:04+00:00", "error": null, "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "status", "status": "running"}
+{"at": "2026-10-31T18:59:16+00:00", "error": null, "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T18:59:16+00:00", "by": "auto", "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "selected_best", "rationale": "highest validation metric among completed full runs", "task": "m-chesapeake"}
+{"at": "2026-10-31T18:59:19+00:00", "by": "agent", "experiment_id": "exp-20261031T185604Z-d02e93", "kind": "selected_best", "rationale": "Best val mIoU 0.6066 (unet_small, 10 epochs) vs 0.5664 (unet_small, 5 epochs) and 0.5554 (unet_medium, 6 epochs).", "task": "m-chesapeake"}
+{"at": "2026-10-31T19:12:44+00:00", "experiment_id": "exp-20261031T191244Z-ad67e7", "kind": "created", "tag": "longer_schedule", "task": "m-chesapeake"}
+{"at": "2026-10-31T19:12:44+00:00", "error": null, "experiment_id": "exp-20261031T191244Z-ad67e7", "kind": "status", "status": "running"}
+{"at": "2026-10-31T19:22:15+00:00", "error": null, "experiment_id": "exp-20261031T191244Z-ad67e7", "kind": "status", "status": "completed"}
+{"at": "2026-10-31T19:38:10+00:00", "by": "manual", "experiment_id": "exp-20261031T191244Z-ad67e7", "kind": "selected_best", "rationale": "Selected using full validation only: mIoU improved from 0.6066 to 0.6683. Class 4 IoU improved from 0.2291 to 0.3709, and class 6 from 0.0476 to 0.2898. Best checkpoint is epoch 28. No test results used.", "task": "m-chesapeake"}
+{"at": "2026-10-31T19:43:49+00:00", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "model_version_stored", "version_id": "mv-m-eurosat-0001-1725b67f"}
+{"at": "2026-10-31T19:44:05+00:00", "experiment_id": "exp-20261031T181019Z-94b654", "kind": "model_version_stored", "version_id": "mv-m-pv4ger-0001-1c42a390"}
+{"at": "2026-10-31T19:44:13+00:00", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "model_version_stored", "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9"}
+{"at": "2026-10-31T19:44:24+00:00", "experiment_id": "exp-20261031T191244Z-ad67e7", "kind": "model_version_stored", "version_id": "mv-m-chesapeake-0001-15b194f7"}
+{"at": "2026-10-31T23:12:44+00:00", "experiment_id": "exp-20261031T175718Z-2acce6", "kind": "frozen_for_final_eval", "manifest_hash": "c5c1b73338b4ac554f4d3c88dba6302e5e055e3f7b7c0ad8ff45bd89e5dc7091", "task": "m-eurosat"}
+{"at": "2026-10-31T23:12:44+00:00", "experiment_id": "exp-20261031T181019Z-94b654", "kind": "frozen_for_final_eval", "manifest_hash": "c5c1b73338b4ac554f4d3c88dba6302e5e055e3f7b7c0ad8ff45bd89e5dc7091", "task": "m-pv4ger"}
+{"at": "2026-10-31T23:12:44+00:00", "experiment_id": "exp-20261031T182357Z-34155d", "kind": "frozen_for_final_eval", "manifest_hash": "c5c1b73338b4ac554f4d3c88dba6302e5e055e3f7b7c0ad8ff45bd89e5dc7091", "task": "m-pv4ger-seg"}
+{"at": "2026-10-31T23:12:44+00:00", "experiment_id": "exp-20261031T191244Z-ad67e7", "kind": "frozen_for_final_eval", "manifest_hash": "c5c1b73338b4ac554f4d3c88dba6302e5e055e3f7b7c0ad8ff45bd89e5dc7091", "task": "m-chesapeake"}

@@ -1,0 +1,1 @@
+{"at": "2026-10-31T17:54:29+00:00", "batch_size": 16, "elapsed_seconds": 3.75, "epoch": 1, "improved": true, "lr": 5e-05, "nonfinite_steps": 0, "train_loss": 1.8602139766399677, "train_seconds": 3.08, "truncated_by_budget": false, "val_accuracy": 0.24, "val_loss": 2.1355951172964915, "val_metrics_summary": {"accuracy": 0.24, "macro_f1": 0.1907779637180726}, "val_seconds": 0.63}

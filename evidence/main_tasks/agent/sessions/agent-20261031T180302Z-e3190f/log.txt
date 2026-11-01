@@ -1,0 +1,4 @@
+[2026-10-31T18:19:09+00:00] guard blocked run_experiment: ['max_minutes 5.2 exceeds the per-run cap 5.0']
+[2026-10-31T18:26:20+00:00] guard blocked run_experiment: ['experiment limit reached (6)']
+[2026-10-31T18:26:31+00:00] guard blocked run_experiment: ['experiment limit reached (6)']
+[2026-10-31T18:26:46+00:00] guard blocked run_experiment: ['experiment limit reached (6)']

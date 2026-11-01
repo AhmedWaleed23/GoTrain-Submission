@@ -1,0 +1,27 @@
+{
+  "band_names": [
+    "Red",
+    "Green",
+    "Blue",
+    "NearInfrared"
+  ],
+  "mean": [
+    0.4607989384992671,
+    0.5257134938696066,
+    0.4851127170562305,
+    0.5767568347882689
+  ],
+  "n_samples_in_split": 3000,
+  "n_samples_used": 3000,
+  "sample_order_hash": "b48ffedef9c173635d08663f3ba21020c8b317780d0e1b5c652a3bba8f9d3a04",
+  "source": "geobench",
+  "split": "train",
+  "stats_hash": "c8af9b0eb3848cc8eb3a3f7d57e8e3ee2f251fea414c95726f94993c77c3bec9",
+  "std": [
+    0.2074140461725593,
+    0.1911499744984593,
+    0.16713083069894544,
+    0.2846663907644418
+  ],
+  "task": "m-chesapeake"
+}

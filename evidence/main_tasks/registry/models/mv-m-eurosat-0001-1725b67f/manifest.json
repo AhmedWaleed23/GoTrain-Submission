@@ -1,0 +1,153 @@
+{
+  "architecture": {
+    "class_names": [
+      "Industrial Buildings",
+      "Residential Buildings",
+      "Annual Crop",
+      "Permanent Crop",
+      "River",
+      "Sea and Lake",
+      "Herbaceous Vegetation",
+      "Highway",
+      "Pasture",
+      "Forest"
+    ],
+    "ignore_index": null,
+    "in_channels": 13,
+    "n_classes": 10,
+    "name": "cnn_small",
+    "parameters": 588330
+  },
+  "backend": "filesystem",
+  "checkpoint_bytes": 7108571,
+  "checkpoint_sha256": "1725b67f5908c4c4427a619a9b1507bbecefd38983157cd132d12d17df377285",
+  "created_at": "2026-10-31T19:43:49+00:00",
+  "environment": {
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "experiment_id": "exp-20261031T175718Z-2acce6",
+  "metric": {
+    "best_epoch": 10,
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid",
+    "value": 0.902
+  },
+  "note": "",
+  "parent_version": null,
+  "preprocessing": {
+    "band_names": [
+      "01 - Coastal aerosol",
+      "02 - Blue",
+      "03 - Green",
+      "04 - Red",
+      "05 - Vegetation Red Edge",
+      "06 - Vegetation Red Edge",
+      "07 - Vegetation Red Edge",
+      "08 - NIR",
+      "08A - Vegetation Red Edge",
+      "09 - Water vapour",
+      "10 - SWIR - Cirrus",
+      "11 - SWIR",
+      "12 - SWIR"
+    ],
+    "channels_stacked_in_stored_order": true,
+    "input_size": [
+      64,
+      64
+    ],
+    "normalization_file": "normalization.json",
+    "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-eurosat.json",
+    "normalization_stats_hash": "5fb7bcce78b3e419e2996331f04618ad513fb7d497c5b2ff709fd78f6dca83d9"
+  },
+  "pretrained": null,
+  "reference": {
+    "file": "reference.npz",
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "input_sha256": "02a26ee3f1b21a8a0d1bf6d1532616cc3ac47c50f0a44c4aa20594816949a723",
+    "logits_argmax": [
+      4.0,
+      0.0,
+      4.0,
+      2.0
+    ],
+    "n": 4,
+    "split": "valid",
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 64,
+    "early_stopping_patience": 5,
+    "epochs": 10,
+    "expected_tradeoff": "May be cut by time cap; higher lr risks instability.",
+    "hypothesis": "Larger batch cuts per-epoch time; cnn_small with lr 3e-3 should reach ~80%+ in 10 epochs.",
+    "input_size": null,
+    "label_smoothing": 0.0,
+    "lr": 0.003,
+    "max_minutes": 3.0,
+    "model": "cnn_small",
+    "num_workers": 2,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "Only 3 min/run and 2 runs left; smoke test gave 37s/epoch estimate at bs16, bigger batch should be faster.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-eurosat",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "seed": 0,
+  "source": "geobench",
+  "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-eurosat-0001-1725b67f/checkpoint.pt",
+  "task": "m-eurosat",
+  "task_type": "classification",
+  "training_wall_time_seconds": 74.52778122300151,
+  "validation_diagnostics": {
+    "accuracy": 0.902,
+    "macro_f1": 0.9007406098535439
+  },
+  "verification": {
+    "argmax_agreement": 1.0,
+    "at": "2026-10-31T19:44:35+00:00",
+    "device": "cuda",
+    "max_abs_diff": 9.5367431640625e-07,
+    "mean_abs_diff": 2.95601779498611e-07,
+    "model_reproduced": true,
+    "n_reference": 4,
+    "preprocessing_identity": {
+      "checked": true,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    "preprocessing_verified": true,
+    "sha256_ok": true,
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    },
+    "verified": true,
+    "version_id": "mv-m-eurosat-0001-1725b67f",
+    "within_tolerance": true
+  },
+  "version_id": "mv-m-eurosat-0001-1725b67f"
+}

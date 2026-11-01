@@ -1,0 +1,142 @@
+{
+  "architecture": {
+    "class_names": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "ignore_index": null,
+    "in_channels": 4,
+    "n_classes": 7,
+    "name": "unet_small",
+    "parameters": 1942823
+  },
+  "backend": "filesystem",
+  "checkpoint_bytes": 23426961,
+  "checkpoint_sha256": "15b194f71e93c7f96b1e4ced0275669efad8e8d900a870569cc7e614c5e69848",
+  "created_at": "2026-10-31T19:44:24+00:00",
+  "environment": {
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "experiment_id": "exp-20261031T191244Z-ad67e7",
+  "metric": {
+    "best_epoch": 28,
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid",
+    "value": 0.668305193102589
+  },
+  "note": "",
+  "parent_version": null,
+  "preprocessing": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue",
+      "NearInfrared"
+    ],
+    "channels_stacked_in_stored_order": true,
+    "input_size": [
+      256,
+      256
+    ],
+    "normalization_file": "normalization.json",
+    "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-chesapeake.json",
+    "normalization_stats_hash": "c8af9b0eb3848cc8eb3a3f7d57e8e3ee2f251fea414c95726f94993c77c3bec9"
+  },
+  "pretrained": null,
+  "reference": {
+    "file": "reference.npz",
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "input_sha256": "674e74c9dc5d634d61f40a351b700207be2c3d6c06e52cf275ea7cb8456a40f7",
+    "logits_argmax": [
+      0.0,
+      2.842,
+      3.986,
+      3.682
+    ],
+    "n": 4,
+    "split": "valid",
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 16,
+    "early_stopping_patience": 10,
+    "epochs": 30,
+    "expected_tradeoff": "",
+    "hypothesis": "Test whether extending the small U-Net schedule improves full-validation mIoU and weak classes 4 and 6.",
+    "input_size": null,
+    "label_smoothing": 0.0,
+    "lr": 0.002,
+    "max_minutes": 12.0,
+    "model": "unet_small",
+    "num_workers": 2,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "longer_schedule",
+    "task": "m-chesapeake",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "seed": 0,
+  "source": "geobench",
+  "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-chesapeake-0001-15b194f7/checkpoint.pt",
+  "task": "m-chesapeake",
+  "task_type": "segmentation",
+  "training_wall_time_seconds": 567.220152818998,
+  "validation_diagnostics": {
+    "miou": 0.668305193102589,
+    "n_classes_present": 7,
+    "pixel_accuracy": 0.8636047668457031
+  },
+  "verification": {
+    "argmax_agreement": 1.0,
+    "at": "2026-10-31T19:44:34+00:00",
+    "device": "cuda",
+    "max_abs_diff": 8.58306884765625e-06,
+    "mean_abs_diff": 6.232577334230882e-07,
+    "model_reproduced": true,
+    "n_reference": 4,
+    "preprocessing_identity": {
+      "checked": true,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    "preprocessing_verified": true,
+    "sha256_ok": true,
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    },
+    "verified": true,
+    "version_id": "mv-m-chesapeake-0001-15b194f7",
+    "within_tolerance": true
+  },
+  "version_id": "mv-m-chesapeake-0001-15b194f7"
+}

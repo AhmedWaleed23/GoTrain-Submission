@@ -1,0 +1,378 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T175837Z-612285/checkpoints/best.pt",
+    "best_sha256": "ca76fabf5870d05b2bd4125d65c149c23f0587cb07cb96372ba60b510a82a2ac",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T175837Z-612285/checkpoints/last.pt",
+    "last_sha256": "9ada0ef5f6234788ed7b0a6e88c1014fba9492f8cbcc548f10ec345271b8ff75"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 64,
+    "effective_lr": 0.003,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 77.88855308300117
+  },
+  "config_hash": "cf7e00243d7fa6a472ca6c9addbefae7f7e48ef861e1261c4d6788ba28be03f3",
+  "created_at": "2026-10-31T17:58:37+00:00",
+  "dataset": {
+    "band_names": [
+      "01 - Coastal aerosol",
+      "02 - Blue",
+      "03 - Green",
+      "04 - Red",
+      "05 - Vegetation Red Edge",
+      "06 - Vegetation Red Edge",
+      "07 - Vegetation Red Edge",
+      "08 - NIR",
+      "08A - Vegetation Red Edge",
+      "09 - Water vapour",
+      "10 - SWIR - Cirrus",
+      "11 - SWIR",
+      "12 - SWIR"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/classification_v1.0/m-eurosat",
+    "input_size": [
+      64,
+      64
+    ],
+    "resized": false,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 1000,
+      "train": 2000,
+      "valid": 1000
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 2000,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 1000
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "Slower per epoch; may hit the 3 min cap before the cosine schedule finishes.",
+  "experiment_id": "exp-20261031T175837Z-612285",
+  "finished_at": "2026-10-31T17:59:55+00:00",
+  "hypothesis": "resnet_small with residual connections beats cnn_small's 0.902 at similar epochs.",
+  "metric": {
+    "definition": "overall accuracy on the full validation split (torchmetrics multiclass Accuracy convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "accuracy",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "Industrial Buildings",
+      "Residential Buildings",
+      "Annual Crop",
+      "Permanent Crop",
+      "River",
+      "Sea and Lake",
+      "Herbaceous Vegetation",
+      "Highway",
+      "Pasture",
+      "Forest"
+    ],
+    "ignore_index": null,
+    "in_channels": 13,
+    "n_classes": 10,
+    "name": "resnet_small",
+    "parameters": 2800490
+  },
+  "normalization": {
+    "n_samples_used": 2000,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-eurosat.json",
+    "split": "train",
+    "stats_hash": "5fb7bcce78b3e419e2996331f04618ad513fb7d497c5b2ff709fd78f6dca83d9"
+  },
+  "parent_experiment": "exp-20261031T175718Z-2acce6",
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "cnn_small was still improving at epoch 10 (7s/epoch), leaving compute headroom; last remaining experiment.",
+  "result": {
+    "best_epoch": 10,
+    "best_val_metric": 0.878,
+    "epochs_completed": 10,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "accuracy": 0.878,
+      "confusion_matrix": [
+        [
+          70,
+          0,
+          5,
+          7,
+          0,
+          9,
+          9,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          95,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          89,
+          4,
+          1,
+          3,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          7,
+          3,
+          5,
+          71,
+          6,
+          0,
+          2,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          96,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          5,
+          1,
+          0,
+          91,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          7,
+          3,
+          0,
+          2,
+          83,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          5,
+          4,
+          0,
+          3,
+          87,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          96,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100
+        ]
+      ],
+      "conventions": {
+        "accuracy": "overall accuracy over the full split (torchmetrics multiclass Accuracy)",
+        "macro_f1": "unweighted mean of per-class F1; absent classes count as 0 (diagnostic only)"
+      },
+      "loss": 0.3798482744023204,
+      "macro_f1": 0.8765735975891745,
+      "n_ignored": 0,
+      "n_samples": 1000,
+      "per_class": [
+        {
+          "class": "Industrial Buildings",
+          "f1": 0.7777777777777777,
+          "precision": 0.875,
+          "recall": 0.7,
+          "support": 100
+        },
+        {
+          "class": "Residential Buildings",
+          "f1": 0.9452736318407959,
+          "precision": 0.9405940594059405,
+          "recall": 0.95,
+          "support": 100
+        },
+        {
+          "class": "Annual Crop",
+          "f1": 0.8240740740740741,
+          "precision": 0.7672413793103449,
+          "recall": 0.89,
+          "support": 100
+        },
+        {
+          "class": "Permanent Crop",
+          "f1": 0.743455497382199,
+          "precision": 0.7802197802197802,
+          "recall": 0.71,
+          "support": 100
+        },
+        {
+          "class": "River",
+          "f1": 0.927536231884058,
+          "precision": 0.897196261682243,
+          "recall": 0.96,
+          "support": 100
+        },
+        {
+          "class": "Sea and Lake",
+          "f1": 0.8792270531400966,
+          "precision": 0.8504672897196262,
+          "recall": 0.91,
+          "support": 100
+        },
+        {
+          "class": "Herbaceous Vegetation",
+          "f1": 0.8341708542713568,
+          "precision": 0.8383838383838383,
+          "recall": 0.83,
+          "support": 100
+        },
+        {
+          "class": "Highway",
+          "f1": 0.8743718592964824,
+          "precision": 0.8787878787878788,
+          "recall": 0.87,
+          "support": 100
+        },
+        {
+          "class": "Pasture",
+          "f1": 0.964824120603015,
+          "precision": 0.9696969696969697,
+          "recall": 0.96,
+          "support": 100
+        },
+        {
+          "class": "Forest",
+          "f1": 0.9950248756218906,
+          "precision": 0.9900990099009901,
+          "recall": 1.0,
+          "support": 100
+        }
+      ]
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 64,
+    "early_stopping_patience": 5,
+    "epochs": 10,
+    "expected_tradeoff": "Slower per epoch; may hit the 3 min cap before the cosine schedule finishes.",
+    "hypothesis": "resnet_small with residual connections beats cnn_small's 0.902 at similar epochs.",
+    "input_size": null,
+    "label_smoothing": 0.0,
+    "lr": 0.003,
+    "max_minutes": 3.0,
+    "model": "resnet_small",
+    "num_workers": 2,
+    "parent_experiment": "exp-20261031T175718Z-2acce6",
+    "precision": "auto",
+    "rationale": "cnn_small was still improving at epoch 10 (7s/epoch), leaving compute headroom; last remaining experiment.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-eurosat",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T17:58:37+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-eurosat",
+  "task_type": "classification",
+  "updated_at": "2026-10-31T17:59:55+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

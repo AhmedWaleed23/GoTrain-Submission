@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-11-01T00:03:17+00:00",
+  "manifest_hash": "695dca472bd2ce5d2f0320fd45745d2c434526bc6840ac1c7cc8449fc9e89ba1",
+  "tasks": {
+    "m-nz-cattle": {
+      "checkpoint_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+      "device": "cuda",
+      "environment": {
+        "cuda_available": true,
+        "cuda_version": "12.9",
+        "executable": "/opt/conda/bin/python",
+        "gpu": {
+          "name": "Tesla T4",
+          "total_memory_gib": 14.56
+        },
+        "packages": {
+          "geobench": "1.1.0",
+          "h5py": "3.16.0",
+          "huggingface_hub": "0.36.0",
+          "numpy": "1.26.4",
+          "rasterio": "1.4.3",
+          "strands-agents": "1.63.0"
+        },
+        "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+        "python": "3.12.15",
+        "torch": "2.8.0"
+      },
+      "evaluated_at": "2026-11-01T00:03:21+00:00",
+      "experiment_id": "exp-20261031T234011Z-fa5d0b",
+      "metric": {
+        "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+        "direction": "max",
+        "name": "miou",
+        "split": "valid"
+      },
+      "model_version": "mv-m-nz-cattle-0001-18138fd9",
+      "n_test_samples": 65,
+      "started_at": "2026-11-01T00:03:17+00:00",
+      "status": "completed",
+      "test_metric": 0.8432340843280733,
+      "test_metrics": {
+        "confusion_matrix": [
+          [
+            15793205,
+            74090
+          ],
+          [
+            65138,
+            317567
+          ]
+        ],
+        "foreground_iou": 0.69520682144069,
+        "loss": null,
+        "miou": 0.8432340843280733,
+        "n_classes_present": 2,
+        "n_ignored": 0,
+        "n_pixels": 16250000,
+        "per_class": [
+          {
+            "class": "no cattle",
+            "iou": 0.9912613472154567,
+            "predicted_pixels": 15858343,
+            "present": true,
+            "target_pixels": 15867295
+          },
+          {
+            "class": "cattle",
+            "iou": 0.69520682144069,
+            "predicted_pixels": 391657,
+            "present": true,
+            "target_pixels": 382705
+          }
+        ],
+        "pixel_accuracy": 0.9914321230769231
+      },
+      "val_metric_at_selection": 0.847690075670909
+    }
+  },
+  "updated_at": "2026-11-01T00:03:21+00:00"
+}

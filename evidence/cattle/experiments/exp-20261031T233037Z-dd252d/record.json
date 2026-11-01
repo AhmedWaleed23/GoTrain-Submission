@@ -1,0 +1,191 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T233037Z-dd252d/checkpoints/best.pt",
+    "best_sha256": "6c36d1c6a805af3109ed1cc5ed47eb69b9e8ed53da5d3df2a1a44a467225b5bc",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T233037Z-dd252d/checkpoints/last.pt",
+    "last_sha256": "3f249c18ad48d3444feebd4a6988af04155afefeef613b19ddf1f8657a400288"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 8,
+    "effective_lr": 0.003,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 251.50950437999563
+  },
+  "config_hash": "caeeee93208043b007295b3160dbdd7d8a29254067848a0e1a08ddf850daaffd",
+  "created_at": "2026-10-31T23:30:37+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-nz-cattle",
+    "input_size": 320,
+    "resized": true,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 65,
+      "train": 524,
+      "valid": 66
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 524,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 66
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "~6 min of the remaining 20; some overfitting risk.",
+  "experiment_id": "exp-20261031T233037Z-dd252d",
+  "finished_at": "2026-10-31T23:34:51+00:00",
+  "hypothesis": "Best epoch was the last (20); doubling to 40 epochs with cosine schedule should raise mIoU above 0.833.",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "no cattle",
+      "cattle"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "unet_medium",
+    "parameters": 7763074
+  },
+  "normalization": {
+    "n_samples_used": 524,
+    "path": "/home/sagemaker-user/gotrain_cattle_runs/normalization/m-nz-cattle.json",
+    "split": "train",
+    "stats_hash": "b75effdcdf31a32c03178fb8a96d2cd123238951527c00d44e3f315e1773a1ba"
+  },
+  "parent_experiment": "exp-20261031T232427Z-2342ff",
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "Gain from small\u2192medium and 12\u219220 epochs suggests undertraining; 8.6 s/epoch so 40 epochs \u2248 5.8 min fits the 7 min cap.",
+  "result": {
+    "best_epoch": 22,
+    "best_val_metric": 0.8338258205748226,
+    "epochs_completed": 27,
+    "stop_reason": "early_stopping",
+    "val_metrics_at_best": {
+      "confusion_matrix": [
+        [
+          16069891,
+          57304
+        ],
+        [
+          81947,
+          290858
+        ]
+      ],
+      "conventions": {
+        "miou": "macro mean of per-class IoU from the split-level confusion matrix; classes absent from both target and prediction are excluded (torchmetrics multiclass JaccardIndex, average=macro)",
+        "pixel_accuracy": "diagnostic only; misleading on imbalanced masks"
+      },
+      "foreground_iou": 0.6762425338693215,
+      "loss": 0.018542536405018635,
+      "miou": 0.8338258205748226,
+      "n_classes_present": 2,
+      "n_ignored": 0,
+      "n_pixels": 16500000,
+      "per_class": [
+        {
+          "class": "no cattle",
+          "iou": 0.9914091072803236,
+          "predicted_pixels": 16151838,
+          "present": true,
+          "target_pixels": 16127195
+        },
+        {
+          "class": "cattle",
+          "iou": 0.6762425338693215,
+          "predicted_pixels": 348162,
+          "present": true,
+          "target_pixels": 372805
+        }
+      ],
+      "pixel_accuracy": 0.9915605454545454
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 8,
+    "early_stopping_patience": 5,
+    "epochs": 40,
+    "expected_tradeoff": "~6 min of the remaining 20; some overfitting risk.",
+    "hypothesis": "Best epoch was the last (20); doubling to 40 epochs with cosine schedule should raise mIoU above 0.833.",
+    "input_size": 320,
+    "label_smoothing": 0.0,
+    "lr": 0.003,
+    "max_minutes": 7.0,
+    "model": "unet_medium",
+    "num_workers": 2,
+    "parent_experiment": "exp-20261031T232427Z-2342ff",
+    "precision": "auto",
+    "rationale": "Gain from small\u2192medium and 12\u219220 epochs suggests undertraining; 8.6 s/epoch so 40 epochs \u2248 5.8 min fits the 7 min cap.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-nz-cattle",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T23:30:37+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-nz-cattle",
+  "task_type": "segmentation",
+  "updated_at": "2026-10-31T23:34:51+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

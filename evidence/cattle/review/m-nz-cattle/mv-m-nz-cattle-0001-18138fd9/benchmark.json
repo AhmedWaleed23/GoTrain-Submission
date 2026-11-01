@@ -1,0 +1,167 @@
+{
+  "both_empty_images": 0,
+  "budget_fractions": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "caveat": "exploratory validation evidence on this dataset; not a deployment guarantee and not a user study of time saved",
+  "comparison": {
+    "applicable": true,
+    "budgets": {
+      "10%": {
+        "above_random_p95": true,
+        "beats_random_mean": true,
+        "images": 7,
+        "random_mean": 0.10654414888774241,
+        "random_p5": 0.06098790628508998,
+        "random_p95": 0.16074474219295318,
+        "ranked_proportion": 0.2669342356832873
+      },
+      "20%": {
+        "above_random_p95": true,
+        "beats_random_mean": true,
+        "images": 14,
+        "random_mean": 0.21074952201754119,
+        "random_p5": 0.1533936754574975,
+        "random_p95": 0.2722876392218749,
+        "ranked_proportion": 0.4756911778094747
+      },
+      "30%": {
+        "above_random_p95": true,
+        "beats_random_mean": true,
+        "images": 20,
+        "random_mean": 0.30273421140481316,
+        "random_p5": 0.22132484598342994,
+        "random_p95": 0.36771569906831353,
+        "ranked_proportion": 0.6117189159661315
+      }
+    }
+  },
+  "cumulative_capture_curve": [
+    0.06310127158508087,
+    0.09997420412127098,
+    0.13730994506995237,
+    0.1707080210008801,
+    0.2020348396103305,
+    0.24311098297472003,
+    0.2669342356832873,
+    0.30398925677521166,
+    0.3268641315893296,
+    0.3558996692057904,
+    0.38619465266607994,
+    0.4198355133379867,
+    0.45291493429637947,
+    0.4756911778094747,
+    0.5055916360656733,
+    0.5308943582895815,
+    0.5499833085490576,
+    0.5741631513459379,
+    0.5925920305908774,
+    0.6117189159661315,
+    0.6284103669084398,
+    0.6422339230979333,
+    0.6622788382750144,
+    0.6779763891839398,
+    0.6952368668629176,
+    0.7126339109586962,
+    0.722914327334527,
+    0.735698461351704,
+    0.7521623015993445,
+    0.7611984461776578,
+    0.7788382750144154,
+    0.7909244029012776,
+    0.8032760765985858,
+    0.8162043640557191,
+    0.8308093836302388,
+    0.8427741191466116,
+    0.8548450729871627,
+    0.8657324512154411,
+    0.8741161118023733,
+    0.8831750174501533,
+    0.8934781948954508,
+    0.8996692057904161,
+    0.9055946708749355,
+    0.9132272161694638,
+    0.9180904980121999,
+    0.9265803769233104,
+    0.9358061970805135,
+    0.9430745652635731,
+    0.9504339777245,
+    0.9548572122242117,
+    0.9615489666474462,
+    0.9646292980486176,
+    0.9676716943340111,
+    0.9713589875876301,
+    0.9753725228369396,
+    0.9775803465752178,
+    0.9804482413280325,
+    0.9832326788261357,
+    0.9852660010318351,
+    0.9890215774938546,
+    0.9896892355315469,
+    0.9925950654001396,
+    0.9944690601195715,
+    0.9965099693484265,
+    0.9988695335498164,
+    1.0
+  ],
+  "foreground_iou_convention": "IoU of the foreground class per image; 1.0 when both target and prediction are empty (counted separately)",
+  "ground_truth_used_for": "retrospective evaluation only; never for ranking",
+  "partial": false,
+  "random": {
+    "applicable": true,
+    "budgets": {
+      "10%": {
+        "images": 7,
+        "mean": 0.10654414888774241,
+        "p5": 0.06098790628508998,
+        "p95": 0.16074474219295318
+      },
+      "20%": {
+        "images": 14,
+        "mean": 0.21074952201754119,
+        "p5": 0.1533936754574975,
+        "p95": 0.2722876392218749
+      },
+      "30%": {
+        "images": 20,
+        "mean": 0.30273421140481316,
+        "p5": 0.22132484598342994,
+        "p95": 0.36771569906831353
+      }
+    },
+    "n_queues": 200,
+    "seed": 42
+  },
+  "ranked": {
+    "applicable": true,
+    "budgets": {
+      "10%": {
+        "captured_pixels": 35183,
+        "images": 7,
+        "proportion": 0.2669342356832873
+      },
+      "20%": {
+        "captured_pixels": 62698,
+        "images": 14,
+        "proportion": 0.4756911778094747
+      },
+      "30%": {
+        "captured_pixels": 80627,
+        "images": 20,
+        "proportion": 0.6117189159661315
+      }
+    },
+    "n_images": 66,
+    "total_misclassified_pixels": 131804
+  },
+  "signal": {
+    "caveat": "an uncertainty heuristic, not calibrated correctness and not an explanation of the model",
+    "image_aggregate": "mean of the highest-entropy 10 percent of pixels",
+    "name": "top10pct_mean_normalized_entropy",
+    "pixel_signal": "normalized predictive entropy of the softmax output (entropy / log(n_classes))",
+    "tie_break": "ascending sample id",
+    "uses_labels": false
+  }
+}

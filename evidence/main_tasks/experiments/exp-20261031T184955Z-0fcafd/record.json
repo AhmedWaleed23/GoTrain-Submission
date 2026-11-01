@@ -1,0 +1,295 @@
+{
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T184955Z-0fcafd/checkpoints/best.pt",
+    "best_sha256": "be692ac0852c6d3d0b2f20121da93edb572f36bc8578211bae3a7012eda2159b",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T184955Z-0fcafd/checkpoints/last.pt",
+    "last_sha256": "41c4c2f30c3a54c8eaa96db68362034113fc6fe5e9da31d632345d2660e3f895"
+  },
+  "compute": {
+    "adjustments": [],
+    "device": "cuda",
+    "effective_batch_size": 16,
+    "effective_lr": 0.002,
+    "nonfinite_steps": 0,
+    "resume_count": 0,
+    "wall_time_seconds": 158.89703663100227
+  },
+  "config_hash": "1f33e90f7e730496262031da28431a9892f89d5f48a7fb7c99b112682cae51ee",
+  "created_at": "2026-10-31T18:49:55+00:00",
+  "dataset": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue",
+      "NearInfrared"
+    ],
+    "dataset_dir": "/home/sagemaker-user/dataset/geobench/segmentation_v1.0/m-chesapeake",
+    "input_size": [
+      256,
+      256
+    ],
+    "resized": false,
+    "source": "geobench",
+    "split_sizes": {
+      "test": 1000,
+      "train": 3000,
+      "valid": 1000
+    },
+    "subset_fraction": 1.0,
+    "train_samples_used": 3000,
+    "train_subset_indices_hash": null,
+    "valid_samples_used": 1000
+  },
+  "device": "cuda",
+  "environment": {
+    "cuda_available": true,
+    "cuda_version": "12.9",
+    "executable": "/opt/conda/bin/python",
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "packages": {
+      "geobench": "1.1.0",
+      "h5py": "3.16.0",
+      "huggingface_hub": "0.36.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.4.3",
+      "strands-agents": "1.63.0"
+    },
+    "platform": "Linux-6.12.110-135.202.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "error": null,
+  "expected_tradeoff": "Few epochs may underfit; cosine schedule over 5 epochs helps converge within cap.",
+  "experiment_id": "exp-20261031T184955Z-0fcafd",
+  "finished_at": "2026-10-31T18:52:36+00:00",
+  "hypothesis": "unet_small with 5 epochs full data fits ~50s/epoch in the 5 min cap and gives a solid mIoU baseline.",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "model": {
+    "class_names": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "ignore_index": null,
+    "in_channels": 4,
+    "n_classes": 7,
+    "name": "unet_small",
+    "parameters": 1942823
+  },
+  "normalization": {
+    "n_samples_used": 3000,
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-chesapeake.json",
+    "split": "train",
+    "stats_hash": "c8af9b0eb3848cc8eb3a3f7d57e8e3ee2f251fea414c95726f94993c77c3bec9"
+  },
+  "parent_experiment": null,
+  "partial_validation": false,
+  "precision": {
+    "requested": "auto",
+    "use_amp": true
+  },
+  "pretrained": null,
+  "rationale": "Smoke test reached 0.305 mIoU after 1 epoch on 10% data; budget (18 min, 5 min/run) only allows short full runs.",
+  "result": {
+    "best_epoch": 5,
+    "best_val_metric": 0.5663613378777528,
+    "epochs_completed": 5,
+    "stop_reason": "max_epochs",
+    "val_metrics_at_best": {
+      "confusion_matrix": [
+        [
+          1310720,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          5947311,
+          226524,
+          216386,
+          4761,
+          482354,
+          77
+        ],
+        [
+          10432,
+          13812,
+          22151906,
+          1801777,
+          4372,
+          210436,
+          1548
+        ],
+        [
+          107,
+          114471,
+          2897566,
+          21286687,
+          273015,
+          878755,
+          2508
+        ],
+        [
+          0,
+          54298,
+          20211,
+          317939,
+          260454,
+          410622,
+          1540
+        ],
+        [
+          5,
+          102191,
+          219225,
+          587373,
+          255573,
+          3564742,
+          6813
+        ],
+        [
+          0,
+          28849,
+          160131,
+          308343,
+          34930,
+          1359837,
+          7391
+        ]
+      ],
+      "conventions": {
+        "miou": "macro mean of per-class IoU from the split-level confusion matrix; classes absent from both target and prediction are excluded (torchmetrics multiclass JaccardIndex, average=macro)",
+        "pixel_accuracy": "diagnostic only; misleading on imbalanced masks"
+      },
+      "loss": 0.48664078684080214,
+      "miou": 0.5663613378777528,
+      "miou_excluding": {
+        "classes": [
+          "6"
+        ],
+        "value": 0.6601106187752189
+      },
+      "n_classes_present": 7,
+      "n_ignored": 0,
+      "n_pixels": 65536000,
+      "per_class": [
+        {
+          "class": "0",
+          "iou": 0.9920137564407632,
+          "predicted_pixels": 1321272,
+          "present": true,
+          "target_pixels": 1310720
+        },
+        {
+          "class": "1",
+          "iou": 0.8270443977381859,
+          "predicted_pixels": 6260932,
+          "present": true,
+          "target_pixels": 6877421
+        },
+        {
+          "class": "2",
+          "iou": 0.7991901995602848,
+          "predicted_pixels": 25675563,
+          "present": true,
+          "target_pixels": 24194283
+        },
+        {
+          "class": "3",
+          "iou": 0.7420861485894665,
+          "predicted_pixels": 24518505,
+          "present": true,
+          "target_pixels": 25453109
+        },
+        {
+          "class": "4",
+          "iou": 0.15903499693170056,
+          "predicted_pixels": 833105,
+          "present": true,
+          "target_pixels": 1065064
+        },
+        {
+          "class": "5",
+          "iou": 0.44129421339091246,
+          "predicted_pixels": 6906746,
+          "present": true,
+          "target_pixels": 4735922
+        },
+        {
+          "class": "6",
+          "iou": 0.003865652492956207,
+          "predicted_pixels": 19877,
+          "present": true,
+          "target_pixels": 1899481
+        }
+      ],
+      "pixel_accuracy": 0.8320497283935547
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 16,
+    "early_stopping_patience": 2,
+    "epochs": 5,
+    "expected_tradeoff": "Few epochs may underfit; cosine schedule over 5 epochs helps converge within cap.",
+    "hypothesis": "unet_small with 5 epochs full data fits ~50s/epoch in the 5 min cap and gives a solid mIoU baseline.",
+    "input_size": null,
+    "label_smoothing": 0.0,
+    "lr": 0.002,
+    "max_minutes": 4.8,
+    "model": "unet_small",
+    "num_workers": 2,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "Smoke test reached 0.305 mIoU after 1 epoch on 10% data; budget (18 min, 5 min/run) only allows short full runs.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-chesapeake",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "screening": false,
+  "seed": 0,
+  "source": "geobench",
+  "started_at": "2026-10-31T18:49:55+00:00",
+  "status": "completed",
+  "tag": "agent",
+  "task": "m-chesapeake",
+  "task_type": "segmentation",
+  "updated_at": "2026-10-31T18:52:36+00:00",
+  "val_examples": {
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n": 8,
+    "path": "predictions/val_examples.npz",
+    "split": "valid"
+  }
+}

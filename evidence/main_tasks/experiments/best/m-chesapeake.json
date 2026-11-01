@@ -1,0 +1,21 @@
+{
+  "best_val_metric": 0.668305193102589,
+  "checkpoint": {
+    "best_path": "experiments/exp-20261031T191244Z-ad67e7/checkpoints/best.pt",
+    "best_sha256": "15b194f71e93c7f96b1e4ced0275669efad8e8d900a870569cc7e614c5e69848",
+    "format": "gotrain-checkpoint-v1",
+    "last_path": "experiments/exp-20261031T191244Z-ad67e7/checkpoints/last.pt",
+    "last_sha256": "1816b50adce21a5884df0534974bafd7cbc0ed643610b3d63c84971eca2f78a7"
+  },
+  "experiment_id": "exp-20261031T191244Z-ad67e7",
+  "metric": {
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid"
+  },
+  "rationale": "Selected using full validation only: mIoU improved from 0.6066 to 0.6683. Class 4 IoU improved from 0.2291 to 0.3709, and class 6 from 0.0476 to 0.2898. Best checkpoint is epoch 28. No test results used.",
+  "selected_at": "2026-10-31T19:38:10+00:00",
+  "selected_by": "manual",
+  "task": "m-chesapeake"
+}

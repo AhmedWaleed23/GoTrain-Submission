@@ -1,0 +1,60 @@
+{
+  "source_commit": "e6af09fd558438bdd5d353a98247e06085fc1ef8",
+  "results": [
+    {
+      "task": "m-chesapeake",
+      "metric": "miou",
+      "validation": 0.668305193102589,
+      "test": 0.6404638589150371,
+      "test_samples": 1000,
+      "selected_by": "manual",
+      "experiment_id": "exp-20261031T191244Z-ad67e7",
+      "model_version": "mv-m-chesapeake-0001-15b194f7",
+      "evidence_group": "main_tasks"
+    },
+    {
+      "task": "m-eurosat",
+      "metric": "accuracy",
+      "validation": 0.902,
+      "test": 0.901,
+      "test_samples": 1000,
+      "selected_by": "agent",
+      "experiment_id": "exp-20261031T175718Z-2acce6",
+      "model_version": "mv-m-eurosat-0001-1725b67f",
+      "evidence_group": "main_tasks"
+    },
+    {
+      "task": "m-pv4ger",
+      "metric": "accuracy",
+      "validation": 0.9409409409409409,
+      "test": 0.955955955955956,
+      "test_samples": 999,
+      "selected_by": "agent",
+      "experiment_id": "exp-20261031T181019Z-94b654",
+      "model_version": "mv-m-pv4ger-0001-1c42a390",
+      "evidence_group": "main_tasks"
+    },
+    {
+      "task": "m-pv4ger-seg",
+      "metric": "miou",
+      "validation": 0.9229632830171473,
+      "test": 0.914438957622814,
+      "test_samples": 403,
+      "selected_by": "agent",
+      "experiment_id": "exp-20261031T182357Z-34155d",
+      "model_version": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+      "evidence_group": "main_tasks"
+    },
+    {
+      "task": "m-nz-cattle",
+      "metric": "miou",
+      "validation": 0.847690075670909,
+      "test": 0.8432340843280733,
+      "test_samples": 65,
+      "selected_by": "manual",
+      "experiment_id": "exp-20261031T234011Z-fa5d0b",
+      "model_version": "mv-m-nz-cattle-0001-18138fd9",
+      "evidence_group": "cattle"
+    }
+  ]
+}

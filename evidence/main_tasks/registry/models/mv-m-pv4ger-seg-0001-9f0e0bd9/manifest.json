@@ -1,0 +1,134 @@
+{
+  "architecture": {
+    "class_names": [
+      "no solar pv",
+      "solar pv"
+    ],
+    "ignore_index": null,
+    "in_channels": 3,
+    "n_classes": 2,
+    "name": "unet_small",
+    "parameters": 1942594
+  },
+  "backend": "filesystem",
+  "checkpoint_bytes": 23423953,
+  "checkpoint_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+  "created_at": "2026-10-31T19:44:13+00:00",
+  "environment": {
+    "gpu": {
+      "name": "Tesla T4",
+      "total_memory_gib": 14.56
+    },
+    "python": "3.12.15",
+    "torch": "2.8.0"
+  },
+  "experiment_id": "exp-20261031T182357Z-34155d",
+  "metric": {
+    "best_epoch": 14,
+    "definition": "macro mean IoU over classes present in target or prediction, confusion matrix accumulated over the full validation split (torchmetrics multiclass JaccardIndex convention, as in geo-bench-experiments)",
+    "direction": "max",
+    "name": "miou",
+    "split": "valid",
+    "value": 0.9229632830171473
+  },
+  "note": "",
+  "parent_version": null,
+  "preprocessing": {
+    "band_names": [
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "channels_stacked_in_stored_order": true,
+    "input_size": 160,
+    "normalization_file": "normalization.json",
+    "normalization_source": "/home/sagemaker-user/GoTrain/gotrain_runs/normalization/m-pv4ger-seg.json",
+    "normalization_stats_hash": "9dbf09291ec520b9b99ea66416defa9393d6f7f6a00c16cc4f556d43f6e55ef8"
+  },
+  "pretrained": null,
+  "reference": {
+    "file": "reference.npz",
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "input_sha256": "00bda380d95e3134ce0e406eab98146a5a711afd38a9a92d98c3d9a60b1ff7bc",
+    "logits_argmax": [
+      0.563,
+      0.043,
+      0.213,
+      0.081
+    ],
+    "n": 4,
+    "split": "valid",
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    }
+  },
+  "run_config": {
+    "augment": true,
+    "batch_size": 16,
+    "early_stopping_patience": 5,
+    "epochs": 14,
+    "expected_tradeoff": "Lose fine detail from downscaling; higher lr may be slightly unstable but cosine schedule helps.",
+    "hypothesis": "Downscaling to 160 cuts compute ~4x, enabling ~14 epochs in the 5 min cap; should well exceed the 1-epoch smoke mIoU of 0.41.",
+    "input_size": 160,
+    "label_smoothing": 0.0,
+    "lr": 0.003,
+    "max_minutes": 5.0,
+    "model": "unet_small",
+    "num_workers": 2,
+    "parent_experiment": null,
+    "precision": "auto",
+    "rationale": "Only one experiment and ~14 min left; native speed is 64s/epoch, so only ~4 epochs would fit natively.",
+    "scheduler": "cosine",
+    "screening": false,
+    "seed": 0,
+    "subset_fraction": 1.0,
+    "tag": "agent",
+    "task": "m-pv4ger-seg",
+    "val_limit": null,
+    "weight_decay": 0.0001
+  },
+  "seed": 0,
+  "source": "geobench",
+  "storage_uri": "file:///home/sagemaker-user/GoTrain/gotrain_runs/registry/models/mv-m-pv4ger-seg-0001-9f0e0bd9/checkpoint.pt",
+  "task": "m-pv4ger-seg",
+  "task_type": "segmentation",
+  "training_wall_time_seconds": 131.83306585500395,
+  "validation_diagnostics": {
+    "foreground_iou": 0.8776153245467778,
+    "miou": 0.9229632830171473,
+    "n_classes_present": 2,
+    "pixel_accuracy": 0.9741788151364764
+  },
+  "verification": {
+    "argmax_agreement": 1.0,
+    "at": "2026-10-31T19:44:36+00:00",
+    "device": "cuda",
+    "max_abs_diff": 3.993511199951172e-06,
+    "mean_abs_diff": 4.767041446029907e-07,
+    "model_reproduced": true,
+    "n_reference": 4,
+    "preprocessing_identity": {
+      "checked": true,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    "preprocessing_verified": true,
+    "sha256_ok": true,
+    "tolerance": {
+      "atol": 0.001,
+      "note": "fp32 eval on either device; AMP is not used for verification",
+      "rtol": 0.001
+    },
+    "verified": true,
+    "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+    "within_tolerance": true
+  },
+  "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9"
+}
