@@ -62,6 +62,10 @@ This launches new training and Bedrock calls. It does not reproduce a score dete
 
 The evidence ZIP and model ZIP use two groups: `main_tasks` and `cattle`. Keep their frozen manifests separate. Bundle directories contain `manifest.json`, `checkpoint.pt`, `normalization.json` and `reference.npz`. For a fresh binary review build, `review-build --bundle /path/to/version --device cuda` loads bundle-local preprocessing; download the corresponding validation dataset first. Original metadata preserves historical absolute SageMaker paths and must not be silently rewritten. The lightweight evidence folder intentionally omits model weights, image caches and HTML pages; standalone pages are in the evidence release asset.
 
+## Automatic delivery after training
+
+Add `--complete` to an `agent` command to store/reuse and verify selected models, build supported binary reviewers and refresh the dashboard after training. For existing selections, `python -m gotrain --home /path/to/runs complete --task all --device cuda` performs those steps without training or LLM calls. Cattle is explicit: `--task m-nz-cattle`. Each invocation saves per-stage success/failure evidence under `completion/`; incomplete output yields a nonzero exit code. Completion time is additional to the agent's training budget. Freeze and final test evaluation remain separate operator commands. See [AUTOMATION.md](AUTOMATION.md).
+
 ## Verification and limitations
 
 The latest combined source passed **93 tests** on SageMaker. Tests include synthetic training, metrics, budget guards, artifact integrity, test isolation, review behavior and reporting; they do not prove arbitrary-dataset generalization. The optional S3 backend and a production GoPilot/MCP integration remain future work. See [VERIFIED.md](VERIFIED.md), [PRODUCTION_DESIGN.md](PRODUCTION_DESIGN.md) and [DEMO.md](DEMO.md).
