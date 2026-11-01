@@ -1,0 +1,74 @@
+{
+  "format": "gotrain-completion-v1",
+  "run_id": "20261101T081718Z-cec6ec90",
+  "tasks": {
+    "m-nz-cattle": {
+      "status": "completed",
+      "stages": {
+        "selection": {
+          "status": "completed"
+        },
+        "storage": {
+          "status": "completed",
+          "version_id": "mv-m-nz-cattle-0001-18138fd9",
+          "reused": true
+        },
+        "verification": {
+          "status": "completed",
+          "result": {
+            "version_id": "mv-m-nz-cattle-0001-18138fd9",
+            "at": "2026-11-01T08:17:18+00:00",
+            "device": "cuda",
+            "verified": true,
+            "sha256_ok": true,
+            "max_abs_diff": 5.245208740234375e-06,
+            "mean_abs_diff": 3.7410410413940554e-07,
+            "within_tolerance": true,
+            "argmax_agreement": 1.0,
+            "tolerance": {
+              "atol": 0.001,
+              "note": "fp32 eval on either device; AMP is not used for verification",
+              "rtol": 0.001
+            },
+            "n_reference": 4,
+            "preprocessing_identity": {
+              "checked": true,
+              "max_abs_diff": 0.0,
+              "ok": true
+            },
+            "model_reproduced": true,
+            "preprocessing_verified": true
+          }
+        },
+        "review": {
+          "status": "completed",
+          "page": "/home/sagemaker-user/gotrain_cattle_runs/review/m-nz-cattle/mv-m-nz-cattle-0001-18138fd9/review.html",
+          "n_images": 66,
+          "partial": false,
+          "metric_comparison": {
+            "recorded_val_miou": 0.847690075670909,
+            "review_val_miou": 0.8476994734599252,
+            "abs_diff": 9.397789016207803e-06,
+            "tolerance": 0.005,
+            "within_tolerance": true,
+            "note": "recorded value came from training-time validation (possibly AMP on CUDA); the review recomputes in fp32"
+          }
+        }
+      },
+      "selection": {
+        "experiment_id": "exp-20261031T234011Z-fa5d0b",
+        "checkpoint_sha256": "18138fd94e8864d22f0c9fda61a7d657a93e332db5713e3935205408e68cc194",
+        "selected_by": "manual"
+      }
+    }
+  },
+  "status": "completed",
+  "device": "cuda",
+  "scope": "validation/reference inference and deliverables only; no final test evaluation",
+  "summary_path": "/home/sagemaker-user/gotrain_cattle_runs/completion/20261101T081718Z-cec6ec90.json",
+  "dashboard": {
+    "status": "completed",
+    "path": "/home/sagemaker-user/gotrain_cattle_runs/reports/dashboard.html"
+  },
+  "selection_and_final_evidence_unchanged": true
+}
