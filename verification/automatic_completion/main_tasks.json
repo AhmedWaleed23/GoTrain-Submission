@@ -1,0 +1,221 @@
+{
+  "format": "gotrain-completion-v1",
+  "run_id": "20261101T081622Z-7fdedc04",
+  "tasks": {
+    "m-eurosat": {
+      "status": "completed",
+      "stages": {
+        "selection": {
+          "status": "completed"
+        },
+        "storage": {
+          "status": "completed",
+          "version_id": "mv-m-eurosat-0001-1725b67f",
+          "reused": true
+        },
+        "verification": {
+          "status": "completed",
+          "result": {
+            "version_id": "mv-m-eurosat-0001-1725b67f",
+            "at": "2026-11-01T08:16:22+00:00",
+            "device": "cuda",
+            "verified": true,
+            "sha256_ok": true,
+            "max_abs_diff": 9.5367431640625e-07,
+            "mean_abs_diff": 2.95601779498611e-07,
+            "within_tolerance": true,
+            "argmax_agreement": 1.0,
+            "tolerance": {
+              "atol": 0.001,
+              "note": "fp32 eval on either device; AMP is not used for verification",
+              "rtol": 0.001
+            },
+            "n_reference": 4,
+            "preprocessing_identity": {
+              "checked": true,
+              "max_abs_diff": 0.0,
+              "ok": true
+            },
+            "model_reproduced": true,
+            "preprocessing_verified": true
+          }
+        },
+        "review": {
+          "status": "skipped",
+          "reason": "Interactive reviewer supports solar/cattle binary segmentation; task remains in technical dashboard"
+        }
+      },
+      "selection": {
+        "experiment_id": "exp-20261031T175718Z-2acce6",
+        "checkpoint_sha256": "1725b67f5908c4c4427a619a9b1507bbecefd38983157cd132d12d17df377285",
+        "selected_by": "agent"
+      }
+    },
+    "m-pv4ger": {
+      "status": "completed",
+      "stages": {
+        "selection": {
+          "status": "completed"
+        },
+        "storage": {
+          "status": "completed",
+          "version_id": "mv-m-pv4ger-0001-1c42a390",
+          "reused": true
+        },
+        "verification": {
+          "status": "completed",
+          "result": {
+            "version_id": "mv-m-pv4ger-0001-1c42a390",
+            "at": "2026-11-01T08:16:24+00:00",
+            "device": "cuda",
+            "verified": true,
+            "sha256_ok": true,
+            "max_abs_diff": 7.152557373046875e-07,
+            "mean_abs_diff": 2.682209014892578e-07,
+            "within_tolerance": true,
+            "argmax_agreement": 1.0,
+            "tolerance": {
+              "atol": 0.001,
+              "note": "fp32 eval on either device; AMP is not used for verification",
+              "rtol": 0.001
+            },
+            "n_reference": 4,
+            "preprocessing_identity": {
+              "checked": true,
+              "max_abs_diff": 0.0,
+              "ok": true
+            },
+            "model_reproduced": true,
+            "preprocessing_verified": true
+          }
+        },
+        "review": {
+          "status": "skipped",
+          "reason": "Interactive reviewer supports solar/cattle binary segmentation; task remains in technical dashboard"
+        }
+      },
+      "selection": {
+        "experiment_id": "exp-20261031T181019Z-94b654",
+        "checkpoint_sha256": "1c42a390fdac352344a48615032c70d4a99975820ba8290a62757f7dade517d4",
+        "selected_by": "agent"
+      }
+    },
+    "m-pv4ger-seg": {
+      "status": "completed",
+      "stages": {
+        "selection": {
+          "status": "completed"
+        },
+        "storage": {
+          "status": "completed",
+          "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+          "reused": true
+        },
+        "verification": {
+          "status": "completed",
+          "result": {
+            "version_id": "mv-m-pv4ger-seg-0001-9f0e0bd9",
+            "at": "2026-11-01T08:16:24+00:00",
+            "device": "cuda",
+            "verified": true,
+            "sha256_ok": true,
+            "max_abs_diff": 3.993511199951172e-06,
+            "mean_abs_diff": 4.767041446029907e-07,
+            "within_tolerance": true,
+            "argmax_agreement": 1.0,
+            "tolerance": {
+              "atol": 0.001,
+              "note": "fp32 eval on either device; AMP is not used for verification",
+              "rtol": 0.001
+            },
+            "n_reference": 4,
+            "preprocessing_identity": {
+              "checked": true,
+              "max_abs_diff": 0.0,
+              "ok": true
+            },
+            "model_reproduced": true,
+            "preprocessing_verified": true
+          }
+        },
+        "review": {
+          "status": "completed",
+          "page": "/home/sagemaker-user/GoTrain/gotrain_runs/review/m-pv4ger-seg/mv-m-pv4ger-seg-0001-9f0e0bd9/review.html",
+          "n_images": 403,
+          "partial": false,
+          "metric_comparison": {
+            "recorded_val_miou": 0.9229632830171473,
+            "review_val_miou": 0.9229557567594789,
+            "abs_diff": 7.526257668311054e-06,
+            "tolerance": 0.005,
+            "within_tolerance": true,
+            "note": "recorded value came from training-time validation (possibly AMP on CUDA); the review recomputes in fp32"
+          }
+        }
+      },
+      "selection": {
+        "experiment_id": "exp-20261031T182357Z-34155d",
+        "checkpoint_sha256": "9f0e0bd93ecf465e5de4dae5c6ae60789ef4163fc7d8f1bfe5794dd107df5e22",
+        "selected_by": "agent"
+      }
+    },
+    "m-chesapeake": {
+      "status": "completed",
+      "stages": {
+        "selection": {
+          "status": "completed"
+        },
+        "storage": {
+          "status": "completed",
+          "version_id": "mv-m-chesapeake-0001-15b194f7",
+          "reused": true
+        },
+        "verification": {
+          "status": "completed",
+          "result": {
+            "version_id": "mv-m-chesapeake-0001-15b194f7",
+            "at": "2026-11-01T08:17:05+00:00",
+            "device": "cuda",
+            "verified": true,
+            "sha256_ok": true,
+            "max_abs_diff": 8.58306884765625e-06,
+            "mean_abs_diff": 6.232577334230882e-07,
+            "within_tolerance": true,
+            "argmax_agreement": 1.0,
+            "tolerance": {
+              "atol": 0.001,
+              "note": "fp32 eval on either device; AMP is not used for verification",
+              "rtol": 0.001
+            },
+            "n_reference": 4,
+            "preprocessing_identity": {
+              "checked": true,
+              "max_abs_diff": 0.0,
+              "ok": true
+            },
+            "model_reproduced": true,
+            "preprocessing_verified": true
+          }
+        },
+        "review": {
+          "status": "skipped",
+          "reason": "Interactive reviewer supports solar/cattle binary segmentation; task remains in technical dashboard"
+        }
+      },
+      "selection": {
+        "experiment_id": "exp-20261031T191244Z-ad67e7",
+        "checkpoint_sha256": "15b194f71e93c7f96b1e4ced0275669efad8e8d900a870569cc7e614c5e69848",
+        "selected_by": "manual"
+      }
+    }
+  },
+  "status": "completed",
+  "device": "cuda",
+  "scope": "validation/reference inference and deliverables only; no final test evaluation",
+  "summary_path": "/home/sagemaker-user/GoTrain/gotrain_runs/completion/20261101T081622Z-7fdedc04.json",
+  "dashboard": {
+    "status": "completed",
+    "path": "/home/sagemaker-user/GoTrain/gotrain_runs/reports/dashboard.html"
+  },
+  "selection_and_final_evidence_unchanged": true
+}
